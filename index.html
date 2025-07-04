@@ -15,12 +15,16 @@
             flex-direction: column;
             min-height: 100vh;
         }
-        h1 {
+        .content {
+            width: 80%;
+            margin: 0 auto;
+        }
+        h1, h2 {
             text-align: center;
         }
         table {
-            width: 80%;
-            margin: 20px auto;
+            width: 100%;
+            margin: 20px 0;
             border-collapse: collapse;
         }
         th, td {
@@ -38,104 +42,215 @@
         a:hover {
             text-decoration: underline;
         }
+        .columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .column-pair {
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+            gap: 10px;
+        }
+        .column-picture {
+            flex: 1;
+            min-width: 100px;
+        }
+        .column-text-left, .column-text-right {
+            flex: 1;
+            min-width: 100px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .column-text-left {
+            text-align: left;
+        }
+        .column-text-right {
+            text-align: right;
+        }
+        .column-picture img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
         footer {
             text-align: center;
             margin-top: auto;
             padding: 10px 0;
         }
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .content {
+                width: 100%;
+            }
+            th, td {
+                padding: 6px;
+                font-size: 14px;
+            }
+            table {
+                font-size: 12px;
+            }
+            .column-pair {
+                min-width: 100%;
+                flex-direction: column;
+            }
+            .column-picture, .column-text-left, .column-text-right {
+                min-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Megan's Motorbike</h1>
-    </header>
+    <div class="content">
+        <header>
+            <h1>Megan's Motorbike</h1>
+        </header>
 
-    <table>
-        <tr>
-            <th>Part</th>
-            <th>Brand</th>
-            <th>Version</th>
-            <th>Safety Rating</th>
-            <th>Safety Laws</th>
-        </tr>
-        <tr>
-            <td>Helmet</td>
-            <td>Scorpion</td>
-            <td>EXO-491</td>
-            <td>ECE 22.06</td>
-            <td>
-                <a href="https://www.gov.uk/motorcycle-helmet-law" target="_blank">UKLaw</a><br>
-                <a href="https://sharp.dft.gov.uk/" target="_blank">SHARP</a><br>
-                <a href="https://sharp.dft.gov.uk/2024/09/04/ece-r22-06-what-you-need-to-know-about-the-new-helmet-standard/" target="_blank">SHARP ECE22.06</a>
-            </td>
-        </tr>
-        <tr>
-            <td>Gloves</td>
-            <td>Rjays</td>
-            <td>Flow Ladies Gloves Blk/Wht XS</td>
-            <td>CE Level 1</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
+        <table>
+            <tr>
+                <th>Part</th>
+                <th>Brand</th>
+                <th>Version</th>
+                <th>Safety Rating</th>
+                <th>Safety Laws</th>
+            </tr>
+            <tr>
+                <td>Helmet</td>
+                <td>Scorpion</td>
+                <td>EXO-491</td>
+                <td>ECE 22.06</td>
+                <td>
+                    <a href="https://www.gov.uk/motorcycle-helmet-law" target="_blank">UKLaw</a><br>
+                    <a href="https://sharp.dft.gov.uk/" target="_blank">SHARP</a><br>
+                    <a href="https://sharp.dft.gov.uk/2024/09/04/ece-r22-06-what-you-need-to-know-about-the-new-helmet-standard/" target="_blank">SHARP ECE22.06</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Gloves</td>
+                <td>Rjays</td>
+                <td>Flow Ladies Gloves Blk/Wht XS</td>
+                <td>CE Level 1</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
 
-    <footer>
-        <p>© Megan Judge</p>
-    </footer>
+        <h2>Which motorbike and why?</h2>
+
+        <div class="columns">
+            <div class="column-pair">
+                <div class="column-picture">
+                    <img src="https://via.placeholder.com/150" alt="Motorbike 1">
+                </div>
+                <div class="column-text-left">
+                    Text for Motorbike 1 (Left-aligned)
+                </div>
+            </div>
+            <div class="column-pair">
+                <div class="column-picture">
+                    <img src="https://via.placeholder.com/150" alt="Motorbike 2">
+                </div>
+                <div class="column-text-right">
+                    Text for Motorbike 2 (Right-aligned)
+                </div>
+            </div>
+            <div class="column-pair">
+                <div class="column-picture">
+                    <img src="https://via.placeholder.com/150" alt="Motorbike 3">
+                </div>
+                <div class="column-text-left">
+                    Text for Motorbike 3 (Left-aligned)
+                </div>
+            </div>
+            <div class="column-pair">
+                <div class="column-picture">
+                    <img src="https://via.placeholder.com/150" alt="Motorbike 4">
+                </div>
+                <div class="column-text-right">
+                    Text for Motorbike 4 (Right-aligned)
+                </div>
+            </div>
+            <div class="column-pair">
+                <div class="column-picture">
+                    <img src="https://via.placeholder.com/150" alt="Motorbike 5">
+                </div>
+                <div class="column-text-left">
+                    Text for Motorbike 5 (Left-aligned)
+                </div>
+            </div>
+            <div class="column-pair">
+                <div class="column-picture">
+                    <img src="https://via.placeholder.com/150" alt="Motorbike 6">
+                </div>
+                <div class="column-text-right">
+                    Text for Motorbike 6 (Right-aligned)
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© Megan Judge</p>
+        </footer>
+    </div>
 </body>
 </html>
