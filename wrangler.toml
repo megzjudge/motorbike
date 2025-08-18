@@ -2,11 +2,10 @@ name = "motorbike"
 main = "index.js"
 compatibility_date = "2025-07-04"
 
-# Enable Workers Sites to serve static files from the root directory
 [site]
 bucket = "."
 
-# Configure custom domain
+# Optional: configure a custom domain here or via CLI
 [[routes]]
 pattern = "motorbike.jdge.cc"
 zone_name = "jdge.cc"
