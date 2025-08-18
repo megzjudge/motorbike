@@ -5,7 +5,7 @@ compatibility_date = "2025-07-04"
 [site]
 bucket = "."
 
-# Optional: configure a custom domain here or via CLI
+# Custom domain updated
 [[routes]]
-pattern = "motorbike.jdge.cc"
-zone_name = "jdge.cc"
+pattern = "motorbike.mbti.ninja"
+zone_name = "mbti.ninja"
