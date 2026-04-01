@@ -75,13 +75,17 @@
     "video_url": "https://www.youtube.com/watch?v=_AEG0nPdQEk"
   },
   {
-    "image": "",
-    "part": "",
-    "brand": "",
-    "brand_flag": "🇫🇷",
-    "version": "",
-    "version_url": "",
-    "safety_rating": [],
+    "image": "images/freeland_shoes.png",
+    "part": "Shoes",
+    "brand": "Dainese",
+    "brand_flag": "🇮🇹",
+    "version": "Freeland 2 Women's Gore-Tex Boots",
+    "version_url": "https://www.amxsuperstores.com.au/products/dainese-freeland-2-womens-gore-tex-boots-black",
+    "safety_rating": [
+      {
+        "text": "Category II - EN 13634"
+      },
+    ],
     "video_url": ""
   }
 ]
