@@ -1,12 +1,12 @@
 {
-  "image": "https://your-image-url-here.jpg",
-  "part": "Your part name here",
-  "brand": "Brand name",
-  "brand_flag": "🇦🇺",
-  "version": "Your version / model name",
+  "image": "https://picsum.photos/id/1015/800/1200",
+  "part": "Front Brake Pads",
+  "brand": "Brembo",
+  "brand_flag": "🇮🇹",
+  "version": "GT-R Performance",
   "safety_rating": {
-    "text": "5★ ANCAP / Euro NCAP",
-    "url": "https://your-safety-rating-website.com"
+    "text": "5★ Euro NCAP",
+    "url": "https://www.euroncap.com"
   },
-  "video_url": "https://youtube.com/watch?v=your-video-id"
+  "video_url": "https://www.youtube.com/watch?v=3JZ4pnN7gm8"
 }
