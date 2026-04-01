@@ -1,12 +1,30 @@
 {
-  "image": "https://picsum.photos/id/1015/800/1200",
-  "part": "Front Brake Pads",
-  "brand": "Brembo",
-  "brand_flag": "🇮🇹",
-  "version": "GT-R Performance",
+  "image": "",
+  "part": "Helmet",
+  "brand": "Scorpion Exo",
+  "brand_flag": "AU",
+  "version": "EXO-491",
+  "version_url":"https://www.mcas.com.au/scorpion-exo-491-helmet-matte-black-se48100100-p",
   "safety_rating": {
-    "text": "5★ Euro NCAP",
-    "url": "https://www.euroncap.com"
+    "text": "ECE 22.06",
+    "text": "UKLaw",
+    "url": "https://www.gov.uk/motorcycle-helmet-law",
+    "text": "SHARP",
+    "url": "https://sharp.dft.gov.uk/",
+    "text": "SHARP ECE22.06",
+    "url": "https://sharp.dft.gov.uk/2024/09/04/ece-r22-06-what-you-need-to-know-about-the-new-helmet-standard/"
   },
-  "video_url": "https://www.youtube.com/watch?v=3JZ4pnN7gm8"
+  "video_url": ""
+},
+{
+  "image": "",
+  "part": "",
+  "brand": "",
+  "brand_flag": "🇮🇹",
+  "version": "",
+  "safety_rating": {
+    "text": "",
+    "url": ""
+  },
+  "video_url": ""
 }
