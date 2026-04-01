@@ -18,15 +18,30 @@ function renderAllData() {
     container.innerHTML = '';
 
     dataArray.forEach(data => {
-        // IMAGE
-        const imgContainer = document.createElement('div');
-        imgContainer.className = 'image-container';
-        const img = document.createElement('img');
-        img.src = data.image || '';
-        img.alt = data.part || 'Motorbike part';
-        imgContainer.appendChild(img);
+        const cardLink = document.createElement('a');
+        cardLink.className = 'embed-card';
+        cardLink.target = '_blank';
+        cardLink.href = data.version_url || data.video_url || '#';
 
-        // DATA CARD
+        const img = document.createElement('img');
+
+        if (data.video_url && data.video_url.includes("youtube.com")) {
+            const videoId = data.video_url.split("v=")[1]?.split("&")[0];
+            img.src = videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : data.image || '';
+        } else {
+            img.src = data.image || '';
+        }
+        img.alt = data.part || 'Motorbike part';
+        cardLink.appendChild(img);
+
+        const info = document.createElement('div');
+        info.className = 'embed-info';
+        info.innerHTML = `
+            <strong>${data.part || '—'}</strong><br>
+            ${data.brand || '—'} ${data.brand_flag || ''}
+        `;
+        cardLink.appendChild(info);
+
         const card = document.createElement('div');
         card.className = 'data-card';
         card.innerHTML = `
@@ -61,7 +76,6 @@ function renderAllData() {
             </div>
         `;
 
-        // VIDEO LINK
         let videoLink;
         if (data.video_url) {
             videoLink = document.createElement('a');
@@ -71,30 +85,9 @@ function renderAllData() {
             videoLink.innerHTML = `<div class="icon">📹</div><span>WATCH VIDEOS</span>`;
         }
 
-        // APPEND
-        container.appendChild(imgContainer);
+        container.appendChild(cardLink);
         container.appendChild(card);
         if (videoLink) container.appendChild(videoLink);
-    });
-
-    setupLightbox();
-}
-
-function setupLightbox() {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-image');
-    const closeBtn = document.querySelector('.lightbox-close');
-
-    document.querySelectorAll('.image-container img').forEach(img => {
-        img.addEventListener('click', () => {
-            lightboxImg.src = img.src;
-            lightbox.classList.add('active');
-        });
-    });
-
-    closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
-    lightbox.addEventListener('click', e => {
-        if (e.target === lightbox) lightbox.classList.remove('active');
     });
 }
 
