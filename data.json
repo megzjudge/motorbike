@@ -26,7 +26,7 @@
     "video_url": "https://www.youtube.com/watch?v=KqqAZaFgXhY"
   },
   {
-    "image": "",
+    "image": "https://web.archive.org/web/20260401155907/https://www.mcas.com.au/assets/full/GL125BKWTDL.jpg?20240328085645",
     "part": "Gloves",
     "brand": "Rjays",
     "brand_flag": "🇦🇺",
@@ -55,6 +55,16 @@
         "url": "https://www.motocap.com.au/product/exhaust-ladies"
       }
     ],
+    "video_url": ""
+  },
+  {
+    "image": "https://web.archive.org/web/20260401155904im_/https://peakmotogear.com.au/cdn/shop/files/motogirl-sherrie-leggings-462835.jpg?v=1764642766&width=1000",
+    "part": "Pants",
+    "brand": "MotoGirl",
+    "brand_flag": "🇦🇺",
+    "version": "Sherrie Leggings",
+    "version_url": "https://peakmotogear.com.au/products/motogirlsherrieleggings",
+    "safety_rating": [],
     "video_url": ""
   },
   {
