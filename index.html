@@ -184,7 +184,7 @@
             line-height: 1;
         }
 
-        /* VERSION - Now styled like safety tags */
+        /* VERSION TAG - Same style as safety tags with arrow */
         .version-tag {
             display: inline-flex;
             align-items: center;
@@ -341,11 +341,12 @@
                 document.getElementById('brand-value').textContent = data.brand || '—';
                 document.getElementById('flag-value').textContent = data.brand_flag || '';
 
-                // Version - Now styled as a tag
+                // Version with arrow
                 const versionLink = document.getElementById('version-link');
                 versionLink.textContent = data.version || '—';
                 if (data.version_url) {
                     versionLink.href = data.version_url;
+                    versionLink.innerHTML = `${data.version || '—'} <span style="font-size:18px">↗</span>`;
                 } else {
                     versionLink.style.pointerEvents = 'none';
                     versionLink.style.background = 'transparent';
