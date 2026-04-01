@@ -53,17 +53,17 @@
         .header-left {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 16px;
         }
 
         .header-logo-left {
-            width: 48px;
-            height: 48px;
+            width: 64px;           /* ← Increased size */
+            height: 64px;          /* ← Increased size */
             object-fit: contain;
-            border-radius: 12px;
+            border-radius: 14px;
             background: rgba(255,255,255,0.95);
-            padding: 6px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         }
 
         .title {
@@ -319,7 +319,6 @@
             }
         }
 
-        // Lightbox functionality
         function setupLightbox() {
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-image');
