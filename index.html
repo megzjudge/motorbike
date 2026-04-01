@@ -154,7 +154,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            min-height: 60px;           /* Helps with vertical alignment */
+            min-height: 60px;
             padding: 18px 24px;
             transition: background 0.2s;
         }
@@ -167,7 +167,6 @@
             text-transform: uppercase;
             letter-spacing: 1.2px;
             color: #64748b;
-            align-self: center;
         }
         .value {
             font-size: 15.5px;
@@ -185,23 +184,26 @@
             line-height: 1;
         }
 
-        /* SAFETY RATINGS - Better vertical alignment */
+        /* SAFETY RATINGS - Improved spacing */
         .safety-ratings {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 10px;
             justify-content: flex-end;
-            align-items: center;           /* This is the key fix */
-            min-height: 32px;
+            align-items: center;
         }
         .safety-item {
             font-size: 15.5px;
             font-weight: 600;
             color: #1f2937;
-            display: flex;
+            padding: 6px 14px;           /* Same padding as the blue tags */
+            border-radius: 9999px;
+            background: rgba(0, 0, 0, 0.04);   /* Very light background for consistency */
+            display: inline-flex;
             align-items: center;
-            height: 32px;                  /* Matches height of safety-tag */
+            height: 34px;
             line-height: 1;
+            white-space: nowrap;
         }
         .safety-tag {
             display: inline-flex;
@@ -209,14 +211,15 @@
             gap: 6px;
             background: rgba(1, 184, 198, 0.1);
             color: #01b8c6;
-            padding: 6px 12px;
+            padding: 6px 14px;           /* Same horizontal padding */
             border-radius: 9999px;
             font-size: 15px;
             font-weight: 600;
             text-decoration: none;
-            height: 32px;                  /* Consistent height */
+            height: 34px;
             line-height: 1;
             transition: all 0.2s;
+            white-space: nowrap;
         }
         .safety-tag:hover {
             background: #01b8c6;
