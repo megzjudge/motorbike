@@ -1,30 +1,35 @@
-{
-  "image": "",
-  "part": "Helmet",
-  "brand": "Scorpion Exo",
-  "brand_flag": "AU",
-  "version": "EXO-491",
-  "version_url":"https://www.mcas.com.au/scorpion-exo-491-helmet-matte-black-se48100100-p",
-  "safety_rating": {
-    "text": "ECE 22.06",
-    "text": "UKLaw",
-    "url": "https://www.gov.uk/motorcycle-helmet-law",
-    "text": "SHARP",
-    "url": "https://sharp.dft.gov.uk/",
-    "text": "SHARP ECE22.06",
-    "url": "https://sharp.dft.gov.uk/2024/09/04/ece-r22-06-what-you-need-to-know-about-the-new-helmet-standard/"
+[
+  {
+    "image": "https://web.archive.org/web/20250818092157if_/https://www.mcas.com.au/assets/full/SE48100100-p.png?20241004155919",
+    "part": "Helmet",
+    "brand": "Scorpion Exo",
+    "brand_flag": "🇦🇺",
+    "version": "EXO-491",
+    "version_url": "https://www.mcas.com.au/scorpion-exo-491-helmet-matte-black-se48100100-p",
+    "safety_rating": [
+      {
+        "text": "ECE 22.06",
+        "url": "https://www.gov.uk/motorcycle-helmet-law"
+      },
+      {
+        "text": "UK Law",
+        "url": "https://www.gov.uk/motorcycle-helmet-law"
+      },
+      {
+        "text": "SHARP 3★",
+        "url": "https://sharp.dft.gov.uk/helmets/scorpion-exo-491/"
+      }
+    ],
+    "video_url": "https://www.youtube.com/watch?v=KqqAZaFgXhY"
   },
-  "video_url": ""
-},
-{
-  "image": "",
-  "part": "",
-  "brand": "",
-  "brand_flag": "🇮🇹",
-  "version": "",
-  "safety_rating": {
-    "text": "",
-    "url": ""
-  },
-  "video_url": ""
-}
+  {
+    "image": "",
+    "part": "",
+    "brand": "",
+    "brand_flag": "🇮🇹",
+    "version": "",
+    "version_url": "",
+    "safety_rating": [],
+    "video_url": ""
+  }
+]
