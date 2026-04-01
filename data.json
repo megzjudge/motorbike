@@ -87,5 +87,14 @@
       }
     ],
     "video_url": ""
+  },
+  {
+    "image": "images/cfmoto_300sr_bike.png",
+    "part": "Motorbike",
+    "brand": "CFMoto",
+    "brand_flag": "🇨🇳",
+    "version": "300SR PrüstelGP",
+    "version_url": "https://bikereview.com.au/new-livery-cfmoto-300sr-prustelgp-moto3-edition/",
+    "video_url": "https://www.youtube.com/watch?v=Ehc9fZQSKw0"
   }
 ]
