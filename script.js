@@ -18,15 +18,15 @@ function renderAllData() {
     container.innerHTML = '';
 
     dataArray.forEach(data => {
-        // Create image container
+        // IMAGE
         const imgContainer = document.createElement('div');
-        imgContainer.id = 'image-container';
+        imgContainer.className = 'image-container';
         const img = document.createElement('img');
         img.src = data.image || '';
         img.alt = data.part || 'Motorbike part';
         imgContainer.appendChild(img);
 
-        // Create data card
+        // DATA CARD
         const card = document.createElement('div');
         card.className = 'data-card';
         card.innerHTML = `
@@ -51,9 +51,9 @@ function renderAllData() {
                 <div class="data-row">
                     <span class="label">SAFETY RATING</span>
                     <div class="safety-ratings">
-                        ${data.safety_rating && data.safety_rating.length > 0 
-                            ? data.safety_rating.map(r => r.url 
-                                ? `<a href="${r.url}" target="_blank" class="safety-tag">${r.text}</a>` 
+                        ${data.safety_rating && data.safety_rating.length > 0
+                            ? data.safety_rating.map(r => r.url
+                                ? `<a href="${r.url}" target="_blank" class="safety-tag">${r.text}</a>`
                                 : `<span class="safety-item">${r.text}</span>`).join('')
                             : '<span class="value">—</span>'}
                     </div>
@@ -61,7 +61,7 @@ function renderAllData() {
             </div>
         `;
 
-        // Video link
+        // VIDEO LINK
         let videoLink;
         if (data.video_url) {
             videoLink = document.createElement('a');
@@ -71,7 +71,7 @@ function renderAllData() {
             videoLink.innerHTML = `<div class="icon">📹</div><span>WATCH VIDEOS</span>`;
         }
 
-        // Append everything
+        // APPEND
         container.appendChild(imgContainer);
         container.appendChild(card);
         if (videoLink) container.appendChild(videoLink);
@@ -85,7 +85,7 @@ function setupLightbox() {
     const lightboxImg = document.getElementById('lightbox-image');
     const closeBtn = document.querySelector('.lightbox-close');
 
-    document.querySelectorAll('#image-container img').forEach(img => {
+    document.querySelectorAll('.image-container img').forEach(img => {
         img.addEventListener('click', () => {
             lightboxImg.src = img.src;
             lightbox.classList.add('active');
@@ -93,7 +93,9 @@ function setupLightbox() {
     });
 
     closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
-    lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('active'); });
+    lightbox.addEventListener('click', e => {
+        if (e.target === lightbox) lightbox.classList.remove('active');
+    });
 }
 
 window.onload = loadData;
