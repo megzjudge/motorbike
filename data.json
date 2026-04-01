@@ -40,7 +40,7 @@
     "video_url": ""
   },
   {
-    "image": "",
+    "image": "images/exhaust_jacket.png",
     "part": "Jacket",
     "brand": "Ixon",
     "brand_flag": "🇫🇷",
@@ -58,7 +58,7 @@
     "video_url": ""
   },
   {
-    "image": "https://web.archive.org/web/20260401155904im_/https://peakmotogear.com.au/cdn/shop/files/motogirl-sherrie-leggings-462835.jpg?v=1764642766&width=1000",
+    "image": "images/sherrie-leggings.png",
     "part": "Pants",
     "brand": "MotoGirl",
     "brand_flag": "🇦🇺",
