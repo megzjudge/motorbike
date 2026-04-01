@@ -154,6 +154,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            min-height: 60px;           /* Helps with vertical alignment */
             padding: 18px 24px;
             transition: background 0.2s;
         }
@@ -166,6 +167,7 @@
             text-transform: uppercase;
             letter-spacing: 1.2px;
             color: #64748b;
+            align-self: center;
         }
         .value {
             font-size: 15.5px;
@@ -178,20 +180,28 @@
             gap: 14px;
         }
         .flag {
-            font-size: 36px;
+            font-size: 42px;
+            font-family: "Segoe UI Emoji", "Noto Color Emoji", "Twemoji Mozilla", sans-serif;
+            line-height: 1;
         }
 
-        /* SAFETY RATINGS - Now consistent with other text */
+        /* SAFETY RATINGS - Better vertical alignment */
         .safety-ratings {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
             justify-content: flex-end;
+            align-items: center;           /* This is the key fix */
+            min-height: 32px;
         }
         .safety-item {
             font-size: 15.5px;
             font-weight: 600;
             color: #1f2937;
+            display: flex;
+            align-items: center;
+            height: 32px;                  /* Matches height of safety-tag */
+            line-height: 1;
         }
         .safety-tag {
             display: inline-flex;
@@ -204,6 +214,8 @@
             font-size: 15px;
             font-weight: 600;
             text-decoration: none;
+            height: 32px;                  /* Consistent height */
+            line-height: 1;
             transition: all 0.2s;
         }
         .safety-tag:hover {
@@ -293,26 +305,19 @@
                 const dataArray = await response.json();
                 const data = dataArray[0];
 
-                // Image
                 const mainImg = document.getElementById('main-image');
                 if (data.image) {
                     mainImg.src = data.image;
                     mainImg.alt = data.part || 'Motorbike part';
                 }
 
-                // Basic info
                 document.getElementById('part-value').textContent = data.part || '—';
                 document.getElementById('brand-value').textContent = data.brand || '—';
                 document.getElementById('flag-value').textContent = data.brand_flag || '';
 
-                // Version
                 const versionLink = document.getElementById('version-link');
                 versionLink.textContent = data.version || '—';
-                if (data.version_url) {
-                    versionLink.href = data.version_url;
-                } else {
-                    versionLink.style.pointerEvents = 'none';
-                }
+                if (data.version_url) versionLink.href = data.version_url;
 
                 // Safety Ratings
                 const safetyContainer = document.getElementById('safety-container');
@@ -323,7 +328,6 @@
                         if (!rating.text) return;
 
                         if (rating.url) {
-                            // Clickable with arrow
                             const a = document.createElement('a');
                             a.href = rating.url;
                             a.target = '_blank';
@@ -331,7 +335,6 @@
                             a.innerHTML = `${rating.text} <span style="font-size:18px">↗</span>`;
                             safetyContainer.appendChild(a);
                         } else {
-                            // Plain text - same style as Part, Brand, Version
                             const span = document.createElement('span');
                             span.className = 'safety-item';
                             span.textContent = rating.text;
@@ -342,7 +345,6 @@
                     safetyContainer.innerHTML = '<span class="value">—</span>';
                 }
 
-                // Video
                 const videoLink = document.getElementById('video-link');
                 if (data.video_url) {
                     videoLink.href = data.video_url;
@@ -353,7 +355,6 @@
 
             } catch (error) {
                 console.error("Failed to load data.json", error);
-                alert("Could not load data.json. Make sure the file exists in the same folder.");
             }
         }
 
