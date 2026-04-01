@@ -18,30 +18,15 @@ function renderAllData() {
     container.innerHTML = '';
 
     dataArray.forEach(data => {
-        const cardLink = document.createElement('a');
-        cardLink.className = 'embed-card';
-        cardLink.target = '_blank';
-        cardLink.href = data.version_url || data.video_url || '#';
-
+        // Create image container
+        const imgContainer = document.createElement('div');
+        imgContainer.id = 'image-container';
         const img = document.createElement('img');
-
-        if (data.video_url && data.video_url.includes("youtube.com")) {
-            const videoId = data.video_url.split("v=")[1]?.split("&")[0];
-            img.src = videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : data.image || '';
-        } else {
-            img.src = data.image || '';
-        }
+        img.src = data.image || '';
         img.alt = data.part || 'Motorbike part';
-        cardLink.appendChild(img);
+        imgContainer.appendChild(img);
 
-        const info = document.createElement('div');
-        info.className = 'embed-info';
-        info.innerHTML = `
-            <strong>${data.part || '—'}</strong><br>
-            ${data.brand || '—'} ${data.brand_flag || ''}
-        `;
-        cardLink.appendChild(info);
-
+        // Create data card
         const card = document.createElement('div');
         card.className = 'data-card';
         card.innerHTML = `
@@ -66,9 +51,9 @@ function renderAllData() {
                 <div class="data-row">
                     <span class="label">SAFETY RATING</span>
                     <div class="safety-ratings">
-                        ${data.safety_rating && data.safety_rating.length > 0
-                            ? data.safety_rating.map(r => r.url
-                                ? `<a href="${r.url}" target="_blank" class="safety-tag">${r.text}</a>`
+                        ${data.safety_rating && data.safety_rating.length > 0 
+                            ? data.safety_rating.map(r => r.url 
+                                ? `<a href="${r.url}" target="_blank" class="safety-tag">${r.text}</a>` 
                                 : `<span class="safety-item">${r.text}</span>`).join('')
                             : '<span class="value">—</span>'}
                     </div>
@@ -76,6 +61,7 @@ function renderAllData() {
             </div>
         `;
 
+        // Video link
         let videoLink;
         if (data.video_url) {
             videoLink = document.createElement('a');
@@ -85,10 +71,29 @@ function renderAllData() {
             videoLink.innerHTML = `<div class="icon">📹</div><span>WATCH VIDEOS</span>`;
         }
 
-        container.appendChild(cardLink);
+        // Append everything
+        container.appendChild(imgContainer);
         container.appendChild(card);
         if (videoLink) container.appendChild(videoLink);
     });
+
+    setupLightbox();
+}
+
+function setupLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-image');
+    const closeBtn = document.querySelector('.lightbox-close');
+
+    document.querySelectorAll('#image-container img').forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightbox.classList.add('active');
+        });
+    });
+
+    closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('active'); });
 }
 
 window.onload = loadData;
