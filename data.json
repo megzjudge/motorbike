@@ -1,0 +1,12 @@
+{
+  "image": "https://your-image-url-here.jpg",
+  "part": "Your part name here",
+  "brand": "Brand name",
+  "brand_flag": "🇦🇺",
+  "version": "Your version / model name",
+  "safety_rating": {
+    "text": "5★ ANCAP / Euro NCAP",
+    "url": "https://your-safety-rating-website.com"
+  },
+  "video_url": "https://youtube.com/watch?v=your-video-id"
+}
