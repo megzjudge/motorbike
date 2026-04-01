@@ -184,7 +184,30 @@
             line-height: 1;
         }
 
-        /* SAFETY RATINGS - Improved spacing */
+        /* VERSION - Now styled like safety tags */
+        .version-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(1, 184, 198, 0.1);
+            color: #01b8c6;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            height: 34px;
+            line-height: 1;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .version-tag:hover {
+            background: #01b8c6;
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        /* SAFETY RATINGS */
         .safety-ratings {
             display: flex;
             flex-wrap: wrap;
@@ -196,9 +219,9 @@
             font-size: 15.5px;
             font-weight: 600;
             color: #1f2937;
-            padding: 6px 14px;           /* Same padding as the blue tags */
+            padding: 6px 14px;
             border-radius: 9999px;
-            background: rgba(0, 0, 0, 0.04);   /* Very light background for consistency */
+            background: transparent;
             display: inline-flex;
             align-items: center;
             height: 34px;
@@ -211,7 +234,7 @@
             gap: 6px;
             background: rgba(1, 184, 198, 0.1);
             color: #01b8c6;
-            padding: 6px 14px;           /* Same horizontal padding */
+            padding: 6px 14px;
             border-radius: 9999px;
             font-size: 15px;
             font-weight: 600;
@@ -280,7 +303,7 @@
                     </div>
                     <div class="data-row">
                         <span class="label">VERSION</span>
-                        <a id="version-link" target="_blank" class="value" style="color: #01b8c6; text-decoration: none;"></a>
+                        <a id="version-link" target="_blank" class="version-tag"></a>
                     </div>
                     <div class="data-row">
                         <span class="label">SAFETY RATING</span>
@@ -318,9 +341,16 @@
                 document.getElementById('brand-value').textContent = data.brand || '—';
                 document.getElementById('flag-value').textContent = data.brand_flag || '';
 
+                // Version - Now styled as a tag
                 const versionLink = document.getElementById('version-link');
                 versionLink.textContent = data.version || '—';
-                if (data.version_url) versionLink.href = data.version_url;
+                if (data.version_url) {
+                    versionLink.href = data.version_url;
+                } else {
+                    versionLink.style.pointerEvents = 'none';
+                    versionLink.style.background = 'transparent';
+                    versionLink.style.color = '#1f2937';
+                }
 
                 // Safety Ratings
                 const safetyContainer = document.getElementById('safety-container');
@@ -348,6 +378,7 @@
                     safetyContainer.innerHTML = '<span class="value">—</span>';
                 }
 
+                // Video link
                 const videoLink = document.getElementById('video-link');
                 if (data.video_url) {
                     videoLink.href = data.video_url;
