@@ -60,6 +60,8 @@
             height: 52px;
             object-fit: contain;
             border-radius: 12px;
+            background: white;
+            padding: 4px;
         }
 
         .title {
@@ -83,9 +85,6 @@
             background-color: #01b8c6;
             border-radius: 20px;
         }
-        .content::-webkit-scrollbar-thumb:hover {
-            background-color: #00a0b0;
-        }
 
         /* CONTENT */
         .content {
@@ -94,22 +93,19 @@
             padding: 32px 32px 40px;
         }
 
-        /* MAIN IMAGE - Now Thumbnail */
+        /* MAIN IMAGE - Full width but restricted height */
         #image-container {
             margin-bottom: 32px;
             border-radius: 20px;
             overflow: hidden;
             border: 4px solid rgba(1, 184, 198, 0.3);
             box-shadow: 0 15px 30px -10px rgb(0 0 0 / 0.2);
-            width: fit-content;
-            max-width: 320px;
-            margin-left: auto;
-            margin-right: auto;
+            width: 100%;
         }
 
         #image-container img {
             width: 100%;
-            max-height: 260px;
+            max-height: 280px;     /* ← Height restricted */
             object-fit: cover;
             display: block;
         }
@@ -151,7 +147,7 @@
         }
 
         .value {
-            font-size: 19px;           /* Smaller as requested */
+            font-size: 17px;           /* Smaller as requested */
             font-weight: 600;
             color: #1f2937;
         }
@@ -199,7 +195,6 @@
         <!-- HEADER -->
         <div class="header">
             <div class="header-left">
-                <!-- Replaced emoji with image.png -->
                 <img src="images/image.png" alt="Motorbike" class="header-logo-left">
                 <h1 class="title">MOTORBIKE</h1>
             </div>
@@ -210,7 +205,7 @@
         <!-- CONTENT -->
         <div class="content">
             
-            <!-- Thumbnail Image -->
+            <!-- Full width image with restricted height -->
             <div id="image-container"></div>
 
             <!-- DATA CARD -->
@@ -276,11 +271,6 @@
 
             } catch (error) {
                 console.error("Failed to load data.json", error);
-                document.getElementById('image-container').innerHTML = `
-                    <div style="padding: 50px 20px; text-align: center; color: #ef4444;">
-                        Could not load data.json
-                    </div>
-                `;
             }
         }
 
