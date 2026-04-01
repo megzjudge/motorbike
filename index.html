@@ -74,7 +74,7 @@
             padding: 32px 32px 40px;
         }
 
-        /* IMAGE - Fit by height */
+        /* IMAGE */
         #image-container {
             margin-bottom: 32px;
             border-radius: 20px;
@@ -181,12 +181,17 @@
             font-size: 36px;
         }
 
-        /* SAFETY RATINGS */
+        /* SAFETY RATINGS - Now consistent with other text */
         .safety-ratings {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             justify-content: flex-end;
+        }
+        .safety-item {
+            font-size: 15.5px;
+            font-weight: 600;
+            color: #1f2937;
         }
         .safety-tag {
             display: inline-flex;
@@ -205,14 +210,6 @@
             background: #01b8c6;
             color: white;
             transform: translateY(-1px);
-        }
-        .safety-text {
-            background: #e2e8f0;
-            color: #475569;
-            padding: 6px 12px;
-            border-radius: 9999px;
-            font-size: 15px;
-            font-weight: 600;
         }
 
         /* VIDEO LINK */
@@ -311,10 +308,13 @@
                 // Version
                 const versionLink = document.getElementById('version-link');
                 versionLink.textContent = data.version || '—';
-                versionLink.href = data.version_url || '#';
-                if (!data.version_url) versionLink.style.pointerEvents = 'none';
+                if (data.version_url) {
+                    versionLink.href = data.version_url;
+                } else {
+                    versionLink.style.pointerEvents = 'none';
+                }
 
-                // Safety Ratings - Handles both with and without URL
+                // Safety Ratings
                 const safetyContainer = document.getElementById('safety-container');
                 safetyContainer.innerHTML = '';
 
@@ -323,7 +323,7 @@
                         if (!rating.text) return;
 
                         if (rating.url) {
-                            // Clickable link
+                            // Clickable with arrow
                             const a = document.createElement('a');
                             a.href = rating.url;
                             a.target = '_blank';
@@ -331,9 +331,9 @@
                             a.innerHTML = `${rating.text} <span style="font-size:18px">↗</span>`;
                             safetyContainer.appendChild(a);
                         } else {
-                            // Just text, no link
+                            // Plain text - same style as Part, Brand, Version
                             const span = document.createElement('span');
-                            span.className = 'safety-text';
+                            span.className = 'safety-item';
                             span.textContent = rating.text;
                             safetyContainer.appendChild(span);
                         }
@@ -342,7 +342,7 @@
                     safetyContainer.innerHTML = '<span class="value">—</span>';
                 }
 
-                // Video link
+                // Video
                 const videoLink = document.getElementById('video-link');
                 if (data.video_url) {
                     videoLink.href = data.video_url;
