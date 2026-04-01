@@ -3,33 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Motorbike</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap');
-        
-        :root {
-            --primary: #01b8c6;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
         
         body {
             font-family: 'Inter', system_ui, sans-serif;
             background-color: #f8fafc;
+            height: 100vh;
+            overflow: hidden;
         }
         
         .main-container {
-            max-width: 480px;
-            box-shadow: 0 30px 70px -15px rgb(0 0 0 / 0.25);
+            max-width: 768px;
+            width: 100%;
+            height: 100vh;
+            margin: 0 auto;
+            box-shadow: 0 30px 70px -15px rgb(0 0 0 / 0.3);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
         
         .data-card {
             border: 3px solid #01b8c6;
             box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
-        }
-        
-        .data-row {
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .data-row:hover {
@@ -39,121 +38,114 @@
         .motorbike-emoji {
             filter: drop-shadow(0 0 12px #01b8c6) brightness(1.1) saturate(1.3);
         }
+        
+        .header-logo {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+        }
     </style>
 </head>
-<body class="min-h-screen pb-12">
-    <div class="main-container mx-auto bg-white min-h-screen overflow-hidden">
+<body>
+    <div class="main-container bg-white">
         
         <!-- HEADER -->
-        <div class="bg-[#01b8c6] px-6 py-5 flex items-center gap-3">
-            <div class="w-9 h-9 bg-white rounded-2xl flex items-center justify-center text-3xl motorbike-emoji">🏍️</div>
-            <h1 class="text-3xl font-semibold tracking-tighter text-white">MOTORBIKE</h1>
+        <div class="bg-[#01b8c6] px-8 py-5 flex items-center justify-between flex-shrink-0">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-white rounded-2xl flex items-center justify-center text-4xl motorbike-emoji">🏍️</div>
+                <h1 class="text-4xl font-semibold tracking-tighter text-white">MOTORBIKE</h1>
+            </div>
+            
+            <!-- Logo on top right -->
+            <img src="images/icon.png" alt="Logo" class="header-logo">
         </div>
 
         <!-- MAIN CONTENT -->
-        <div class="px-6 pt-6 pb-10">
+        <div class="flex-1 overflow-auto px-8 pt-8 pb-10">
             
             <!-- IMAGE -->
             <div id="image-container" class="mb-8 rounded-3xl overflow-hidden border-4 border-[#01b8c6]/30 shadow-2xl">
-                <!-- Populated by JS -->
+                <!-- JS populated -->
             </div>
 
             <!-- DATA CARD -->
-            <div class="data-card bg-white rounded-3xl p-1">
-                <div class="bg-white text-zinc-900 rounded-3xl px-6 py-6 divide-y divide-zinc-100">
+            <div class="data-card bg-white rounded-3xl p-1 mb-10">
+                <div class="bg-white text-zinc-900 rounded-3xl px-8 py-7 divide-y divide-zinc-100">
                     
-                    <!-- Row 1: Part -->
-                    <div id="row-part" class="data-row flex justify-between items-center py-4 px-2 rounded-2xl">
+                    <div id="row-part" class="data-row flex justify-between items-center py-5 px-3 rounded-2xl">
                         <span class="font-medium text-zinc-500 text-sm tracking-widest uppercase">PART</span>
-                        <span id="part-value" class="font-semibold text-xl"></span>
+                        <span id="part-value" class="font-semibold text-2xl"></span>
                     </div>
                     
-                    <!-- Row 2: Brand + Flag -->
-                    <div id="row-brand" class="data-row flex justify-between items-center py-4 px-2 rounded-2xl">
+                    <div id="row-brand" class="data-row flex justify-between items-center py-5 px-3 rounded-2xl">
                         <span class="font-medium text-zinc-500 text-sm tracking-widest uppercase">BRAND</span>
-                        <div class="flex items-center gap-3">
-                            <span id="brand-value" class="font-semibold text-xl"></span>
-                            <span id="flag-value" class="text-4xl"></span>
+                        <div class="flex items-center gap-4">
+                            <span id="brand-value" class="font-semibold text-2xl"></span>
+                            <span id="flag-value" class="text-5xl"></span>
                         </div>
                     </div>
                     
-                    <!-- Row 3: Version -->
-                    <div id="row-version" class="data-row flex justify-between items-center py-4 px-2 rounded-2xl">
+                    <div id="row-version" class="data-row flex justify-between items-center py-5 px-3 rounded-2xl">
                         <span class="font-medium text-zinc-500 text-sm tracking-widest uppercase">VERSION</span>
-                        <span id="version-value" class="font-semibold text-xl"></span>
+                        <span id="version-value" class="font-semibold text-2xl"></span>
                     </div>
                     
-                    <!-- Row 4: Safety Rating -->
-                    <div id="row-safety" class="data-row flex justify-between items-center py-4 px-2 rounded-2xl">
+                    <div id="row-safety" class="data-row flex justify-between items-center py-5 px-3 rounded-2xl">
                         <span class="font-medium text-zinc-500 text-sm tracking-widest uppercase">SAFETY RATING</span>
-                        <a id="safety-link" target="_blank" class="flex items-center gap-2 font-semibold text-[#01b8c6] hover:text-[#01b8c6]/80 transition-colors text-lg">
-                            <!-- Populated by JS -->
-                        </a>
+                        <a id="safety-link" target="_blank" class="flex items-center gap-3 font-semibold text-[#01b8c6] hover:text-[#01b8c6]/80 transition-colors text-xl"></a>
                     </div>
                 </div>
             </div>
 
             <!-- VIDEO LINK -->
-            <div class="mt-10 flex flex-col items-center">
+            <div class="flex flex-col items-center">
                 <a id="video-link" target="_blank" 
-                   class="flex flex-col items-center gap-2 text-[#01b8c6] hover:scale-110 active:scale-95 transition-all">
-                    <div class="text-7xl mb-1">📹</div>
-                    <span class="text-sm font-medium tracking-widest uppercase">WATCH VIDEOS</span>
+                   class="flex flex-col items-center gap-3 text-[#01b8c6] hover:scale-110 active:scale-95 transition-all">
+                    <div class="text-8xl">📹</div>
+                    <span class="text-base font-medium tracking-widest uppercase">WATCH VIDEOS</span>
                 </a>
             </div>
         </div>
     </div>
 
     <script>
-        tailwind.config = {
-            content: [],
-            theme: {
-                extend: {}
+        async function loadData() {
+            try {
+                const response = await fetch('data.json');
+                const data = await response.json();
+
+                // Image
+                document.getElementById('image-container').innerHTML = `
+                    <img src="${data.image}" alt="${data.part}" class="w-full h-auto object-cover">
+                `;
+
+                // Part
+                document.getElementById('part-value').textContent = data.part;
+
+                // Brand + Flag
+                document.getElementById('brand-value').textContent = data.brand;
+                document.getElementById('flag-value').textContent = data.brand_flag;
+
+                // Version
+                document.getElementById('version-value').textContent = data.version;
+
+                // Safety Rating
+                const safetyEl = document.getElementById('safety-link');
+                safetyEl.innerHTML = `${data.safety_rating.text} <span class="text-3xl">↗</span>`;
+                safetyEl.href = data.safety_rating.url;
+
+                // Video
+                document.getElementById('video-link').href = data.video_url;
+
+            } catch (error) {
+                console.error("Error loading data.json:", error);
+                document.getElementById('image-container').innerHTML = `
+                    <div class="p-12 text-center text-red-500">Failed to load data.json — make sure it's in the same folder</div>
+                `;
             }
         }
 
-        // ==================== YOUR DATA ====================
-        const data = {
-            image: "https://picsum.photos/id/1015/800/1200",
-            part: "Front Brake Pads",
-            brand: "Brembo",
-            brand_flag: "🇮🇹",
-            version: "GT-R Performance",
-            safety_rating: {
-                text: "5★ Euro NCAP",
-                url: "https://www.euroncap.com"
-            },
-            video_url: "https://www.youtube.com/watch?v=3JZ4pnN7gm8"
-        }
-
-        function renderPage() {
-            // Image
-            document.getElementById('image-container').innerHTML = `
-                <img src="${data.image}" 
-                     alt="${data.part}"
-                     class="w-full h-auto object-cover">
-            `;
-
-            // Part
-            document.getElementById('part-value').textContent = data.part;
-
-            // Brand + Flag
-            document.getElementById('brand-value').textContent = data.brand;
-            document.getElementById('flag-value').textContent = data.brand_flag;
-
-            // Version
-            document.getElementById('version-value').textContent = data.version;
-
-            // Safety
-            const safetyEl = document.getElementById('safety-link');
-            safetyEl.innerHTML = `${data.safety_rating.text} <span class="text-2xl">↗</span>`;
-            safetyEl.href = data.safety_rating.url;
-
-            // Video
-            document.getElementById('video-link').href = data.video_url;
-        }
-
-        window.onload = renderPage;
+        window.onload = loadData;
     </script>
 </body>
 </html>
