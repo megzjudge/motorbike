@@ -27,6 +27,38 @@
   },
   {
     "image": "",
+    "part": "Gloves",
+    "brand": "Rjays",
+    "brand_flag": "🇮🇹",
+    "version": "Flow Ladies Gloves Blk/Wht XS",
+    "version_url": "https://www.mcas.com.au/shop/rjays-flow-womens-gloves-black-white-GL125BKWTDXS-P",
+    "safety_rating": [
+      {
+        "text": "CE Level 1"
+      }
+    ],
+    "video_url": ""
+  },
+  {
+    "image": "",
+    "part": "Jacket",
+    "brand": "Ixon",
+    "brand_flag": "🇫🇷",
+    "version": "Exhaust",
+    "version_url": "https://motorcyclestuff.com.au/collections/ixon-womens-jackets/products/ixon-exhaust-womens-textile-jacket-black",
+    "safety_rating": [
+      {
+        "text": "CE Level 2",
+      },
+      {
+        "text": "Motocap 2★",
+        "url": "https://www.motocap.com.au/product/exhaust-ladies"
+      }
+    ],
+    "video_url": ""
+  },
+  {
+    "image": "",
     "part": "",
     "brand": "",
     "brand_flag": "🇮🇹",
