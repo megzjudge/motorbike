@@ -1,6 +1,6 @@
 [
   {
-    "image": "https://web.archive.org/web/20250818092157if_/https://www.mcas.com.au/assets/full/SE48100100-p.png?20241004155919",
+    "image": "images/exo_helmet.png",
     "part": "Helmet",
     "brand": "Scorpion Exo",
     "brand_flag": "🇦🇺",
@@ -26,7 +26,7 @@
     "video_url": "https://www.youtube.com/watch?v=KqqAZaFgXhY"
   },
   {
-    "image": "https://web.archive.org/web/20260401155907/https://www.mcas.com.au/assets/full/GL125BKWTDL.jpg?20240328085645",
+    "image": "images/flow_gloves.png",
     "part": "Gloves",
     "brand": "Rjays",
     "brand_flag": "🇦🇺",
