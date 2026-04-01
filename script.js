@@ -29,6 +29,35 @@ function renderAllData() {
         // DATA CARD
         const card = document.createElement('div');
         card.className = 'data-card';
+
+        // SAFETY RATING HTML
+        const safetyHTML = data.safety_rating && data.safety_rating.length > 0
+            ? data.safety_rating.map(r => r.url
+                ? `<a href="${r.url}" target="_blank" class="safety-tag">${r.text}</a>`
+                : `<span class="safety-item">${r.text}</span>`).join('')
+            : '<span class="value">â€”</span>';
+
+        // VIDEO LINK HTML (optional)
+        let videoHTML = '';
+        if (data.video_url) {
+            // Extract website name from URL
+            let siteName = '';
+            try {
+                const urlObj = new URL(data.video_url);
+                siteName = urlObj.hostname.replace('www.', '').split('.')[0];
+                siteName = siteName.charAt(0).toUpperCase() + siteName.slice(1); // Capitalize
+            } catch (e) {
+                siteName = 'Video';
+            }
+
+            videoHTML = `<div class="data-row">
+                <span class="label">VIDEO</span>
+                <div class="safety-ratings">
+                    <a href="${data.video_url}" target="_blank" class="safety-tag">${siteName}</a>
+                </div>
+            </div>`;
+        }
+
         card.innerHTML = `
             <div class="data-inner">
                 <div class="data-row">
@@ -51,30 +80,16 @@ function renderAllData() {
                 <div class="data-row">
                     <span class="label">SAFETY RATING</span>
                     <div class="safety-ratings">
-                        ${data.safety_rating && data.safety_rating.length > 0
-                            ? data.safety_rating.map(r => r.url
-                                ? `<a href="${r.url}" target="_blank" class="safety-tag">${r.text}</a>`
-                                : `<span class="safety-item">${r.text}</span>`).join('')
-                            : '<span class="value">â€”</span>'}
+                        ${safetyHTML}
                     </div>
                 </div>
+                ${videoHTML}
             </div>
         `;
-
-        // VIDEO LINK
-        let videoLink;
-        if (data.video_url) {
-            videoLink = document.createElement('a');
-            videoLink.className = 'video-link';
-            videoLink.href = data.video_url;
-            videoLink.target = '_blank';
-            videoLink.innerHTML = `<div class="icon">ðŸ“¹</div><span>WATCH VIDEOS</span>`;
-        }
 
         // APPEND
         container.appendChild(imgContainer);
         container.appendChild(card);
-        if (videoLink) container.appendChild(videoLink);
     });
 
     setupLightbox();
