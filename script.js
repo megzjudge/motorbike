@@ -1,66 +1,99 @@
 // motorbike-5x6.pages.dev motorbike.jdge.cc
 
 let dataArray = [];
-let currentIndex = 0;
 
 async function loadData() {
     try {
         const response = await fetch('data.json');
         dataArray = await response.json();
         if (!dataArray.length) return;
-        renderData();
+        renderAllData();
     } catch (error) {
         console.error("Failed to load data.json", error);
     }
 }
 
-function renderData() {
-    const data = dataArray[currentIndex];
+function renderAllData() {
+    const container = document.getElementById('content-container');
+    container.innerHTML = '';
 
-    const mainImg = document.getElementById('main-image');
-    mainImg.src = data.image || '';
-    mainImg.alt = data.part || 'Motorbike part';
+    dataArray.forEach(data => {
+        // Create image container
+        const imgContainer = document.createElement('div');
+        imgContainer.id = 'image-container';
+        const img = document.createElement('img');
+        img.src = data.image || '';
+        img.alt = data.part || 'Motorbike part';
+        imgContainer.appendChild(img);
 
-    document.getElementById('part-value').textContent = data.part || '—';
-    document.getElementById('brand-value').textContent = data.brand || '—';
-    document.getElementById('flag-value').textContent = data.brand_flag || '';
+        // Create data card
+        const card = document.createElement('div');
+        card.className = 'data-card';
+        card.innerHTML = `
+            <div class="data-inner">
+                <div class="data-row">
+                    <span class="label">PART</span>
+                    <span class="value">${data.part || '—'}</span>
+                </div>
+                <div class="data-row">
+                    <span class="label">BRAND</span>
+                    <div class="brand-row">
+                        <span class="value">${data.brand || '—'}</span>
+                        <span class="flag">${data.brand_flag || ''}</span>
+                    </div>
+                </div>
+                <div class="data-row">
+                    <span class="label">VERSION</span>
+                    ${data.version_url 
+                        ? `<a href="${data.version_url}" target="_blank" class="version-tag">${data.version || '—'}</a>` 
+                        : `<span class="version-tag" style="background:transparent;color:#1f2937;">${data.version || '—'}</span>`}
+                </div>
+                <div class="data-row">
+                    <span class="label">SAFETY RATING</span>
+                    <div class="safety-ratings">
+                        ${data.safety_rating && data.safety_rating.length > 0 
+                            ? data.safety_rating.map(r => r.url 
+                                ? `<a href="${r.url}" target="_blank" class="safety-tag">${r.text}</a>` 
+                                : `<span class="safety-item">${r.text}</span>`).join('')
+                            : '<span class="value">—</span>'}
+                    </div>
+                </div>
+            </div>
+        `;
 
-    const versionLink = document.getElementById('version-link');
-    versionLink.textContent = data.version || '—';
-    if (data.version_url) { versionLink.href = data.version_url; versionLink.style.pointerEvents='auto'; versionLink.style.background=''; versionLink.style.color=''; }
-    else { versionLink.removeAttribute('href'); versionLink.style.pointerEvents='none'; versionLink.style.background='transparent'; versionLink.style.color='#1f2937'; }
+        // Video link
+        let videoLink;
+        if (data.video_url) {
+            videoLink = document.createElement('a');
+            videoLink.className = 'video-link';
+            videoLink.href = data.video_url;
+            videoLink.target = '_blank';
+            videoLink.innerHTML = `<div class="icon">📹</div><span>WATCH VIDEOS</span>`;
+        }
 
-    const safetyContainer = document.getElementById('safety-container');
-    safetyContainer.innerHTML = '';
-    if (data.safety_rating && data.safety_rating.length > 0) {
-        data.safety_rating.forEach(rating => {
-            if (!rating.text) return;
-            if (rating.url) {
-                const a = document.createElement('a'); a.href = rating.url; a.target='_blank'; a.className='safety-tag'; a.textContent=rating.text; safetyContainer.appendChild(a);
-            } else {
-                const span = document.createElement('span'); span.className='safety-item'; span.textContent=rating.text; safetyContainer.appendChild(span);
-            }
-        });
-    } else { safetyContainer.innerHTML = '<span class="value">—</span>'; }
+        // Append everything
+        container.appendChild(imgContainer);
+        container.appendChild(card);
+        if (videoLink) container.appendChild(videoLink);
+    });
 
-    const videoLink = document.getElementById('video-link');
-    if (data.video_url) { videoLink.href=data.video_url; videoLink.style.display='flex'; } else { videoLink.style.display='none'; }
+    setupLightbox();
 }
-
-function nextItem() { currentIndex=(currentIndex+1)%dataArray.length; renderData(); }
-function prevItem() { currentIndex=(currentIndex-1+dataArray.length)%dataArray.length; renderData(); }
 
 function setupLightbox() {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-image');
-    const mainImg = document.getElementById('main-image');
     const closeBtn = document.querySelector('.lightbox-close');
 
-    mainImg.addEventListener('click', () => {
-        if (mainImg.src) { lightboxImg.src=mainImg.src; lightbox.classList.add('active'); }
+    document.querySelectorAll('#image-container img').forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightbox.classList.add('active');
+        });
     });
+
     closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
-    lightbox.addEventListener('click', (e) => { if (e.target===lightbox) lightbox.classList.remove('active'); });
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('active'); });
 }
 
-window.onload = () => { loadData(); setupLightbox(); };
+window.onload = loadData;
