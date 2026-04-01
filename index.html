@@ -3,108 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
     <title>Motorbike</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
-        
+
+        :root {
+            --primary: #01b8c6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Inter', system_ui, sans-serif;
             background-color: #f8fafc;
             height: 100vh;
             overflow: hidden;
+            color: #111827;
         }
-        
+
         .main-container {
             max-width: 768px;
             width: 100%;
             height: 100vh;
             margin: 0 auto;
+            background: white;
             box-shadow: 0 30px 70px -15px rgb(0 0 0 / 0.3);
-            overflow: hidden;
             display: flex;
             flex-direction: column;
+            overflow: hidden;
         }
-        
+
+        /* HEADER */
+        .header {
+            background-color: var(--primary);
+            padding: 20px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .header-logo-left {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        .title {
+            font-size: 36px;
+            font-weight: 600;
+            letter-spacing: -1.5px;
+            color: white;
+        }
+
+        .header-logo-right {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+        }
+
+        /* SCROLLBAR */
+        .content::-webkit-scrollbar {
+            width: 8px;
+        }
+        .content::-webkit-scrollbar-thumb {
+            background-color: #01b8c6;
+            border-radius: 20px;
+        }
+        .content::-webkit-scrollbar-thumb:hover {
+            background-color: #00a0b0;
+        }
+
+        /* CONTENT */
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 32px 32px 40px;
+        }
+
+        /* MAIN IMAGE - Now Thumbnail */
+        #image-container {
+            margin-bottom: 32px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 4px solid rgba(1, 184, 198, 0.3);
+            box-shadow: 0 15px 30px -10px rgb(0 0 0 / 0.2);
+            width: fit-content;
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #image-container img {
+            width: 100%;
+            max-height: 260px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* DATA CARD */
         .data-card {
             border: 3px solid #01b8c6;
+            border-radius: 24px;
             box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+            background: white;
+            padding: 4px;
+            margin-bottom: 40px;
         }
-        
+
+        .data-inner {
+            background: white;
+            border-radius: 20px;
+            padding: 6px 0;
+        }
+
+        .data-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 24px;
+            transition: background 0.2s;
+        }
+
         .data-row:hover {
-            background-color: rgb(1 184 198 / 0.05);
+            background-color: rgba(1, 184, 198, 0.05);
         }
-        
-        .motorbike-emoji {
-            filter: drop-shadow(0 0 12px #01b8c6) brightness(1.1) saturate(1.3);
+
+        .label {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #64748b;
         }
-        
-        .header-logo {
-            width: 48px;
-            height: 48px;
-            object-fit: contain;
+
+        .value {
+            font-size: 19px;           /* Smaller as requested */
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .brand-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .flag {
+            font-size: 38px;
+        }
+
+        /* VIDEO LINK */
+        .video-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #01b8c6;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .video-link:hover {
+            transform: scale(1.08);
+        }
+
+        .video-link .icon {
+            font-size: 78px;
+            margin-bottom: 8px;
+        }
+
+        .video-link span {
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
-    <div class="main-container bg-white">
+    <div class="main-container">
         
         <!-- HEADER -->
-        <div class="bg-[#01b8c6] px-8 py-5 flex items-center justify-between flex-shrink-0">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-white rounded-2xl flex items-center justify-center text-4xl motorbike-emoji">🏍️</div>
-                <h1 class="text-4xl font-semibold tracking-tighter text-white">MOTORBIKE</h1>
+        <div class="header">
+            <div class="header-left">
+                <!-- Replaced emoji with image.png -->
+                <img src="images/image.png" alt="Motorbike" class="header-logo-left">
+                <h1 class="title">MOTORBIKE</h1>
             </div>
             
-            <!-- Logo on top right -->
-            <img src="images/icon.png" alt="Logo" class="header-logo">
+            <img src="images/icon.png" alt="Logo" class="header-logo-right">
         </div>
 
-        <!-- MAIN CONTENT -->
-        <div class="flex-1 overflow-auto px-8 pt-8 pb-10">
+        <!-- CONTENT -->
+        <div class="content">
             
-            <!-- IMAGE -->
-            <div id="image-container" class="mb-8 rounded-3xl overflow-hidden border-4 border-[#01b8c6]/30 shadow-2xl">
-                <!-- JS populated -->
-            </div>
+            <!-- Thumbnail Image -->
+            <div id="image-container"></div>
 
             <!-- DATA CARD -->
-            <div class="data-card bg-white rounded-3xl p-1 mb-10">
-                <div class="bg-white text-zinc-900 rounded-3xl px-8 py-7 divide-y divide-zinc-100">
+            <div class="data-card">
+                <div class="data-inner">
                     
-                    <div id="row-part" class="data-row flex justify-between items-center py-5 px-3 rounded-2xl">
-                        <span class="font-medium text-zinc-500 text-sm tracking-widest uppercase">PART</span>
-                        <span id="part-value" class="font-semibold text-2xl"></span>
+                    <div class="data-row">
+                        <span class="label">PART</span>
+                        <span id="part-value" class="value"></span>
                     </div>
                     
-                    <div id="row-brand" class="data-row flex justify-between items-center py-5 px-3 rounded-2xl">
-                        <span class="font-medium text-zinc-500 text-sm tracking-widest uppercase">BRAND</span>
-                        <div class="flex items-center gap-4">
-                            <span id="brand-value" class="font-semibold text-2xl"></span>
-                            <span id="flag-value" class="text-5xl"></span>
+                    <div class="data-row">
+                        <span class="label">BRAND</span>
+                        <div class="brand-row">
+                            <span id="brand-value" class="value"></span>
+                            <span id="flag-value" class="flag"></span>
                         </div>
                     </div>
                     
-                    <div id="row-version" class="data-row flex justify-between items-center py-5 px-3 rounded-2xl">
-                        <span class="font-medium text-zinc-500 text-sm tracking-widest uppercase">VERSION</span>
-                        <span id="version-value" class="font-semibold text-2xl"></span>
+                    <div class="data-row">
+                        <span class="label">VERSION</span>
+                        <span id="version-value" class="value"></span>
                     </div>
                     
-                    <div id="row-safety" class="data-row flex justify-between items-center py-5 px-3 rounded-2xl">
-                        <span class="font-medium text-zinc-500 text-sm tracking-widest uppercase">SAFETY RATING</span>
-                        <a id="safety-link" target="_blank" class="flex items-center gap-3 font-semibold text-[#01b8c6] hover:text-[#01b8c6]/80 transition-colors text-xl"></a>
+                    <div class="data-row">
+                        <span class="label">SAFETY RATING</span>
+                        <a id="safety-link" target="_blank" style="display: flex; align-items: center; gap: 12px; font-weight: 600; color: #01b8c6; font-size: 20px; text-decoration: none;">
+                            <!-- JS populated -->
+                        </a>
                     </div>
                 </div>
             </div>
 
             <!-- VIDEO LINK -->
-            <div class="flex flex-col items-center">
-                <a id="video-link" target="_blank" 
-                   class="flex flex-col items-center gap-3 text-[#01b8c6] hover:scale-110 active:scale-95 transition-all">
-                    <div class="text-8xl">📹</div>
-                    <span class="text-base font-medium tracking-widest uppercase">WATCH VIDEOS</span>
-                </a>
-            </div>
+            <a id="video-link" class="video-link" target="_blank">
+                <div class="icon">📹</div>
+                <span>WATCH VIDEOS</span>
+            </a>
+
         </div>
     </div>
 
@@ -114,33 +259,27 @@
                 const response = await fetch('data.json');
                 const data = await response.json();
 
-                // Image
                 document.getElementById('image-container').innerHTML = `
-                    <img src="${data.image}" alt="${data.part}" class="w-full h-auto object-cover">
+                    <img src="${data.image}" alt="${data.part}">
                 `;
 
-                // Part
                 document.getElementById('part-value').textContent = data.part;
-
-                // Brand + Flag
                 document.getElementById('brand-value').textContent = data.brand;
                 document.getElementById('flag-value').textContent = data.brand_flag;
-
-                // Version
                 document.getElementById('version-value').textContent = data.version;
 
-                // Safety Rating
                 const safetyEl = document.getElementById('safety-link');
-                safetyEl.innerHTML = `${data.safety_rating.text} <span class="text-3xl">↗</span>`;
+                safetyEl.innerHTML = `${data.safety_rating.text} <span style="font-size:28px">↗</span>`;
                 safetyEl.href = data.safety_rating.url;
 
-                // Video
                 document.getElementById('video-link').href = data.video_url;
 
             } catch (error) {
-                console.error("Error loading data.json:", error);
+                console.error("Failed to load data.json", error);
                 document.getElementById('image-container').innerHTML = `
-                    <div class="p-12 text-center text-red-500">Failed to load data.json — make sure it's in the same folder</div>
+                    <div style="padding: 50px 20px; text-align: center; color: #ef4444;">
+                        Could not load data.json
+                    </div>
                 `;
             }
         }
