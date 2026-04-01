@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="mobile-web-app-capable" content="yes">
-    <title>Motorbike</title>
+    <title>Megan Judge's Motorbike</title>
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
@@ -56,12 +56,13 @@
         }
 
         .header-logo-left {
-            width: 52px;
-            height: 52px;
+            width: 48px;
+            height: 48px;
             object-fit: contain;
             border-radius: 12px;
-            background: white;
-            padding: 4px;
+            background: rgba(255,255,255,0.95);
+            padding: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         .title {
@@ -72,8 +73,8 @@
         }
 
         .header-logo-right {
-            width: 52px;
-            height: 52px;
+            width: 48px;
+            height: 48px;
             object-fit: contain;
         }
 
@@ -93,7 +94,7 @@
             padding: 32px 32px 40px;
         }
 
-        /* MAIN IMAGE - Full width but restricted height */
+        /* MAIN IMAGE */
         #image-container {
             margin-bottom: 32px;
             border-radius: 20px;
@@ -101,13 +102,62 @@
             border: 4px solid rgba(1, 184, 198, 0.3);
             box-shadow: 0 15px 30px -10px rgb(0 0 0 / 0.2);
             width: 100%;
+            cursor: zoom-in;
         }
 
         #image-container img {
             width: 100%;
-            max-height: 280px;     /* ← Height restricted */
+            max-height: 280px;
             object-fit: cover;
             display: block;
+            transition: transform 0.3s ease;
+        }
+
+        #image-container:hover img {
+            transform: scale(1.03);
+        }
+
+        /* LIGHTBOX */
+        #lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.92);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 20px;
+            cursor: zoom-out;
+        }
+
+        #lightbox.active {
+            display: flex;
+        }
+
+        #lightbox img {
+            max-width: 100%;
+            max-height: 92vh;
+            border-radius: 12px;
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.6);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            color: white;
+            font-size: 42px;
+            font-weight: 300;
+            cursor: pointer;
+            line-height: 1;
+            opacity: 0.8;
+        }
+
+        .lightbox-close:hover {
+            opacity: 1;
         }
 
         /* DATA CARD */
@@ -147,7 +197,7 @@
         }
 
         .value {
-            font-size: 17px;           /* Smaller as requested */
+            font-size: 15.5px;
             font-weight: 600;
             color: #1f2937;
         }
@@ -159,7 +209,7 @@
         }
 
         .flag {
-            font-size: 38px;
+            font-size: 36px;
         }
 
         /* VIDEO LINK */
@@ -195,28 +245,27 @@
         <!-- HEADER -->
         <div class="header">
             <div class="header-left">
-                <img src="images/image.png" alt="Motorbike" class="header-logo-left">
+                <img src="images/image.png" alt="Motorbike Icon" class="header-logo-left">
                 <h1 class="title">MOTORBIKE</h1>
             </div>
-            
             <img src="images/icon.png" alt="Logo" class="header-logo-right">
         </div>
 
         <!-- CONTENT -->
         <div class="content">
             
-            <!-- Full width image with restricted height -->
-            <div id="image-container"></div>
+            <!-- Clickable Image -->
+            <div id="image-container">
+                <img id="main-image" src="" alt="">
+            </div>
 
             <!-- DATA CARD -->
             <div class="data-card">
                 <div class="data-inner">
-                    
                     <div class="data-row">
                         <span class="label">PART</span>
                         <span id="part-value" class="value"></span>
                     </div>
-                    
                     <div class="data-row">
                         <span class="label">BRAND</span>
                         <div class="brand-row">
@@ -224,16 +273,13 @@
                             <span id="flag-value" class="flag"></span>
                         </div>
                     </div>
-                    
                     <div class="data-row">
                         <span class="label">VERSION</span>
                         <span id="version-value" class="value"></span>
                     </div>
-                    
                     <div class="data-row">
                         <span class="label">SAFETY RATING</span>
-                        <a id="safety-link" target="_blank" style="display: flex; align-items: center; gap: 12px; font-weight: 600; color: #01b8c6; font-size: 20px; text-decoration: none;">
-                            <!-- JS populated -->
+                        <a id="safety-link" target="_blank" style="display: flex; align-items: center; gap: 12px; font-weight: 600; color: #01b8c6; font-size: 19px; text-decoration: none;">
                         </a>
                     </div>
                 </div>
@@ -244,8 +290,13 @@
                 <div class="icon">📹</div>
                 <span>WATCH VIDEOS</span>
             </a>
-
         </div>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-image" src="" alt="">
     </div>
 
     <script>
@@ -254,9 +305,9 @@
                 const response = await fetch('data.json');
                 const data = await response.json();
 
-                document.getElementById('image-container').innerHTML = `
-                    <img src="${data.image}" alt="${data.part}">
-                `;
+                const mainImg = document.getElementById('main-image');
+                mainImg.src = data.image;
+                mainImg.alt = data.part;
 
                 document.getElementById('part-value').textContent = data.part;
                 document.getElementById('brand-value').textContent = data.brand;
@@ -264,7 +315,7 @@
                 document.getElementById('version-value').textContent = data.version;
 
                 const safetyEl = document.getElementById('safety-link');
-                safetyEl.innerHTML = `${data.safety_rating.text} <span style="font-size:28px">↗</span>`;
+                safetyEl.innerHTML = `${data.safety_rating.text} <span style="font-size:26px">↗</span>`;
                 safetyEl.href = data.safety_rating.url;
 
                 document.getElementById('video-link').href = data.video_url;
@@ -274,7 +325,33 @@
             }
         }
 
-        window.onload = loadData;
+        // Lightbox functionality
+        function setupLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-image');
+            const mainImg = document.getElementById('main-image');
+            const closeBtn = document.querySelector('.lightbox-close');
+
+            mainImg.addEventListener('click', () => {
+                lightboxImg.src = mainImg.src;
+                lightbox.classList.add('active');
+            });
+
+            closeBtn.addEventListener('click', () => {
+                lightbox.classList.remove('active');
+            });
+
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    lightbox.classList.remove('active');
+                }
+            });
+        }
+
+        window.onload = () => {
+            loadData();
+            setupLightbox();
+        };
     </script>
 </body>
 </html>
