@@ -43,7 +43,7 @@
         /* HEADER */
         .header {
             background-color: var(--primary);
-            padding: 20px 32px;
+            padding: 18px 32px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -56,16 +56,6 @@
             gap: 16px;
         }
 
-        .header-logo-left {
-            width: 64px;           /* ← Increased size */
-            height: 64px;          /* ← Increased size */
-            object-fit: contain;
-            border-radius: 14px;
-            background: rgba(255,255,255,0.95);
-            padding: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-        }
-
         .title {
             font-size: 36px;
             font-weight: 600;
@@ -74,8 +64,8 @@
         }
 
         .header-logo-right {
-            width: 48px;
-            height: 48px;
+            width: 68px;           /* Larger clean icon */
+            height: 68px;
             object-fit: contain;
         }
 
@@ -245,9 +235,11 @@
         
         <div class="header">
             <div class="header-left">
-                <img src="images/icon.png" alt="Motorbike Icon" class="header-logo-left">
                 <h1 class="title">MOTORBIKE</h1>
             </div>
+            
+            <!-- Icon moved to right, no background box -->
+            <img src="images/icon.png" alt="Motorbike Icon" class="header-logo-right">
         </div>
 
         <div class="content">
