@@ -184,11 +184,10 @@
             line-height: 1;
         }
 
-        /* VERSION TAG - Same style as safety tags with arrow */
+        /* VERSION TAG */
         .version-tag {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
             background: rgba(1, 184, 198, 0.1);
             color: #01b8c6;
             padding: 6px 14px;
@@ -231,7 +230,6 @@
         .safety-tag {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
             background: rgba(1, 184, 198, 0.1);
             color: #01b8c6;
             padding: 6px 14px;
@@ -341,12 +339,11 @@
                 document.getElementById('brand-value').textContent = data.brand || '—';
                 document.getElementById('flag-value').textContent = data.brand_flag || '';
 
-                // Version with arrow
+                // Version
                 const versionLink = document.getElementById('version-link');
                 versionLink.textContent = data.version || '—';
                 if (data.version_url) {
                     versionLink.href = data.version_url;
-                    versionLink.innerHTML = `${data.version || '—'} <span style="font-size:18px">↗</span>`;
                 } else {
                     versionLink.style.pointerEvents = 'none';
                     versionLink.style.background = 'transparent';
@@ -366,7 +363,7 @@
                             a.href = rating.url;
                             a.target = '_blank';
                             a.className = 'safety-tag';
-                            a.innerHTML = `${rating.text} <span style="font-size:18px">↗</span>`;
+                            a.textContent = rating.text;
                             safetyContainer.appendChild(a);
                         } else {
                             const span = document.createElement('span');
