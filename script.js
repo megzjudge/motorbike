@@ -192,12 +192,10 @@ function renderCardRows(data) {
     const rows = [];
 
     Object.entries(data).forEach(([key, value]) => {
-        // ❌ Skip non-display fields
         if (['image', 'type', 'title', 'thumbnail'].includes(key)) return;
-
         if (isEmptyValue(value)) return;
 
-        // ✅ PART
+        // PART
         if (key === 'part') {
             rows.push(`
                 <div class="data-row">
@@ -208,13 +206,17 @@ function renderCardRows(data) {
             return;
         }
 
-        // ✅ BRAND
+        // BRAND
         if (key === 'brand') {
+            const brandContent = data.brand_url
+                ? `<a href="${data.brand_url}" target="_blank" rel="noopener noreferrer" class="version-tag">${value}</a>`
+                : `<span class="value">${value}</span>`;
+
             rows.push(`
                 <div class="data-row">
                     <span class="label">BRAND</span>
                     <div class="brand-row">
-                        <span class="value">${value}</span>
+                        ${brandContent}
                         ${data.brand_flag ? `<span class="flag">${data.brand_flag}</span>` : ''}
                     </div>
                 </div>
@@ -222,17 +224,16 @@ function renderCardRows(data) {
             return;
         }
 
-        // skip flag (already handled)
-        if (key === 'brand_flag') return;
+        if (key === 'brand_flag' || key === 'brand_url') return;
 
-        // ✅ VERSION
+        // VERSION
         if (key === 'version') {
             rows.push(`
                 <div class="data-row">
                     <span class="label">VERSION</span>
                     ${
                         data.version_url
-                            ? `<a href="${data.version_url}" target="_blank" class="version-tag">${value}</a>`
+                            ? `<a href="${data.version_url}" target="_blank" rel="noopener noreferrer" class="version-tag">${value}</a>`
                             : `<span class="version-tag version-tag-plain">${value}</span>`
                     }
                 </div>
@@ -242,46 +243,52 @@ function renderCardRows(data) {
 
         if (key === 'version_url') return;
 
-        // ✅ SAFETY
+        // SAFETY RATING
         if (key === 'safety_rating' && Array.isArray(value)) {
-            const items = value.map(r =>
-                r.url
-                    ? `<a href="${r.url}" target="_blank" class="safety-tag">${r.text}</a>`
-                    : `<span class="safety-item">${r.text}</span>`
-            ).join('');
+            const items = value
+                .filter(r => r && r.text)
+                .map(r =>
+                    r.url
+                        ? `<a href="${r.url}" target="_blank" rel="noopener noreferrer" class="safety-tag">${r.text}</a>`
+                        : `<span class="safety-item">${r.text}</span>`
+                )
+                .join('');
 
-            rows.push(`
-                <div class="data-row">
-                    <span class="label">SAFETY RATING</span>
-                    <div class="safety-ratings">${items}</div>
-                </div>
-            `);
+            if (items) {
+                rows.push(`
+                    <div class="data-row">
+                        <span class="label">SAFETY RATING</span>
+                        <div class="safety-ratings">${items}</div>
+                    </div>
+                `);
+            }
             return;
         }
 
-        // ✅ VIDEO (single or multiple)
+        // VIDEO
         if (key === 'video_url') {
-            const videos = Array.isArray(value) ? value : [value];
+            const videos = Array.isArray(value) ? value.filter(Boolean) : [value];
 
-            const links = videos.map((url, i) => {
-                const name = getVideoSiteName(url);
-                return `
-                    <a href="${url}" target="_blank" class="safety-tag">
-                        ${videos.length > 1 ? `${name} ${i + 1}` : name}
-                    </a>
-                `;
-            }).join('');
+            if (videos.length) {
+                const links = videos.map((url, i) => {
+                    const name = getVideoSiteName(url);
+                    return `
+                        <a href="${url}" target="_blank" rel="noopener noreferrer" class="safety-tag">
+                            ${videos.length > 1 ? `${name} ${i + 1}` : name}
+                        </a>
+                    `;
+                }).join('');
 
-            rows.push(`
-                <div class="data-row">
-                    <span class="label">VIDEO</span>
-                    <div class="safety-ratings">${links}</div>
-                </div>
-            `);
+                rows.push(`
+                    <div class="data-row">
+                        <span class="label">VIDEO</span>
+                        <div class="safety-ratings">${links}</div>
+                    </div>
+                `);
+            }
             return;
         }
 
-        // ✅ GENERIC (auto fields)
         rows.push(renderGenericRow(key, value));
     });
 
