@@ -68,15 +68,26 @@ function renderAllData() {
         const card = document.createElement('div');
         card.className = 'data-card';
 
-        // SAFETY RATING HTML
-        const safetyHTML = data.safety_rating && data.safety_rating.length > 0
-            ? data.safety_rating.map(r => r.url
+        // SAFETY RATING ROW (optional)
+        let safetyRowHTML = '';
+
+        if (data.safety_rating && data.safety_rating.length > 0) {
+            const safetyHTML = data.safety_rating.map(r => r.url
                 ? `<a href="${r.url}" target="_blank" rel="noopener noreferrer" class="safety-tag">${r.text}</a>`
                 : `<span class="safety-item">${r.text}</span>`
-            ).join('')
-            : '<span class="value">—</span>';
+            ).join('');
 
-        // VIDEO LINK HTML (optional)
+            safetyRowHTML = `
+                <div class="data-row">
+                    <span class="label">SAFETY RATING</span>
+                    <div class="safety-ratings">
+                        ${safetyHTML}
+                    </div>
+                </div>
+            `;
+        }
+
+        // VIDEO LINK ROW (optional)
         let videoHTML = '';
         if (data.video_url) {
             const siteName = getVideoSiteName(data.video_url);
@@ -110,12 +121,7 @@ function renderAllData() {
                         ? `<a href="${data.version_url}" target="_blank" rel="noopener noreferrer" class="version-tag">${data.version || '—'}</a>`
                         : `<span class="version-tag version-tag-plain">${data.version || '—'}</span>`}
                 </div>
-                <div class="data-row">
-                    <span class="label">SAFETY RATING</span>
-                    <div class="safety-ratings">
-                        ${safetyHTML}
-                    </div>
-                </div>
+                ${safetyRowHTML}
                 ${videoHTML}
             </div>
         `;
