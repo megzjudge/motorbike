@@ -122,6 +122,21 @@
     "items": [
       { "image": "images/item1.png", "url": "https://www.temu.com/..." },
       { "image": "images/item2.png", "url": "https://www.amazon.com.au/..." },
+      { "image": "images/tank_attachment.png", "url": "https://www.temu.com/au/motorcycle-tank-bag-with-molle-system--bag-attachment-heavy-duty-design-tool-free-installation-compatible-with-for--mm-for--motorcycles-rider--bag--bag-in-one-for-long-rides-off--black-g-601103427529373.html" },
+      { "image": "images/item3.png", "url": "https://www.ebay.com.au/..." },
+      { "image": "images/item1.png", "url": "https://www.temu.com/..." },
+      { "image": "images/item2.png", "url": "https://www.amazon.com.au/..." },
+      { "image": "images/item3.png", "url": "https://www.ebay.com.au/..." },
+      { "image": "images/item1.png", "url": "https://www.temu.com/..." },
+      { "image": "images/item2.png", "url": "https://www.amazon.com.au/..." },
+      { "image": "images/item3.png", "url": "https://www.ebay.com.au/..." },
+      { "image": "images/waterproof_cover.png", "url": "https://www.temu.com/au/motorcycle-luggage-cover-outdoor-waterproof-riding--cover-lightweight-electric-bike-rack-increased-helmet--mesh-bag-g-606512076419424.html" },
+      { "image": "images/item3.png", "url": "https://www.ebay.com.au/..." },
+      { "image": "images/item1.png", "url": "https://www.temu.com/..." },
+      { "image": "images/item2.png", "url": "https://www.amazon.com.au/..." },
+      { "image": "images/item3.png", "url": "https://www.ebay.com.au/..." },
+      { "image": "images/bag_cables.png", "url": "https://www.temu.com/au/retractable--rope-for-motorcycle-elastic-cord-with--35-43-inches-g-601103789217384.html" },
+      { "image": "images/item2.png", "url": "https://www.amazon.com.au/..." },
       { "image": "images/item3.png", "url": "https://www.ebay.com.au/..." },
       { "image": "images/shoe_covers.png", "url": "https://www.temu.com/au/1-2pairs-waterproof-shoe-covers-rain-shoes-protector-reusable-non-slip-rain-boots-sneakers-protector-silicone-shoe-covers-footwear-g-601099547676354.html" }
     ]
