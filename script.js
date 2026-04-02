@@ -32,7 +32,8 @@ function renderAllData() {
     container.innerHTML = '';
 
     dataArray.forEach(data => {
-        // 🔥 STANDALONE VIDEO (EMOJI STYLE)
+
+        // 🎥 STANDALONE VIDEO (BOTTOM)
         if (data.type === 'standalone_video') {
             const videoBlock = document.createElement('div');
             videoBlock.className = 'standalone-video';
@@ -80,16 +81,29 @@ function renderAllData() {
             `;
         }
 
-        // VIDEO LINK (optional)
+        // ✅ VIDEO (supports single OR multiple)
         let videoHTML = '';
+
         if (data.video_url) {
-            const siteName = getVideoSiteName(data.video_url);
+            const videos = Array.isArray(data.video_url)
+                ? data.video_url
+                : [data.video_url];
+
+            const videoLinks = videos.map((url, index) => {
+                const siteName = getVideoSiteName(url);
+
+                return `
+                    <a href="${url}" target="_blank" rel="noopener noreferrer" class="safety-tag">
+                        ${videos.length > 1 ? `Video ${index + 1}` : siteName}
+                    </a>
+                `;
+            }).join('');
 
             videoHTML = `
                 <div class="data-row">
                     <span class="label">VIDEO</span>
                     <div class="safety-ratings">
-                        <a href="${data.video_url}" target="_blank" rel="noopener noreferrer" class="safety-tag">${siteName}</a>
+                        ${videoLinks}
                     </div>
                 </div>
             `;
