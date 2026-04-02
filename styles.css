@@ -346,7 +346,7 @@ body {
 }
 
 .footer-logos img {
-    height: 12px;
+    height: 32px;
     width: auto;
     max-width: 120px;
     object-fit: contain;
