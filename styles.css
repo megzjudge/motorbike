@@ -334,6 +334,29 @@ body {
     text-transform: uppercase;
 }
 
+/* FOOTER LOGOS */
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    opacity: 0.8;
+}
+
+.footer-logos img {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-logos img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
     .header {
