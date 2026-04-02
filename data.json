@@ -98,7 +98,9 @@
     "video_url": "https://www.youtube.com/watch?v=Ehc9fZQSKw0"
   },
   {
-        "text": "Video about Armour Ratings",
-        "url": "https://www.youtube.com/watch?v=nINIJ1cAbYM"
+    "type": "standalone_video",
+    "title": "Video about Armour Ratings",
+    "thumbnail": "images/armour_video_thumb.png",
+    "video_url": "https://www.youtube.com/watch?v=nINIJ1cAbYM"
   }
 ]
