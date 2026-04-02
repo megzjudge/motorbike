@@ -32,22 +32,15 @@ function renderAllData() {
     container.innerHTML = '';
 
     dataArray.forEach(data => {
-        // STANDALONE VIDEO BLOCK
+        // 🔥 STANDALONE VIDEO (EMOJI STYLE)
         if (data.type === 'standalone_video') {
             const videoBlock = document.createElement('div');
             videoBlock.className = 'standalone-video';
 
             videoBlock.innerHTML = `
-                <a href="${data.video_url || '#'}" target="_blank" rel="noopener noreferrer" class="standalone-video-link">
-                    <img
-                        src="${data.thumbnail || ''}"
-                        alt="${data.title || 'Video thumbnail'}"
-                        class="standalone-video-image"
-                    />
-                    <div class="standalone-video-overlay">
-                        <span class="standalone-video-play">▶</span>
-                        <span class="standalone-video-title">${data.title || 'Watch Video'}</span>
-                    </div>
+                <a href="${data.video_url || '#'}" target="_blank" rel="noopener noreferrer" class="standalone-video-emoji-link">
+                    <div class="standalone-video-emoji">🎥</div>
+                    <div class="standalone-video-text">${data.title || 'Watch Video'}</div>
                 </a>
             `;
 
@@ -68,7 +61,7 @@ function renderAllData() {
         const card = document.createElement('div');
         card.className = 'data-card';
 
-        // SAFETY RATING ROW (optional)
+        // ✅ SAFETY RATING (optional)
         let safetyRowHTML = '';
 
         if (data.safety_rating && data.safety_rating.length > 0) {
@@ -87,7 +80,7 @@ function renderAllData() {
             `;
         }
 
-        // VIDEO LINK ROW (optional)
+        // VIDEO LINK (optional)
         let videoHTML = '';
         if (data.video_url) {
             const siteName = getVideoSiteName(data.video_url);
