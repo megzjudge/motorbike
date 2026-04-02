@@ -335,18 +335,17 @@ body {
 }
 
 .footer-logos {
-    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 18px;
-    padding: 10px 20px 14px;
-    background: white;
+    margin-top: 20px;
+    padding: 10px 0 14px;
     opacity: 0.9;
 }
 
 .footer-logos img {
-    height: 32px;
+    height: 12px;
     width: auto;
     max-width: 120px;
     object-fit: contain;
@@ -395,7 +394,8 @@ body {
 
     .footer-logos {
         gap: 14px;
-        padding: 8px 16px 12px;
+        margin-top: 16px;
+        padding: 8px 0 12px;
     }
 
     .footer-logos img {
