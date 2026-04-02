@@ -186,6 +186,9 @@ body {
     font-weight: 600;
     color: #1f2937;
     text-align: right;
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
 }
 
 .brand-row {
@@ -223,8 +226,16 @@ body {
 }
 
 .version-tag-plain {
+    display: inline-flex;
+    align-items: center;
+    height: 34px;
+    line-height: 1;
     background: transparent;
     color: #1f2937;
+}
+
+.data-row {
+    min-height: 64px;
 }
 
 .safety-ratings {
