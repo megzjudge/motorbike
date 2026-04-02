@@ -191,39 +191,98 @@ function renderGenericRow(key, value) {
 function renderCardRows(data) {
     const rows = [];
 
-    if (!isEmptyValue(data.part)) {
-        rows.push(`
-            <div class="data-row">
-                <span class="label">PART</span>
-                <span class="value">${data.part}</span>
-            </div>
-        `);
-    }
-
-    rows.push(renderBrandRow(data));
-    rows.push(renderVersionRow(data));
-    rows.push(renderSafetyRow(data));
-    rows.push(renderVideoRow(data));
-
-    const handledKeys = new Set([
-        'image',
-        'type',
-        'title',
-        'thumbnail',
-        'part',
-        'brand',
-        'brand_flag',
-        'version',
-        'version_url',
-        'safety_rating',
-        'video_url'
-    ]);
-
     Object.entries(data).forEach(([key, value]) => {
-        if (handledKeys.has(key)) return;
+        // ❌ Skip non-display fields
+        if (['image', 'type', 'title', 'thumbnail'].includes(key)) return;
 
-        const rowHTML = renderGenericRow(key, value);
-        if (rowHTML) rows.push(rowHTML);
+        if (isEmptyValue(value)) return;
+
+        // ✅ PART
+        if (key === 'part') {
+            rows.push(`
+                <div class="data-row">
+                    <span class="label">PART</span>
+                    <span class="value">${value}</span>
+                </div>
+            `);
+            return;
+        }
+
+        // ✅ BRAND
+        if (key === 'brand') {
+            rows.push(`
+                <div class="data-row">
+                    <span class="label">BRAND</span>
+                    <div class="brand-row">
+                        <span class="value">${value}</span>
+                        ${data.brand_flag ? `<span class="flag">${data.brand_flag}</span>` : ''}
+                    </div>
+                </div>
+            `);
+            return;
+        }
+
+        // skip flag (already handled)
+        if (key === 'brand_flag') return;
+
+        // ✅ VERSION
+        if (key === 'version') {
+            rows.push(`
+                <div class="data-row">
+                    <span class="label">VERSION</span>
+                    ${
+                        data.version_url
+                            ? `<a href="${data.version_url}" target="_blank" class="version-tag">${value}</a>`
+                            : `<span class="version-tag version-tag-plain">${value}</span>`
+                    }
+                </div>
+            `);
+            return;
+        }
+
+        if (key === 'version_url') return;
+
+        // ✅ SAFETY
+        if (key === 'safety_rating' && Array.isArray(value)) {
+            const items = value.map(r =>
+                r.url
+                    ? `<a href="${r.url}" target="_blank" class="safety-tag">${r.text}</a>`
+                    : `<span class="safety-item">${r.text}</span>`
+            ).join('');
+
+            rows.push(`
+                <div class="data-row">
+                    <span class="label">SAFETY RATING</span>
+                    <div class="safety-ratings">${items}</div>
+                </div>
+            `);
+            return;
+        }
+
+        // ✅ VIDEO (single or multiple)
+        if (key === 'video_url') {
+            const videos = Array.isArray(value) ? value : [value];
+
+            const links = videos.map((url, i) => {
+                const name = getVideoSiteName(url);
+                return `
+                    <a href="${url}" target="_blank" class="safety-tag">
+                        ${videos.length > 1 ? `${name} ${i + 1}` : name}
+                    </a>
+                `;
+            }).join('');
+
+            rows.push(`
+                <div class="data-row">
+                    <span class="label">VIDEO</span>
+                    <div class="safety-ratings">${links}</div>
+                </div>
+            `);
+            return;
+        }
+
+        // ✅ GENERIC (auto fields)
+        rows.push(renderGenericRow(key, value));
     });
 
     return rows.join('');
