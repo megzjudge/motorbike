@@ -274,65 +274,36 @@ body {
 /* STANDALONE VIDEO */
 .standalone-video {
     width: 100%;
-    margin: 8px 0 40px;
-}
-
-.standalone-video-link {
-    position: relative;
-    display: block;
-    width: 100%;
-    border-radius: 24px;
-    overflow: hidden;
-    text-decoration: none;
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.35);
-    background: #e5e7eb;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.standalone-video-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 30px 60px -12px rgb(0 0 0 / 0.4);
-}
-
-.standalone-video-image {
-    width: 100%;
-    display: block;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-}
-
-.standalone-video-overlay {
-    position: absolute;
-    inset: 0;
+    margin: 40px 0;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    padding: 24px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.12) 55%, rgba(0, 0, 0, 0));
-    color: white;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-.standalone-video-play {
-    display: inline-flex;
-    align-items: center;
     justify-content: center;
-    width: 52px;
-    height: 52px;
-    border-radius: 9999px;
-    background: rgba(255, 255, 255, 0.18);
-    backdrop-filter: blur(4px);
-    font-size: 24px;
-    line-height: 1;
-    flex-shrink: 0;
 }
 
-.standalone-video-title {
-    font-size: 20px;
+.standalone-video-emoji-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #01b8c6;
+    transition: transform 0.2s ease;
+}
+
+.standalone-video-emoji-link:hover {
+    transform: scale(1.1);
+}
+
+.standalone-video-emoji {
+    font-size: 100px;
+    line-height: 1;
+}
+
+.standalone-video-text {
+    margin-top: 10px;
+    font-size: 15px;
     font-weight: 600;
-    line-height: 1.25;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 /* LEGACY VIDEO LINK STYLE */
@@ -409,17 +380,12 @@ body {
         font-size: 34px;
     }
 
-    .standalone-video-overlay {
-        padding: 18px;
+    .standalone-video-emoji {
+        font-size: 82px;
     }
 
-    .standalone-video-play {
-        width: 44px;
-        height: 44px;
-        font-size: 20px;
-    }
-
-    .standalone-video-title {
-        font-size: 17px;
+    .standalone-video-text {
+        font-size: 14px;
+        letter-spacing: 1.2px;
     }
 }
