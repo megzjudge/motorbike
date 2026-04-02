@@ -44,93 +44,10 @@ function isEmptyValue(value) {
     return false;
 }
 
-function renderBrandRow(data) {
-    if (isEmptyValue(data.brand) && isEmptyValue(data.brand_flag)) return '';
-
-    return `
-        <div class="data-row">
-            <span class="label">BRAND</span>
-            <div class="brand-row">
-                <span class="value">${data.brand || '—'}</span>
-                ${data.brand_flag ? `<span class="flag">${data.brand_flag}</span>` : ''}
-            </div>
-        </div>
-    `;
-}
-
-function renderVersionRow(data) {
-    if (isEmptyValue(data.version)) return '';
-
-    return `
-        <div class="data-row">
-            <span class="label">VERSION</span>
-            ${
-                data.version_url
-                    ? `<a href="${data.version_url}" target="_blank" rel="noopener noreferrer" class="version-tag">${data.version}</a>`
-                    : `<span class="version-tag version-tag-plain">${data.version}</span>`
-            }
-        </div>
-    `;
-}
-
-function renderSafetyRow(data) {
-    if (!Array.isArray(data.safety_rating) || data.safety_rating.length === 0) return '';
-
-    const safetyHTML = data.safety_rating
-        .filter(item => item && item.text)
-        .map(item =>
-            item.url
-                ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer" class="safety-tag">${item.text}</a>`
-                : `<span class="safety-item">${item.text}</span>`
-        )
-        .join('');
-
-    if (!safetyHTML) return '';
-
-    return `
-        <div class="data-row">
-            <span class="label">SAFETY RATING</span>
-            <div class="safety-ratings">
-                ${safetyHTML}
-            </div>
-        </div>
-    `;
-}
-
-function renderVideoRow(data) {
-    if (isEmptyValue(data.video_url)) return '';
-
-    const videos = Array.isArray(data.video_url)
-        ? data.video_url.filter(Boolean)
-        : [data.video_url];
-
-    if (!videos.length) return '';
-
-    const videoLinks = videos.map((url, index) => {
-        const siteName = getVideoSiteName(url);
-        const text = videos.length > 1 ? `${siteName} ${index + 1}` : siteName;
-
-        return `
-            <a href="${url}" target="_blank" rel="noopener noreferrer" class="safety-tag">
-                ${text}
-            </a>
-        `;
-    }).join('');
-
-    return `
-        <div class="data-row">
-            <span class="label">VIDEO</span>
-            <div class="safety-ratings">
-                ${videoLinks}
-            </div>
-        </div>
-    `;
-}
-
 function renderGenericRow(key, value) {
     if (isEmptyValue(value)) return '';
 
-    if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
+    if (typeof value === 'string' || typeof value === 'number') {
         return `
             <div class="data-row">
                 <span class="label">${formatLabel(key)}</span>
@@ -142,19 +59,7 @@ function renderGenericRow(key, value) {
     if (Array.isArray(value)) {
         const items = value
             .filter(item => !isEmptyValue(item))
-            .map(item => {
-                if (typeof item === 'string' || typeof item === 'number') {
-                    return `<span class="safety-item">${item}</span>`;
-                }
-
-                if (item && typeof item === 'object' && item.text) {
-                    return item.url
-                        ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer" class="safety-tag">${item.text}</a>`
-                        : `<span class="safety-item">${item.text}</span>`;
-                }
-
-                return '';
-            })
+            .map(item => `<span class="safety-item">${item}</span>`)
             .join('');
 
         if (!items) return '';
@@ -162,17 +67,15 @@ function renderGenericRow(key, value) {
         return `
             <div class="data-row">
                 <span class="label">${formatLabel(key)}</span>
-                <div class="safety-ratings">
-                    ${items}
-                </div>
+                <div class="safety-ratings">${items}</div>
             </div>
         `;
     }
 
     if (typeof value === 'object') {
         const inner = Object.entries(value)
-            .filter(([, innerValue]) => !isEmptyValue(innerValue))
-            .map(([innerKey, innerValue]) => `${formatLabel(innerKey)}: ${innerValue}`)
+            .filter(([, v]) => !isEmptyValue(v))
+            .map(([k, v]) => `${formatLabel(k)}: ${v}`)
             .join(' • ');
 
         if (!inner) return '';
@@ -192,6 +95,7 @@ function renderCardRows(data) {
     const rows = [];
 
     Object.entries(data).forEach(([key, value]) => {
+
         if (['image', 'type', 'title', 'thumbnail'].includes(key)) return;
         if (isEmptyValue(value)) return;
 
@@ -243,8 +147,8 @@ function renderCardRows(data) {
 
         if (key === 'version_url') return;
 
-        // SAFETY RATING
-        if (key === 'safety_rating' && Array.isArray(value)) {
+        // SAFETY
+        if (key === 'safety_rating') {
             const items = value
                 .filter(r => r && r.text)
                 .map(r =>
@@ -289,7 +193,9 @@ function renderCardRows(data) {
             return;
         }
 
-        rows.push(renderGenericRow(key, value));
+        // DEFAULT AUTO FIELD
+        const generic = renderGenericRow(key, value);
+        if (generic) rows.push(generic);
     });
 
     return rows.join('');
@@ -300,7 +206,30 @@ function renderAllData() {
     container.innerHTML = '';
 
     dataArray.forEach(data => {
-        // standalone bottom video
+
+        // SHOP GALLERY
+        if (data.type === 'shop_gallery') {
+            const section = document.createElement('div');
+            section.className = 'shop-gallery-section';
+
+            const items = Array.isArray(data.items) ? data.items : [];
+
+            section.innerHTML = `
+                ${data.title ? `<h2 class="shop-gallery-title">${data.title}</h2>` : ''}
+                <div class="shop-gallery-grid">
+                    ${items.map(item => `
+                        <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="shop-gallery-link">
+                            <img src="${item.image}" class="shop-gallery-image">
+                        </a>
+                    `).join('')}
+                </div>
+            `;
+
+            container.appendChild(section);
+            return;
+        }
+
+        // STANDALONE VIDEO
         if (data.type === 'standalone_video') {
             const videoBlock = document.createElement('div');
             videoBlock.className = 'standalone-video';
@@ -316,6 +245,7 @@ function renderAllData() {
             return;
         }
 
+        // IMAGE
         if (data.image) {
             const imgContainer = document.createElement('div');
             imgContainer.className = 'image-container';
@@ -328,6 +258,7 @@ function renderAllData() {
             container.appendChild(imgContainer);
         }
 
+        // CARD
         const rowsHTML = renderCardRows(data);
 
         if (rowsHTML.trim()) {
