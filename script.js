@@ -91,10 +91,10 @@ function renderAllData() {
 
             const videoLinks = videos.map((url, index) => {
                 const siteName = getVideoSiteName(url);
-
+            
                 return `
                     <a href="${url}" target="_blank" rel="noopener noreferrer" class="safety-tag">
-                        ${videos.length > 1 ? `Video ${index + 1}` : siteName}
+                        ${videos.length > 1 ? `${siteName} ${index + 1}` : siteName}
                     </a>
                 `;
             }).join('');
