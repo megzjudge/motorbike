@@ -117,6 +117,15 @@
     ]
   },
   {
+    "type": "shop_gallery",
+    "title": "Fun Things I've Bought from Temu",
+    "items": [
+      { "image": "images/item1.png", "url": "https://www.temu.com/..." },
+      { "image": "images/item2.png", "url": "https://www.amazon.com.au/..." },
+      { "image": "images/item3.png", "url": "https://www.ebay.com.au/..." }
+    ]
+  },
+  {
     "type": "standalone_video",
     "title": "About Armour Ratings",
     "thumbnail": "images/armour_video_thumb.png",
