@@ -142,6 +142,50 @@ body {
     opacity: 1;
 }
 
+/* SHOP GALLERY */
+.shop-gallery-section {
+    margin: 40px 0;
+}
+
+.shop-gallery-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.shop-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.shop-gallery-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.shop-gallery-link:hover {
+    transform: scale(1.08);
+}
+
+.shop-gallery-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+    border-radius: 12px;
+    background: white;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .shop-gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 /* DATA CARD */
 .data-card {
     border: 3px solid #01b8c6;
