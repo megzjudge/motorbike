@@ -125,8 +125,8 @@
         "items": [
           { "image": "images/tyre_repair.png", "url": "https://www.temu.com/au/20-40-80pcs-vacuum-tire-repair-kit-with-spiral-nails--tool-for-cars-and-motorcycles-non-damaging-iron-mushroom-nails-for-tire-patching-g-601105056555125.html" },
           { "image": "images/screws.png", "url": "https://www.ebay.com.au/itm/156399205324" },
-          { "image": "images/stand_protector.png", "url": "https://www.temu.com/au/high-quality-motorcycle-footpeg-extension-plate--in--side-stand-support-plate-accessory-for-street-bikes-g-601105346977493.html" },
-          { "image": "images/screen_cover.png", "url": "https://www.temu.com/au/for--cf25022--2022-2023-motorcycle-screen-instrument-protection-film-screen-scratch-resistant-tpu-screen-protection-film-transparent-motorcycle-instrument-protection-g-601101995504505.html" }
+          { "image": "images/screen_cover.png", "url": "https://www.temu.com/au/for--cf25022--2022-2023-motorcycle-screen-instrument-protection-film-screen-scratch-resistant-tpu-screen-protection-film-transparent-motorcycle-instrument-protection-g-601101995504505.html" },
+          { "image": "images/stand_protector.png", "url": "https://www.temu.com/au/high-quality-motorcycle-footpeg-extension-plate--in--side-stand-support-plate-accessory-for-street-bikes-g-601105346977493.html" }
         ]
       },
       {
@@ -134,16 +134,17 @@
         "items": [
           { "image": "images/key_cover.png", "url": "https://www.temu.com/au/key-cover-shell-keychain-and-holder-for-modified-motorcycles-including--models-250sr---450mt-700clx--700mt--nk250--400nk-300nk-400gt-and--g-601102494727339.html" },
           { "image": "images/licence_plate_frame.png", "url": "https://www.temu.com/au/2023-2024-new-motorcycle-cnc-meter-frame--glare-shield-instrument-display-guard-for-----2022-g-601105797811353.html" },
+          { "image": "images/stickers_wheel.png", "url": "https://www.temu.com/au/4pcs--reflective-wolf-head-car-wheel-center-stickers-night-safety-warning-decals-for-bumper-and-window-g-601105670757046.html" },
           { "image": "images/stickers_stars.png", "url": "https://www.temu.com/au/star-reflective-car-stickers-starry--motorcycle-racing-laptop-vinyl-decals-g-601099518267065.html" },
-          { "image": "images/stickers_wheel.png", "url": "https://www.temu.com/au/4pcs--reflective-wolf-head-car-wheel-center-stickers-night-safety-warning-decals-for-bumper-and-window-g-601105670757046.html" }
+          { "image": "images/stickers_wheel.png", "url": "https://www.temu.com/au/2-pack-of--high-visibility-reflective-fender-stickers-for-motorcycles-and-electric-bikes-waterproof-oil-proof-durable-pvc-stickers-in-a--of-colors-g-601101543881477.html" }
         ]
       },
       {
         "title": "Cleaning Chain",
         "items": [
-          { "image": "images/stand.png", "url": "https://www.amazon.com.au/Motorcycle-Wheel-cleaning-stand-Replacement/dp/B075N73R26/" },
-          { "image": "images/chain_brush.png", "url": "https://www.ebay.com.au/itm/256960870775" },
           { "image": "images/splash_guard.png", "url": "https://www.temu.com/au/bicycle-mountain-bike-road-bike-disc-brake-splash-guard-oil-stain-cleaning-plate-chain-cleaning-tool-g-606237064327669.html" },
+          { "image": "images/chain_brush.png", "url": "https://www.ebay.com.au/itm/256960870775" },
+          { "image": "images/stand.png", "url": "https://www.amazon.com.au/Motorcycle-Wheel-cleaning-stand-Replacement/dp/B075N73R26/" },
           { "image": "images/gloves.png", "url": "https://www.amazon.com.au/dp/B08G6M1XFR" },
           { "image": "images/cleaner_rust.png", "url": "https://www.amazon.com.au/dp/B07QBXVJVV" }
         ]
@@ -151,9 +152,9 @@
       {
         "title": "Cleaning Bike",
         "items": [
+          { "image": "images/cleaner_foam.png", "url": "https://www.amazon.com.au/dp/B0749VM3MB" },
           { "image": "images/hose_gun.png", "url": "https://www.ebay.com.au/itm/334916310665" },
-          { "image": "images/hose.png", "url": "https://www.ebay.com.au/itm/404941503250" },
-          { "image": "images/cleaner_foam.png", "url": "https://www.amazon.com.au/dp/B0749VM3MB" }
+          { "image": "images/hose.png", "url": "https://www.ebay.com.au/itm/404941503250" }
           
         ]
       },
@@ -186,13 +187,13 @@
       {
         "title": "Carrying",
         "items": [
+          { "image": "images/waterproof_cover.png", "url": "https://www.temu.com/au/motorcycle-luggage-cover-outdoor-waterproof-riding--cover-lightweight-electric-bike-rack-increased-helmet--mesh-bag-g-606512076419424.html" },
           { "image": "images/hook.png", "url": "https://www.temu.com/au/motorcycle-hook-front-heavy-duty-cargo-rack-for-scooters-multi-functional-modified-hook-battery-cart-hook-delivery-vehicle-storage-hook-g-605603690839550.html" },
           { "image": "images/hook2.png", "url": "https://www.temu.com/au/1pc-scooter-hanging-storage--mounting-hook-for-xiaomi-m365---bicycle-motorcycle-e-bikes--for-scooter-bike-motorcycle-accessories-scooter-storage-solution-g-601102029949785.html" },
           { "image": "images/bag_cables.png", "url": "https://www.temu.com/au/retractable--rope-for-motorcycle-elastic-cord-with--35-43-inches-g-601103789217384.html" },
-          { "image": "images/tank_attachment.png", "url": "https://www.temu.com/au/motorcycle-tank-bag-with-molle-system--bag-attachment-heavy-duty-design-tool-free-installation-compatible-with-for--mm-for--motorcycles-rider--bag--bag-in-one-for-long-rides-off--black-g-601103427529373.html" },
-          { "image": "images/padlock.png", "url": "https://www.amazon.com.au/dp/B09HT75K5Z" },
           { "image": "images/saddle_bags.png", "url": "https://www.temu.com/au/large-capacity-side-bag-for-motorcycles-designed-to-hold-a-full-helmet-and-other-riding-essentials-g-601099527575848.html" },
-          { "image": "images/waterproof_cover.png", "url": "https://www.temu.com/au/motorcycle-luggage-cover-outdoor-waterproof-riding--cover-lightweight-electric-bike-rack-increased-helmet--mesh-bag-g-606512076419424.html" }
+          { "image": "images/tank_attachment.png", "url": "https://www.temu.com/au/motorcycle-tank-bag-with-molle-system--bag-attachment-heavy-duty-design-tool-free-installation-compatible-with-for--mm-for--motorcycles-rider--bag--bag-in-one-for-long-rides-off--black-g-601103427529373.html" },
+          { "image": "images/padlock.png", "url": "https://www.amazon.com.au/dp/B09HT75K5Z" }
         ]
       }
     ]
