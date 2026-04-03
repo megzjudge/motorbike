@@ -128,6 +128,13 @@
         ]
       },
       {
+        "title": "Style",
+        "items": [
+          { "image": "images/licence_plate_frame.png", "url": "https://www.temu.com/au/2023-2024-new-motorcycle-cnc-meter-frame--glare-shield-instrument-display-guard-for-----2022-g-601105797811353.html" },
+          { "image": "images/stickers_wheel.png", "url": "https://www.temu.com/au/4pcs--reflective-wolf-head-car-wheel-center-stickers-night-safety-warning-decals-for-bumper-and-window-g-601105670757046.html" }
+        ]
+      },
+      {
         "title": "Cleaning Chain",
         "items": [
           { "image": "images/stand.png", "url": "https://www.amazon.com.au/Motorcycle-Wheel-cleaning-stand-Replacement/dp/B075N73R26/" },
@@ -177,13 +184,6 @@
           { "image": "images/bag_cables.png", "url": "https://www.temu.com/au/retractable--rope-for-motorcycle-elastic-cord-with--35-43-inches-g-601103789217384.html" },
           { "image": "images/tank_attachment.png", "url": "https://www.temu.com/au/motorcycle-tank-bag-with-molle-system--bag-attachment-heavy-duty-design-tool-free-installation-compatible-with-for--mm-for--motorcycles-rider--bag--bag-in-one-for-long-rides-off--black-g-601103427529373.html" },
           { "image": "images/saddle_bags.png", "url": "https://www.temu.com/au/large-capacity-side-bag-for-motorcycles-designed-to-hold-a-full-helmet-and-other-riding-essentials-g-601099527575848.html" }
-        ]
-      },
-      {
-        "title": "Style",
-        "items": [
-          { "image": "images/licence_plate_frame.png", "url": "https://www.temu.com/au/2023-2024-new-motorcycle-cnc-meter-frame--glare-shield-instrument-display-guard-for-----2022-g-601105797811353.html" },
-          { "image": "images/stickers_wheel.png", "url": "https://www.temu.com/au/4pcs--reflective-wolf-head-car-wheel-center-stickers-night-safety-warning-decals-for-bumper-and-window-g-601105670757046.html" }
         ]
       }
     ]
