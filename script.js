@@ -211,20 +211,29 @@ function renderAllData() {
         if (data.type === 'shop_gallery') {
             const section = document.createElement('div');
             section.className = 'shop-gallery-section';
-
-            const items = Array.isArray(data.items) ? data.items : [];
-
+        
+            const sections = Array.isArray(data.sections) ? data.sections : [];
+        
             section.innerHTML = `
-                ${data.title ? `<h2 class="shop-gallery-title">${data.title}</h2>` : ''}
-                <div class="shop-gallery-grid">
-                    ${items.map(item => `
-                        <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="shop-gallery-link">
-                            <img src="${item.image}" class="shop-gallery-image">
-                        </a>
+                <div class="shop-gallery-inner">
+                    ${data.title ? `<div class="shop-gallery-title">${data.title}</div>` : ''}
+        
+                    ${sections.map(sec => `
+                        <div class="shop-subsection">
+                            ${sec.title ? `<div class="shop-subheader">${sec.title}</div>` : ''}
+        
+                            <div class="shop-gallery-grid">
+                                ${(sec.items || []).map(item => `
+                                    <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="shop-gallery-link">
+                                        <img src="${item.image}" class="shop-gallery-image">
+                                    </a>
+                                `).join('')}
+                            </div>
+                        </div>
                     `).join('')}
                 </div>
             `;
-
+        
             container.appendChild(section);
             return;
         }
