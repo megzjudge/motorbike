@@ -139,7 +139,7 @@
           { "image": "images/stickers_wheel.png", "url": "https://www.temu.com/au/4pcs--reflective-wolf-head-car-wheel-center-stickers-night-safety-warning-decals-for-bumper-and-window-g-601105670757046.html" },
           { "image": "images/stickers_stars.png", "url": "https://www.temu.com/au/star-reflective-car-stickers-starry--motorcycle-racing-laptop-vinyl-decals-g-601099518267065.html" },
           { "image": "images/stickers_helmet.png", "url": "https://www.temu.com/au/pair-of-motorcycle-decorative-reflective-strips-for-night-riding-safety-warning-signs-self--reflective-decals-gift-g-601100088127291.html" },
-          { "image": "images/stickers_wheel.png", "url": "https://www.temu.com/au/2-pack-of--high-visibility-reflective-fender-stickers-for-motorcycles-and-electric-bikes-waterproof-oil-proof-durable-pvc-stickers-in-a--of-colors-g-601101543881477.html" }
+          { "image": "images/stickers_tail.png", "url": "https://www.temu.com/au/2-pack-of--high-visibility-reflective-fender-stickers-for-motorcycles-and-electric-bikes-waterproof-oil-proof-durable-pvc-stickers-in-a--of-colors-g-601101543881477.html" }
         ]
       },
       {
@@ -204,7 +204,7 @@
       {
         "title": "Accessories",
         "items": [
-          { "image": "images/lever_clutch_break.png", "url": "https://www.amazon.com.au/MTCRIGHTER-CFMOTO-Retractable-Foldable-Aluminum/dp/B0DRT7SKWX/" },
+          { "image": "images/lever_clutch_break.png", "url": "https://www.amazon.com.au/MTCRIGHTER-CFMOTO-Retractable-Foldable-Aluminum/dp/B0DRT7SKWX/" }
         ]
       }
     ]
