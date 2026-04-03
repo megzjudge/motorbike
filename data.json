@@ -119,52 +119,21 @@
   {
     "type": "shop_gallery",
     "title": "Fun Things I've Bought for the Bike",
-    "items": [
-      "title": "Accessories",
-      "items": [
-        { "image": "images/screws.png", "url": "https://www.ebay.com.au/itm/156399205324" },
-        { "image": "images/stand_protector.png", "url": "https://www.temu.com/au/high-quality-motorcycle-footpeg-extension-plate--in--side-stand-support-plate-accessory-for-street-bikes-g-601105346977493.html" },
-        { "image": "images/break_lock.png", "url": "https://www.temu.com/au/-lock-for-motorcycles-and-scooters-a-strong-anti-theft-device-featuring-an-ergonomic-handle-designed-for-motorcycles-and-electric-vehicles-a-safety-for-bikes-ideal-for-garage-or-outdoor-settings-easy-to-set-up-and--g-606340881681350.html" },
-        { "image": "images/splash_guard.png", "url": "https://www.temu.com/au/bicycle-mountain-bike-road-bike-disc-brake-splash-guard-oil-stain-cleaning-plate-chain-cleaning-tool-g-606237064327669.html" },
-        { "image": "images/sticker_gps.png", "url": "https://www.temu.com/au/gps--matte-vinyl-decals-self--automotive-stickers-with-vibrant-high-quality-design-single-use-front-windshield-decal-for-cars-trucks-suvs-easy-application--removal-car-vinyl-stickers-vehicle-g-601103486862347.html" },
-        { "image": "images/tank_attachment.png", "url": "https://www.temu.com/au/motorcycle-tank-bag-with-molle-system--bag-attachment-heavy-duty-design-tool-free-installation-compatible-with-for--mm-for--motorcycles-rider--bag--bag-in-one-for-long-rides-off--black-g-601103427529373.html" },
-        { "image": "images/saddle_bags.png", "url": "https://www.temu.com/au/large-capacity-side-bag-for-motorcycles-designed-to-hold-a-full-helmet-and-other-riding-essentials-g-601099527575848.html" },
-        { "image": "images/item2.png", "url": "https://www.amazon.com.au/..." },
-        { "image": "images/item1.png", "url": "https://www.temu.com/..." },
-        { "image": "images/earplugs.png", "url": "https://www.temu.com/au/2pcs-noise-canceling-earplugs-with-case-reusable-tips-2-sizes-for-sleeping-studying-travel--relief-back-to-school-essentials-g-605921451297477.html" },
-        { "image": "images/item3.png", "url": "https://www.ebay.com.au/..." },
-        { "image": "images/waterproof_cover.png", "url": "https://www.temu.com/au/motorcycle-luggage-cover-outdoor-waterproof-riding--cover-lightweight-electric-bike-rack-increased-helmet--mesh-bag-g-606512076419424.html" },
-        { "image": "images/tyre_repair.png", "url": "https://www.temu.com/au/20-40-80pcs-vacuum-tire-repair-kit-with-spiral-nails--tool-for-cars-and-motorcycles-non-damaging-iron-mushroom-nails-for-tire-patching-g-601105056555125.html" },
-        { "image": "images/stickers_wheel.png", "url": "https://www.temu.com/au/4pcs--reflective-wolf-head-car-wheel-center-stickers-night-safety-warning-decals-for-bumper-and-window-g-601105670757046.html?refer_page_name=goods&refer_page_id=10032_1775158490671_e2lv0ncevq&refer_page_sn=10032&_x_sessn_id=k7d1tl2l0p" },
-        { "image": "images/hook.png", "url": "https://www.temu.com/au/motorcycle-hook-front-heavy-duty-cargo-rack-for-scooters-multi-functional-modified-hook-battery-cart-hook-delivery-vehicle-storage-hook-g-605603690839550.html" },
-        { "image": "images/hook2.png", "url": "https://www.temu.com/au/1pc-scooter-hanging-storage--mounting-hook-for-xiaomi-m365---bicycle-motorcycle-e-bikes--for-scooter-bike-motorcycle-accessories-scooter-storage-solution-g-601102029949785.html" },
-        { "image": "images/bag_cables.png", "url": "https://www.temu.com/au/retractable--rope-for-motorcycle-elastic-cord-with--35-43-inches-g-601103789217384.html" },
-        { "image": "images/item2.png", "url": "https://www.amazon.com.au/..." },
-        { "image": "images/shoe_covers.png", "url": "https://www.temu.com/au/1-2pairs-waterproof-shoe-covers-rain-shoes-protector-reusable-non-slip-rain-boots-sneakers-protector-silicone-shoe-covers-footwear-g-601099547676354.html" },
-        { "image": "images/hazard_protector.png", "url": "https://www.temu.com/au/for---400nk--motorcycle-switch-button-cover-with-extended-bracket-horn-button-protective-cover-installation-compatible-for--250-400-nk-motorcycles-g-601104497780114.html" },
-        { "image": "images/chain_brush.png", "url": "https://www.ebay.com.au/itm/256960870775" },
-        { "image": "images/seat.png", "url": "http://ebay.com.au/itm/287092771392" },
-        { "image": "images/item2.png", "url": "https://www.amazon.com.au/..." },
-        { "image": "images/item1.png", "url": "https://www.temu.com/..." },
-        { "image": "images/item2.png", "url": "https://www.amazon.com.au/..." },
-        { "image": "images/item1.png", "url": "https://www.temu.com/..." },
-        { "image": "images/item2.png", "url": "https://www.amazon.com.au/..." },
-        { "image": "images/hose_gun.png", "url": "https://www.ebay.com.au/itm/334916310665" },
-        { "image": "images/hose.png", "url": "https://www.ebay.com.au/itm/404941503250" },
-        { "image": "images/item1.png", "url": "https://www.temu.com/..." },
-        { "image": "images/item2.png", "url": "https://www.amazon.com.au/..." },
-        { "image": "images/item1.png", "url": "https://www.temu.com/..." },
-        { "image": "images/licence_plate_frame.png", "url": "https://www.temu.com/au/2023-2024-new-motorcycle-cnc-meter-frame--glare-shield-instrument-display-guard-for-----2022-g-601105797811353.html" },
-        { "image": "images/item1.png", "url": "https://www.temu.com/..." },
-        { "image": "images/item2.png", "url": "https://www.amazon.com.au/..." },
-        { "image": "images/item1.png", "url": "https://www.temu.com/..." },
-        { "image": "images/item2.png", "url": "https://www.amazon.com.au/..." },
-        { "image": "images/stand.png", "url": "https://www.amazon.com.au/Motorcycle-Wheel-cleaning-stand-Replacement/dp/B075N73R26/" },
-        { "image": "images/neck_whale.png", "url": "https://www.temu.com/au/fashionable-knitted-neck-gaiter-with-whale-pattern-polyester-95-and-elastane-5-multifunctional-neck-scarf-and-face-mask-for-outdoor-sports-and-sun-protection-g-601099768087769.html" },
-        { "image": "images/neck_fox.png", "url": "https://www.temu.com/au/-forest-fox-neck-gaiter-with-glasses-stylish-polyester-face-mask-neck-scarf-and-magnet-for-outdoor-activities-outdoor-gear-vibrant-animal-print-durable-neck-gaiter-g-601101195957759.html" },
-        { "image": "images/neck_wolf.png", "url": "https://www.temu.com/au/-mystical-wolf--neck-gaiter-face-mask-lightweight-polyester-knit-bandana-stretchable-95-polyester-5-elastane-fabric-breathable-and-moisture-wicking-motorcycle-scarf-g-601099724112613.html" },
-        { "image": "images/neck_elephant.png", "url": "https://www.temu.com/au/vibrant-neon-elephant-print-scarf-colorful-digital-printed-neck-face-mask-polyester-lightweight-stylish-for-casual-attire-elephant-deco-g-601100819297123.html" }
-      ],
+    "sections": [
+      {
+        "title": "Lights",
+        "items": [
+          { "image": "images/light1.png", "url": "..." },
+          { "image": "images/light2.png", "url": "..." }
+        ]
+      },
+      {
+        "title": "Accessories",
+        "items": [
+          { "image": "images/acc1.png", "url": "..." },
+          { "image": "images/acc2.png", "url": "..." }
+        ]
+      }
     ]
   },
   {
