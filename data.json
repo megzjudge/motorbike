@@ -120,6 +120,7 @@
     "type": "shop_gallery",
     "title": "Fun Things I've Bought from Temu",
     "items": [
+      { "image": "images/screws.png", "url": "https://www.ebay.com.au/itm/156399205324" },
       { "image": "images/stand_protector.png", "url": "https://www.temu.com/au/high-quality-motorcycle-footpeg-extension-plate--in--side-stand-support-plate-accessory-for-street-bikes-g-601105346977493.html" },
       { "image": "images/break_lock.png", "url": "https://www.temu.com/au/-lock-for-motorcycles-and-scooters-a-strong-anti-theft-device-featuring-an-ergonomic-handle-designed-for-motorcycles-and-electric-vehicles-a-safety-for-bikes-ideal-for-garage-or-outdoor-settings-easy-to-set-up-and--g-606340881681350.html" },
       { "image": "images/splash_guard.png", "url": "https://www.temu.com/au/bicycle-mountain-bike-road-bike-disc-brake-splash-guard-oil-stain-cleaning-plate-chain-cleaning-tool-g-606237064327669.html" },
