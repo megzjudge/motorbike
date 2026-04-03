@@ -125,7 +125,8 @@
         "items": [
           { "image": "images/tyre_repair.png", "url": "https://www.temu.com/au/20-40-80pcs-vacuum-tire-repair-kit-with-spiral-nails--tool-for-cars-and-motorcycles-non-damaging-iron-mushroom-nails-for-tire-patching-g-601105056555125.html" },
           { "image": "images/screws.png", "url": "https://www.ebay.com.au/itm/156399205324" },
-          { "image": "images/stand_protector.png", "url": "https://www.temu.com/au/high-quality-motorcycle-footpeg-extension-plate--in--side-stand-support-plate-accessory-for-street-bikes-g-601105346977493.html" }
+          { "image": "images/stand_protector.png", "url": "https://www.temu.com/au/high-quality-motorcycle-footpeg-extension-plate--in--side-stand-support-plate-accessory-for-street-bikes-g-601105346977493.html" },
+          { "image": "images/screen_cover.png", "url": "https://www.temu.com/au/for--cf25022--2022-2023-motorcycle-screen-instrument-protection-film-screen-scratch-resistant-tpu-screen-protection-film-transparent-motorcycle-instrument-protection-g-601101995504505.html" }
         ]
       },
       {
@@ -176,7 +177,7 @@
           { "image": "images/neck_elephant.png", "url": "https://www.temu.com/au/vibrant-neon-elephant-print-scarf-colorful-digital-printed-neck-face-mask-polyester-lightweight-stylish-for-casual-attire-elephant-deco-g-601100819297123.html" },
           { "image": "images/brush.png", "url": "https://www.amazon.com.au/dp/B0FNW46F26" },
           { "image": "images/shoes_insoles.png", "url": "https://www.amazon.com.au/dp/B00PEOHA28" },
-          { "image": "images/skin_hydration.png", "url": "https://www.amazon.com.au/TIAM-Niacinamide-Vitamin-Arbutin-Hyperpigmentation/dp/B07MJ3PJ2N" }
+          { "image": "images/burn_hydration_dryness.png", "url": "https://www.amazon.com.au/CeraVe-Facial-Moisturising-Lotion-1-75oz/dp/B0BT6VDJ5M/" }
         ]
       },
       {
@@ -187,13 +188,12 @@
           { "image": "images/bag_cables.png", "url": "https://www.temu.com/au/retractable--rope-for-motorcycle-elastic-cord-with--35-43-inches-g-601103789217384.html" },
           { "image": "images/tank_attachment.png", "url": "https://www.temu.com/au/motorcycle-tank-bag-with-molle-system--bag-attachment-heavy-duty-design-tool-free-installation-compatible-with-for--mm-for--motorcycles-rider--bag--bag-in-one-for-long-rides-off--black-g-601103427529373.html" },
           { "image": "images/saddle_bags.png", "url": "https://www.temu.com/au/large-capacity-side-bag-for-motorcycles-designed-to-hold-a-full-helmet-and-other-riding-essentials-g-601099527575848.html" },
-          { "image": "images/burn_hydration_dryness.png", "url": "https://www.amazon.com.au/dp/B09HT75K5Z" }
+          { "image": "images/padlock.png", "url": "https://www.amazon.com.au/dp/B09HT75K5Z" },
         ]
       },
       {
         "title": "Weather",
         "items": [
-          { "image": "images/padlock.png", "url": "https://www.amazon.com.au/CeraVe-Facial-Moisturising-Lotion-1-75oz/dp/B0BT6VDJ5M/" },
           { "image": "images/waterproof_cover.png", "url": "https://www.temu.com/au/motorcycle-luggage-cover-outdoor-waterproof-riding--cover-lightweight-electric-bike-rack-increased-helmet--mesh-bag-g-606512076419424.html" },
           { "image": "images/shoe_covers.png", "url": "https://www.temu.com/au/1-2pairs-waterproof-shoe-covers-rain-shoes-protector-reusable-non-slip-rain-boots-sneakers-protector-silicone-shoe-covers-footwear-g-601099547676354.html" }
         ]
