@@ -92,7 +92,7 @@
     "image": "images/cfmoto_300sr_bike.png",
     "part": "Motorbike",
     "brand": "CFMoto",
-    "brand_url": "https://www.youtube.com/watch?v=HNjjPMFiL24",
+    "brand_url": "https://grokipedia.com/page/CFMoto",
     "brand_flag": "🇨🇳",
     "version": "300SR",
     "livery": "PrüstelGP",
@@ -109,6 +109,7 @@
     "breaks": "4 piston front / 1 piston back",
     "colours": "The 2023 Moto3 season will also bring a distinctly Aussie flavour to the CFMOTO Racing Prüstel GP team, with Australia’s Joel Kelso signing on to race the KTM hardware alongside Spain’s Xavier Artigas Lopez.",
     "video_url": [
+      "https://www.youtube.com/watch?v=HNjjPMFiL24",
       "https://www.youtube.com/watch?v=Ehc9fZQSKw0",
       "https://www.youtube.com/watch?v=crD0hfEFvvU",
       "https://www.youtube.com/watch?v=PoRLxh8dmfY",
