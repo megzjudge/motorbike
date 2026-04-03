@@ -88,34 +88,7 @@
     ],
     "video_url": "https://www.youtube.com/watch?v=OuXnmkpWLCk"
   },
-  {
-    "image": "images/cfmoto_300sr_bike.png",
-    "part": "Motorbike",
-    "brand": "CFMoto",
-    "brand_url": "https://www.youtube.com/watch?v=HNjjPMFiL24",
-    "brand_flag": "🇨🇳",
-    "version": "300SR",
-    "livery": "PrüstelGP",
-    "version_url": "https://bikereview.com.au/new-livery-cfmoto-300sr-prustelgp-moto3-edition/",
-    "year": "2023",
-    "features": ["ABS", "App Tracking", "Sportmode"],
-    "seat height": "780mm",
-    "weight": "165kg",
-    "tank": "Bosch EFI 12L ~30 km/L",
-    "clutch": "6-speed Slipper",
-    "cylinder": "DOHC Single 292.4CC",
-    "power": "21.4kW / 8750rpm",
-    "torque": "25.3Nm / 7250rpm",
-    "breaks": "4 piston front / 1 piston back",
-    "colours": "The 2023 Moto3 season will also bring a distinctly Aussie flavour to the CFMOTO Racing Prüstel GP team, with Australia’s Joel Kelso signing on to race the KTM hardware alongside Spain’s Xavier Artigas Lopez.",
-    "video_url": [
-      "https://www.youtube.com/watch?v=Ehc9fZQSKw0",
-      "https://www.youtube.com/watch?v=crD0hfEFvvU",
-      "https://www.youtube.com/watch?v=PoRLxh8dmfY",
-      "https://www.youtube.com/watch?v=RjEgAsqLj5Y",
-      "https://www.youtube.com/watch?v=PoRLxh8dmfY&t=1659s"
-    ]
-  },
+
   {
     "type": "shop_gallery",
     "title": "Fun Things I've Bought for the Bike",
