@@ -88,7 +88,34 @@
     ],
     "video_url": "https://www.youtube.com/watch?v=OuXnmkpWLCk"
   },
-
+  {
+    "image": "images/cfmoto_300sr_bike.png",
+    "part": "Motorbike",
+    "brand": "CFMoto",
+    "brand_url": "https://www.youtube.com/watch?v=HNjjPMFiL24",
+    "brand_flag": "🇨🇳",
+    "version": "300SR",
+    "livery": "PrüstelGP",
+    "version_url": "https://bikereview.com.au/new-livery-cfmoto-300sr-prustelgp-moto3-edition/",
+    "year": "2023",
+    "features": ["ABS", "App Tracking", "Sportmode"],
+    "seat height": "780mm",
+    "weight": "165kg",
+    "tank": "Bosch EFI 12L ~30 km/L",
+    "clutch": "6-speed Slipper",
+    "cylinder": "DOHC Single 292.4CC",
+    "power": "21.4kW / 8750rpm",
+    "torque": "25.3Nm / 7250rpm",
+    "breaks": "4 piston front / 1 piston back",
+    "colours": "The 2023 Moto3 season will also bring a distinctly Aussie flavour to the CFMOTO Racing Prüstel GP team, with Australia’s Joel Kelso signing on to race the KTM hardware alongside Spain’s Xavier Artigas Lopez.",
+    "video_url": [
+      "https://www.youtube.com/watch?v=Ehc9fZQSKw0",
+      "https://www.youtube.com/watch?v=crD0hfEFvvU",
+      "https://www.youtube.com/watch?v=PoRLxh8dmfY",
+      "https://www.youtube.com/watch?v=RjEgAsqLj5Y",
+      "https://www.youtube.com/watch?v=PoRLxh8dmfY&t=1659s"
+    ]
+  },
   {
     "type": "shop_gallery",
     "title": "Fun Things I've Bought for the Bike",
@@ -146,7 +173,7 @@
           { "image": "images/neck_whale.png", "url": "https://www.temu.com/au/fashionable-knitted-neck-gaiter-with-whale-pattern-polyester-95-and-elastane-5-multifunctional-neck-scarf-and-face-mask-for-outdoor-sports-and-sun-protection-g-601099768087769.html" },
           { "image": "images/neck_fox.png", "url": "https://www.temu.com/au/-forest-fox-neck-gaiter-with-glasses-stylish-polyester-face-mask-neck-scarf-and-magnet-for-outdoor-activities-outdoor-gear-vibrant-animal-print-durable-neck-gaiter-g-601101195957759.html" },
           { "image": "images/neck_wolf.png", "url": "https://www.temu.com/au/-mystical-wolf--neck-gaiter-face-mask-lightweight-polyester-knit-bandana-stretchable-95-polyester-5-elastane-fabric-breathable-and-moisture-wicking-motorcycle-scarf-g-601099724112613.html" },
-          { "image": "images/neck_elephant.png", "url": "https://www.temu.com/au/vibrant-neon-elephant-print-scarf-colorful-digital-printed-neck-face-mask-polyester-lightweight-stylish-for-casual-attire-elephant-deco-g-601100819297123.html" }
+          { "image": "images/neck_elephant.png", "url": "https://www.temu.com/au/vibrant-neon-elephant-print-scarf-colorful-digital-printed-neck-face-mask-polyester-lightweight-stylish-for-casual-attire-elephant-deco-g-601100819297123.html" },
           { "image": "images/brush.png", "url": "https://www.amazon.com.au/dp/B0FNW46F26" },
           { "image": "images/shoes_insoles.png", "url": "https://www.amazon.com.au/dp/B00PEOHA28" }
         ]
