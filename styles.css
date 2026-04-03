@@ -198,6 +198,19 @@ body {
     background: white;
 }
 
+.shop-subsection {
+    margin-bottom: 18px;
+}
+
+.shop-subheader {
+    padding: 12px 24px 6px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #01b8c6;
+    text-transform: uppercase;
+}
+
 /* DATA CARD */
 .data-card {
     border: 3px solid #01b8c6;
