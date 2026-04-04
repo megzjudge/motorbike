@@ -5,7 +5,9 @@
     "brand": "Scorpion Exo",
     "brand_flag": "🇦🇺",
     "version": "EXO-491",
-    "version_url": "https://www.mcas.com.au/scorpion-exo-491-helmet-matte-black-se48100100-p",
+    "version_url": "https://www.scorpionexohelmets.com.au/scorpion-exo-491-helmet-matte-black-3xl~112",
+    "from": "MCAS",
+    "from_url": "https://www.mcas.com.au/scorpion-exo-491-helmet-matte-black-se48100100-p",
     "safety_rating": [
       {
         "text": "ECE 22.06"
@@ -32,6 +34,8 @@
     "brand_flag": "🇦🇺",
     "version": "Flow Ladies Gloves Blk/Wht XS",
     "version_url": "https://www.mcas.com.au/shop/rjays-flow-womens-gloves-black-white-GL125BKWTDXS-P",
+    "from": "",
+    "from_url": "",
     "safety_rating": [
       {
         "text": "CE Level 1"
@@ -46,6 +50,8 @@
     "brand_flag": "🇫🇷",
     "version": "Exhaust",
     "version_url": "https://motorcyclestuff.com.au/collections/ixon-womens-jackets/products/ixon-exhaust-womens-textile-jacket-black",
+    "from": "",
+    "from_url": "",
     "safety_rating": [
       {
         "text": "CE Level 2"
@@ -64,6 +70,8 @@
     "brand_flag": "🇦🇺",
     "version": "Sherrie Leggings",
     "version_url": "https://peakmotogear.com.au/products/motogirlsherrieleggings",
+    "from": "",
+    "from_url": "",
     "safety_rating": [
       {
         "text": "AAA Rated"
@@ -81,6 +89,8 @@
     "brand_flag": "🇮🇹",
     "version": "Freeland 2 Women's Gore-Tex Boots",
     "version_url": "https://www.amxsuperstores.com.au/products/dainese-freeland-2-womens-gore-tex-boots-black",
+    "from": "",
+    "from_url": "",
     "safety_rating": [
       {
         "text": "Category II - EN 13634"
@@ -108,6 +118,8 @@
     "torque": "25.3Nm / 7250rpm",
     "breaks": "4 piston front / 1 piston back",
     "colours": "The 2023 Moto3 season will also bring a distinctly Aussie flavour to the CFMOTO Racing Prüstel GP team, with Australia’s Joel Kelso signing on to race the KTM hardware alongside Spain’s Xavier Artigas Lopez.",
+    "from": "",
+    "from_url": "",
     "video_url": [
       "https://www.youtube.com/watch?v=HNjjPMFiL24",
       "https://www.youtube.com/watch?v=Ehc9fZQSKw0",
