@@ -130,6 +130,23 @@ function renderCardRows(data) {
 
         if (key === 'brand_flag' || key === 'brand_url') return;
 
+        // FROM
+        if (key === 'from') {
+            const fromContent = data.from_url
+                ? `<a href="${data.from_url}" target="_blank" rel="noopener noreferrer" class="version-tag">${value}</a>`
+                : `<span class="value">${value}</span>`;
+
+            rows.push(`
+                <div class="data-row">
+                    <span class="label">FROM</span>
+                    ${fromContent}
+                </div>
+            `);
+            return;
+        }
+
+        if (key === 'from_url') return;
+
         // VERSION
         if (key === 'version') {
             rows.push(`
