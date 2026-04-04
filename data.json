@@ -6,8 +6,6 @@
     "brand_flag": "🇦🇺",
     "version": "EXO-491",
     "version_url": "https://www.scorpionexohelmets.com.au/scorpion-exo-491-helmet-matte-black-3xl~112",
-    "from": "MCAS Alexandria",
-    "from_url": "https://www.mcas.com.au/scorpion-exo-491-helmet-matte-black-se48100100-p",
     "safety_rating": [
       {
         "text": "ECE 22.06"
@@ -25,6 +23,8 @@
         "url": "https://sharp.dft.gov.uk/helmets/scorpion-exo-491/"
       }
     ],
+    "from": "MCAS Alexandria",
+    "from_url": "https://www.mcas.com.au/scorpion-exo-491-helmet-matte-black-se48100100-p",
     "video_url": "https://www.youtube.com/watch?v=KqqAZaFgXhY"
   },
   {
@@ -33,14 +33,13 @@
     "brand": "Rjays",
     "brand_flag": "🇦🇺",
     "version": "Flow Ladies Gloves Blk/Wht XS",
-    "from": "MCAS Alexandria",
-    "from_url": "https://www.mcas.com.au/shop/rjays-flow-womens-gloves-black-white-GL125BKWTDXS-P",
     "safety_rating": [
       {
         "text": "CE Level 1"
       }
     ],
-    "video_url": ""
+    "from": "MCAS Alexandria",
+    "from_url": "https://www.mcas.com.au/shop/rjays-flow-womens-gloves-black-white-GL125BKWTDXS-P",
   },
   {
     "image": "images/exhaust_jacket.png",
@@ -48,8 +47,6 @@
     "brand": "Ixon",
     "brand_flag": "🇫🇷",
     "version": "Exhaust",
-    "from": "Motorcycle Stuff Alexandria",
-    "from_url": "https://motorcyclestuff.com.au/products/ixon-exhaust-womens-textile-jacket-black",
     "safety_rating": [
       {
         "text": "CE Level 2"
@@ -59,6 +56,8 @@
         "url": "https://www.motocap.com.au/product/exhaust-ladies"
       }
     ],
+    "from": "Motorcycle Stuff Alexandria",
+    "from_url": "https://motorcyclestuff.com.au/products/ixon-exhaust-womens-textile-jacket-black",
     "video_url": "https://motorcyclestuff.com.au/collections/ixon-womens-jackets/products/ixon-exhaust-womens-textile-jacket-black?tolstoyAutoOpen=eoh4xluzwyodu&utm_source=tolstoy&utm_medium=feed_share&tolstoyStartVideo=aa1e94ca-d51d-4aca-8c1e-fe6f6d125f98"
   },
   {
@@ -68,8 +67,6 @@
     "brand_flag": "🇦🇺",
     "version": "Sherrie Leggings",
     "version_url": "https://peakmotogear.com.au/products/motogirlsherrieleggings",
-    "from": "AMX Auburn",
-    "from_url": "",
     "safety_rating": [
       {
         "text": "AAA Rated"
@@ -78,6 +75,8 @@
         "text": "CE Level 2"
       }
     ],
+    "from": "AMX Auburn",
+    "from_url": "",
     "video_url": "https://www.youtube.com/watch?v=_AEG0nPdQEk"
   },
   {
@@ -87,13 +86,13 @@
     "brand_flag": "🇮🇹",
     "version": "Freeland 2 Women's Gore-Tex Boots",
     "version_url": "https://www.dainese.com/en/freeland-2-gore-tex---womens-waterproof-motorcycle-touring-boots-2017900051001.html",
-    "from": "AMX Auburn",
-    "from_url": "https://www.amxsuperstores.com.au/products/dainese-freeland-2-womens-gore-tex-boots-black",
     "safety_rating": [
       {
         "text": "Category II - EN 13634"
       }
     ],
+    "from": "AMX Auburn",
+    "from_url": "https://www.amxsuperstores.com.au/products/dainese-freeland-2-womens-gore-tex-boots-black",
     "video_url": "https://www.youtube.com/watch?v=OuXnmkpWLCk"
   },
   {
