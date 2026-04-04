@@ -155,7 +155,8 @@
         "items": [
           { "image": "images/hose.png", "url": "https://www.ebay.com.au/itm/404941503250" },
           { "image": "images/hose_gun.png", "url": "https://www.ebay.com.au/itm/334916310665" },
-          { "image": "images/cleaner_foam.png", "url": "https://www.amazon.com.au/dp/B0749VM3MB" }
+          { "image": "images/cleaner_foam.png", "url": "https://www.amazon.com.au/dp/B0749VM3MB" },
+          { "image": "images/cloths.png", "url": "https://www.amazon.com.au/MR-SIGA-Cleaning-Reusable-Absorbent-Microfiber/dp/B0CFXZ6GZS/" }
         ]
       },
       {
@@ -204,7 +205,8 @@
         "title": "Accessories",
         "items": [
           { "image": "images/mirrors.png", "url": "https://www.amazon.com.au/Motorcycle-Rotating-Universal-Adjustable-Replacement/dp/B0CM7YMW7F/" },
-          { "image": "images/lever_clutch_break.png", "url": "https://www.amazon.com.au/MTCRIGHTER-CFMOTO-Retractable-Foldable-Aluminum/dp/B0DRT7SKWX/" }
+          { "image": "images/lever_clutch_break.png", "url": "https://www.amazon.com.au/MTCRIGHTER-CFMOTO-Retractable-Foldable-Aluminum/dp/B0DRT7SKWX/" },
+          { "image": "images/auto_turn_signal.png", "url": "https://st2-systems.com/st2-turn-system/" }
         ]
       }
     ]
