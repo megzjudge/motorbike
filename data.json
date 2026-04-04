@@ -166,6 +166,7 @@
         "items": [
           { "image": "images/key_cover.png", "url": "https://www.temu.com/au/key-cover-shell-keychain-and-holder-for-modified-motorcycles-including--models-250sr---450mt-700clx--700mt--nk250--400nk-300nk-400gt-and--g-601102494727339.html" },
           { "image": "images/licence_plate_frame.png", "url": "https://www.temu.com/au/2023-2024-new-motorcycle-cnc-meter-frame--glare-shield-instrument-display-guard-for-----2022-g-601105797811353.html" },
+          { "image": "images/stickers_fuel_tank.png", "url": "https://www.temu.com/au/3d-rubber-gas-fuel-oil-pad-cover-decals-for-universal-motorcycle-tank-cafe-racer-vintage-style-g-601099836545888.html" },
           { "image": "images/stickers_helmet.png", "url": "https://www.temu.com/au/pair-of-motorcycle-decorative-reflective-strips-for-night-riding-safety-warning-signs-self--reflective-decals-gift-g-601100088127291.html" },
           { "image": "images/stickers_wheel.png", "url": "https://www.temu.com/au/4pcs--reflective-wolf-head-car-wheel-center-stickers-night-safety-warning-decals-for-bumper-and-window-g-601105670757046.html" },
           { "image": "images/stickers_rabbit.png", "url": "https://www.temu.com/au/2d-flat-2d-flat-sticker-car-decal-suitable-for-cars-windows-laptops-bumpers-trunk-motorcycles-and-camping-bikes-easter-theme-creative-rabbit-stickers-2d-g-601101423356550.html" },
@@ -181,14 +182,15 @@
           { "image": "images/glasses_blue_light_blocking.png", "url": "https://www.amazon.com.au/dp/B09KBR76LJ" },
           { "image": "images/seat.png", "url": "http://ebay.com.au/itm/287092771392" },
           { "image": "images/insoles.png", "url": "https://linktr.ee/vixenbike" },
+          { "image": "images/sweat_pads.png", "url": "https://www.temu.com/au/60-disposable-underarm-sweat-pads-suitable-for-a-months--ideal-for-an-lifestyle-absorbent-pads--liners-that--dry-and-hygienic-during-sports-and-outdoor-activities-g-601100098912425.html" },
           { "image": "images/water.png", "url": "https://www.amazon.com.au/Hydration-Reservoir-Military-Replacement-Insulated/dp/B071DQSZB8/" },
           { "image": "images/bottle.png", "url": "https://www.amazon.com.au/dp/B07KD449LM" },
-          { "image": "images/hotday_damp_cloth.png", "url": "https://www.temu.com/au/1pc-camping-towels-cooling-towel-ice-towels-for-neck-and--breathable--towel-for-yoga-workout-gym-golf-camping-stay-cool-and-refreshed-all-day-outdoor-sports-towel-for-instant-cooling-relief-g-601099559042618.html" },
           { "image": "images/neck_whale.png", "url": "https://www.temu.com/au/fashionable-knitted-neck-gaiter-with-whale-pattern-polyester-95-and-elastane-5-multifunctional-neck-scarf-and-face-mask-for-outdoor-sports-and-sun-protection-g-601099768087769.html" },
           { "image": "images/neck_fox.png", "url": "https://www.temu.com/au/-forest-fox-neck-gaiter-with-glasses-stylish-polyester-face-mask-neck-scarf-and-magnet-for-outdoor-activities-outdoor-gear-vibrant-animal-print-durable-neck-gaiter-g-601101195957759.html" },
           { "image": "images/neck_wolf.png", "url": "https://www.temu.com/au/-mystical-wolf--neck-gaiter-face-mask-lightweight-polyester-knit-bandana-stretchable-95-polyester-5-elastane-fabric-breathable-and-moisture-wicking-motorcycle-scarf-g-601099724112613.html" },
           { "image": "images/neck_elephant.png", "url": "https://www.temu.com/au/vibrant-neon-elephant-print-scarf-colorful-digital-printed-neck-face-mask-polyester-lightweight-stylish-for-casual-attire-elephant-deco-g-601100819297123.html" },
           { "image": "images/shoe_covers.png", "url": "https://www.temu.com/au/1-2pairs-waterproof-shoe-covers-rain-shoes-protector-reusable-non-slip-rain-boots-sneakers-protector-silicone-shoe-covers-footwear-g-601099547676354.html" },
+          { "image": "images/hotday_damp_cloth.png", "url": "https://www.temu.com/au/1pc-camping-towels-cooling-towel-ice-towels-for-neck-and--breathable--towel-for-yoga-workout-gym-golf-camping-stay-cool-and-refreshed-all-day-outdoor-sports-towel-for-instant-cooling-relief-g-601099559042618.html" },
           { "image": "images/brush.png", "url": "https://www.amazon.com.au/dp/B0FNW46F26" }
         ]
       },
