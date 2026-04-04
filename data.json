@@ -128,8 +128,8 @@
           { "image": "images/battery_jumper.png", "url": "https://www.ebay.com.au/itm/156419810697" },
           { "image": "images/screen_cover.png", "url": "https://www.temu.com/au/for--cf25022--2022-2023-motorcycle-screen-instrument-protection-film-screen-scratch-resistant-tpu-screen-protection-film-transparent-motorcycle-instrument-protection-g-601101995504505.html" },
           { "image": "images/screws.png", "url": "https://www.ebay.com.au/itm/156399205324" },
-          { "image": "images/screw_looseners.png", "url": "https://www.amazon.com.au/WORKPRO-W001308A-3-piece-Locking-Straight/dp/B0109PTUYM/" },
           { "image": "images/screw_loosener.png", "url": "https://www.ebay.com.au/itm/227141884746" },
+          { "image": "images/screw_looseners.png", "url": "https://www.amazon.com.au/WORKPRO-W001308A-3-piece-Locking-Straight/dp/B0109PTUYM/" },
           { "image": "images/stand_protector.png", "url": "https://www.temu.com/au/high-quality-motorcycle-footpeg-extension-plate--in--side-stand-support-plate-accessory-for-street-bikes-g-601105346977493.html" }
         ]
       },
@@ -157,10 +157,10 @@
       {
         "title": "Cleaning Bike",
         "items": [
+          { "image": "images/cloths.png", "url": "https://www.amazon.com.au/MR-SIGA-Cleaning-Reusable-Absorbent-Microfiber/dp/B0CFXZ6GZS/" },
           { "image": "images/hose.png", "url": "https://www.ebay.com.au/itm/404941503250" },
-          { "image": "images/hose_gun.png", "url": "https://www.ebay.com.au/itm/334916310665" },
           { "image": "images/cleaner_foam.png", "url": "https://www.amazon.com.au/dp/B0749VM3MB" },
-          { "image": "images/cloths.png", "url": "https://www.amazon.com.au/MR-SIGA-Cleaning-Reusable-Absorbent-Microfiber/dp/B0CFXZ6GZS/" }
+          { "image": "images/hose_gun.png", "url": "https://www.ebay.com.au/itm/334916310665" }
         ]
       },
       {
