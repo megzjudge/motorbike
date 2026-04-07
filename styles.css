@@ -53,11 +53,10 @@ body {
 }
     
 .header-right {
-    width: 68px;
-    height: 68px;
+    width: 55px;
+    height: 55px;
     display: flex;
     align-items: left;
-    gap: 16px;
 }
 
 .content {
