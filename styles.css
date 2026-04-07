@@ -54,12 +54,12 @@ body {
 
 .header-logo-right {
     object-fit: contain;
-    gap: 20px;
 }
 
 .header-logo-right img {
     width: 68px;
     height: 68px;
+    padding-left: 20px;
 }
 
 .header-logo-right a img {
