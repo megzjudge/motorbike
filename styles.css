@@ -62,7 +62,7 @@ body {
     height: 68px;
 }
 
-.header-logo-right:last-child {
+.header-logo-right:nth-child(2) {
     width: 55px;
     height: 55px;
 }
