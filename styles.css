@@ -57,13 +57,13 @@ body {
 }
 
 .header-logo-right:first-child {
-    width: 55px;
-    height: 55px;
+    width: 68px;
+    height: 68px;
 }
 
 .header-logo-right:last-child {
-    width: 68px;
-    height: 68px;
+    width: 55px;
+    height: 55px;
 }
 
 .content {
