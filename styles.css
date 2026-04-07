@@ -442,6 +442,30 @@ body {
     opacity: 1;
 }
 
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.header-logo-right {
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.header-icon-link:hover .header-logo-right {
+    transform: scale(1.06);
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
     .header {
