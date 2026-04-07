@@ -57,12 +57,12 @@ body {
     gap: 20px;
 }
 
-.header-right img {
+.header-logo-right img {
     width: 68px;
     height: 68px;
 }
 
-.header-right a img {
+.header-logo-right a img {
     width: 55px;
     height: 55px;
 }
