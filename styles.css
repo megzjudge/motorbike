@@ -62,12 +62,6 @@ body {
     object-fit: contain;
 }
 
-.header-logo-right a img {
-    width: 55px;
-    height: 55px;
-    object-fit: contain;
-}
-
 .content {
     flex: 1;
     overflow-y: auto;
