@@ -61,7 +61,7 @@ body {
     height: 55px;
 }
 
-.header-logo-right:second-child {
+.header-logo-right:last-child {
     width: 68px;
     height: 68px;
 }
