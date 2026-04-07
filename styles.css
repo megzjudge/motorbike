@@ -52,6 +52,10 @@ body {
     color: white;
 }
 
+.header-logo-right {
+    object-fit: contain;
+}
+    
 .header-logo-right img {
     width: 68px;
     height: 68px;
