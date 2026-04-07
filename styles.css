@@ -51,12 +51,8 @@ body {
     letter-spacing: -1.5px;
     color: white;
 }
-
-.header-logo-right {
-    object-fit: contain;
-}
     
-.header-logo-right img {
+.header-right {
     width: 68px;
     height: 68px;
     object-fit: contain;
