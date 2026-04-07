@@ -53,9 +53,10 @@ body {
 }
 
 .header-logo-right {
-    width: 64px;
-    height: 64px;
+    width: 54px;
+    height: 54px;
     object-fit: contain;
+    gap: 20px;
 }
 
 .content {
