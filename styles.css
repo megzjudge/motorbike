@@ -53,10 +53,17 @@ body {
 }
 
 .header-logo-right {
-    width: 54px;
-    height: 54px;
     object-fit: contain;
-    gap: 20px;
+}
+
+.header-logo-right:first-child {
+    width: 55px;
+    height: 55px;
+}
+
+.header-logo-right:second-child {
+    width: 68px;
+    height: 68px;
 }
 
 .content {
