@@ -57,14 +57,14 @@ body {
     gap: 20px;
 }
 
-.header-logo-right:first-child {
+.header-right img {
     width: 68px;
     height: 68px;
 }
 
-.header-logo-right:nth-child(2) {
-    width: 45px;
-    height: 45px;
+.header-right a img {
+    width: 55px;
+    height: 55px;
 }
 
 .content {
