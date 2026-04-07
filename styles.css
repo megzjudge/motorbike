@@ -54,6 +54,7 @@ body {
 
 .header-logo-right {
     object-fit: contain;
+    gap: 20px;
 }
 
 .header-logo-right:first-child {
