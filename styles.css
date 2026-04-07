@@ -60,11 +60,6 @@ body {
     gap: 16px;
 }
 
-.header-right a {
-    width: 55px;
-    height: 55px;
-}
-
 .content {
     flex: 1;
     overflow-y: auto;
