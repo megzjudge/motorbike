@@ -241,9 +241,7 @@
         "title": "First-Aid Kit",
         "items": [
           { "image": "images/first_aid_kit.png", "url": "http://amazon.com.au/Mini-First-Aid-Kit-Waterproof/dp/B0DFQK98D7/" },
-          { "image": "images/first_aid_kit.png", "url": "https://www.coles.com.au/product/savlon-antiseptic-cream-75g-197277" },
-
-          
+          { "image": "images/first_aid_kit.png", "url": "https://www.coles.com.au/product/savlon-antiseptic-cream-75g-197277" }
         ]
       },
     ]
