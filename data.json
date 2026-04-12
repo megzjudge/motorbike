@@ -229,7 +229,7 @@
           { "image": "images/neck_wolf.png", "url": "https://www.temu.com/au/-mystical-wolf--neck-gaiter-face-mask-lightweight-polyester-knit-bandana-stretchable-95-polyester-5-elastane-fabric-breathable-and-moisture-wicking-motorcycle-scarf-g-601099724112613.html" },
           { "image": "images/neck_elephant.png", "url": "https://www.temu.com/au/vibrant-neon-elephant-print-scarf-colorful-digital-printed-neck-face-mask-polyester-lightweight-stylish-for-casual-attire-elephant-deco-g-601100819297123.html" },
           { "image": "images/shoe_covers.png", "url": "https://www.temu.com/au/1-2pairs-waterproof-shoe-covers-rain-shoes-protector-reusable-non-slip-rain-boots-sneakers-protector-silicone-shoe-covers-footwear-g-601099547676354.html" },
-          { "image": "images/socks.png", "url": "https://www.amazon.com.au/s?k=fox+river+military+boot+socks" },
+          { "image": "images/socks_water_repelling_odour_Prevention.png", "url": "https://www.amazon.com.au/s?k=fox+river+military+boot+socks" },
           { "image": "images/brush.png", "url": "https://www.amazon.com.au/dp/B0FNW46F26" }
         ]
       },
@@ -251,20 +251,20 @@
           { "image": "images/first_aid_kit.png", "url": "http://amazon.com.au/Mini-First-Aid-Kit-Waterproof/dp/B0DFQK98D7/" },
           { "image": "images/wipes_rain_repellent.png", "url": "https://www.amazon.com.au/Invisible-Glass-Cleaner-Rain-Repellent/dp/B0FF9GLG3B/" },
           { "image": "images/eye_wash.png", "url": "https://www.amazon.com.au/Reclens-Eyewash-Eye-Cup-100/dp/B09MTFBHSL/" },
-          { "image": "images/wind_damage_protection.png", "url": "https://www.amazon.com.au/s?k=alcohol+free+occlusive+lip+balm+%28petroleum+jelly+beeswax%2C+shea+butter%2C+or+lanolin+based" },
-          { "image": "images/abrasion_cream.png", "url": "https://www.coles.com.au/product/savlon-antiseptic-cream-75g-197277" },
-          { "image": "images/sprain_and_bones_bandage.png", "url": "https://www.amazon.com.au/s?k=compression+cohesive+bandage+brown&s=price-asc-rank" },
-          { "image": "images/no_stab_me_in_back_scissors.png", "url": "https://www.amazon.com.au/ARSUK-Scissors-Fingernails-Pedicure-Stainless/dp/B002L1ZT66/" },
+          { "image": "images/lip_balm_wind_damage_protection.png", "url": "https://www.amazon.com.au/s?k=alcohol+free+occlusive+lip+balm+%28petroleum+jelly+beeswax%2C+shea+butter%2C+or+lanolin+based" },
+          { "image": "images/cream_abrasions.png", "url": "https://www.coles.com.au/product/savlon-antiseptic-cream-75g-197277" },
+          { "image": "images/bandage_sprain_and_bones.png", "url": "https://www.amazon.com.au/s?k=compression+cohesive+bandage+brown&s=price-asc-rank" },
+          { "image": "images/scissors_no_stab_me_in_back.png", "url": "https://www.amazon.com.au/ARSUK-Scissors-Fingernails-Pedicure-Stainless/dp/B002L1ZT66/" },
           { "image": "images/gloves_fluid_protection.png", "url": "https://www.ebay.com.au/itm/394571247962" },
           { "image": "images/pain_relief_low_drowziness.png", "url": "https://www.coles.com.au/product/nyal-paracetamol-liquid-capsules-16-pack-8799080" },
           { "image": "images/wipes_antibacterial_dirty.png", "url": "https://www.priceline.com.au/product/282383/wet-ones-be-gentle-sensitive-antibacterial-hand-face-wipes-15-wipes" },
           { "image": "images/wipes_wound_no_stinging.png", "url": "https://www.ebay.com.au/itm/285925105888" },
-          { "image": "images/emergency_shock_&_cold_protection.png", "url": "https://www.amazon.com.au/s?k=Foil+emergency+blanket+150x210" },
-          { "image": "images/normal_wound_bandage.png", "url": "https://www.amazon.com.au/Matrons-Crepe-Elastic-Bandage-Length/dp/B0B1Q4NZ3M/" },
+          { "image": "images/blanket_emergency_shock_&_cold_protection.png", "url": "https://www.amazon.com.au/s?k=Foil+emergency+blanket+150x210" },
+          { "image": "images/bandage_normal_wound.png", "url": "https://www.amazon.com.au/Matrons-Crepe-Elastic-Bandage-Length/dp/B0B1Q4NZ3M/" },
           { "image": "images/travel_comb.png", "url": "https://www.amazon.com.au/Chicago-Comb-Anti-static-Fine-tooth-Mustache/dp/B088NPVCG1/" },
           { "image": "images/shopping_bag.png", "url": "https://www.amazon.com.au/s?k=reusable+shopping+bags+foldable" },
           { "image": "images/period_cup.png", "url": "https://www.coles.com.au/product/tom-organic-the-period-cup-size-2-1-each-3757957" },
-          { "image": "images/wound_seal_cream.png", "url": "https://www.chemistwarehouse.com.au/buy/100951/stratamed-advanced-film-forming-wound-dressing-5g" }
+          { "image": "images/cream_seal_wounds.png", "url": "https://www.chemistwarehouse.com.au/buy/100951/stratamed-advanced-film-forming-wound-dressing-5g" }
         ]
       }
     ]
