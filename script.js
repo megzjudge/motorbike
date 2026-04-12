@@ -104,11 +104,9 @@ function renderCardRows(data) {
     const rows = [];
 
     Object.entries(data).forEach(([key, value]) => {
-
         if (['image', 'type', 'title', 'thumbnail'].includes(key)) return;
         if (isEmptyValue(value)) return;
 
-        // PART
         if (key === 'part') {
             rows.push(`
                 <div class="data-row">
@@ -119,7 +117,6 @@ function renderCardRows(data) {
             return;
         }
 
-        // BRAND
         if (key === 'brand') {
             const brandContent = data.brand_url
                 ? `<a href="${data.brand_url}" target="_blank" rel="noopener noreferrer" class="version-tag">${value}</a>`
@@ -136,10 +133,8 @@ function renderCardRows(data) {
             `);
             return;
         }
-
         if (key === 'brand_flag' || key === 'brand_url') return;
 
-        // FROM
         if (key === 'from') {
             const fromContent = data.from_url
                 ? `<a href="${data.from_url}" target="_blank" rel="noopener noreferrer" class="version-tag">${value}</a>`
@@ -153,10 +148,8 @@ function renderCardRows(data) {
             `);
             return;
         }
-
         if (key === 'from_url') return;
 
-        // VERSION
         if (key === 'version') {
             rows.push(`
                 <div class="data-row">
@@ -170,10 +163,8 @@ function renderCardRows(data) {
             `);
             return;
         }
-
         if (key === 'version_url') return;
 
-        // SAFETY
         if (key === 'safety_rating') {
             const items = value
                 .filter(r => r && r.text)
@@ -195,10 +186,8 @@ function renderCardRows(data) {
             return;
         }
 
-        // VIDEO
         if (key === 'video_url') {
             const videos = Array.isArray(value) ? value.filter(Boolean) : [value];
-
             if (videos.length) {
                 const links = videos.map((url, i) => {
                     const name = getVideoSiteName(url);
@@ -219,7 +208,6 @@ function renderCardRows(data) {
             return;
         }
 
-        // DEFAULT AUTO FIELD
         const generic = renderGenericRow(key, value);
         if (generic) rows.push(generic);
     });
@@ -236,7 +224,6 @@ function setupTooltips() {
     links.forEach(link => {
         const text = link.getAttribute('data-tooltip');
 
-        // Desktop mouse
         link.addEventListener('mouseenter', (e) => {
             document.getElementById('tooltip-text').textContent = text;
             tooltip.classList.add('show');
@@ -249,7 +236,6 @@ function setupTooltips() {
             tooltip.classList.remove('show');
         });
 
-        // Mobile touch
         link.addEventListener('touchstart', (e) => {
             if (e.touches.length > 0) {
                 document.getElementById('tooltip-text').textContent = text;
@@ -259,9 +245,7 @@ function setupTooltips() {
         });
 
         link.addEventListener('touchmove', (e) => {
-            if (e.touches.length > 0) {
-                updateTooltipPosition(e.touches[0]);
-            }
+            if (e.touches.length > 0) updateTooltipPosition(e.touches[0]);
         });
 
         link.addEventListener('touchend', () => {
@@ -273,10 +257,8 @@ function setupTooltips() {
 function updateTooltipPosition(e) {
     const tooltip = document.getElementById('custom-tooltip');
     if (!tooltip) return;
-
     const x = e.clientX + 18;
     const y = e.clientY + 24;
-
     tooltip.style.left = `${x}px`;
     tooltip.style.top = `${y}px`;
 }
@@ -308,7 +290,8 @@ function renderAllData() {
                                        target="_blank" 
                                        rel="noopener noreferrer" 
                                        class="shop-gallery-link"
-                                       data-tooltip="${getImageTooltipName(item.image)}">
+                                       data-tooltip="${getImageTooltipName(item.image)}"
+                                       ${item.note ? `title="${item.note}"` : ''}>
                                         <img src="${item.image}" class="shop-gallery-image">
                                     </a>
                                 `).join('')}
@@ -369,7 +352,7 @@ function renderAllData() {
     });
 
     setupLightbox();
-    setupTooltips();          // ← D. This is now included
+    setupTooltips();
 }
 
 function setupLightbox() {
@@ -384,15 +367,11 @@ function setupLightbox() {
         });
     });
 
-    if (closeBtn) {
-        closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
-    }
+    if (closeBtn) closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
 
     if (lightbox) {
         lightbox.addEventListener('click', e => {
-            if (e.target === lightbox) {
-                lightbox.classList.remove('active');
-            }
+            if (e.target === lightbox) lightbox.classList.remove('active');
         });
     }
 }
