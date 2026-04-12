@@ -212,7 +212,15 @@
         "items": [
           { "image": "images/earplugs.png", "url": "https://www.temu.com/au/2pcs-noise-canceling-earplugs-with-case-reusable-tips-2-sizes-for-sleeping-studying-travel--relief-back-to-school-essentials-g-605921451297477.html" },
           { "image": "images/key_wrap_anti_scratch.png", "url": "https://www.amazon.com.au/Hide-Drink-Keychain-Organizer-Silencer/dp/B0BT5YY9VN/" },
-          { "image": "images/cream_prevent_burn_hydration_dryness.png", "url": "https://www.amazon.com.au/CeraVe-Facial-Moisturising-Lotion-1-75oz/dp/B0BT6VDJ5M/" },
+          {
+              "image": "images/cream_prevent_burn_hydration_dryness.png",
+              "url": "https://www.amazon.com.au/CeraVe-Facial-Moisturising-Lotion-1-75oz/dp/B0BT6VDJ5M/",
+              "note": [
+                "UV filters: Ethylhexyl Salicylate, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Butyl Methoxydibenzoylmethane, Ethylhexyl Triazone, as +15 it blocks 93% of UV, leaving some for your vitamin D each day (stops depression, heightens testosterone, etc).",
+                "Dehydration (from sunlight): Glycerin and Sodium hyaluronate (humectants).",
+                "Dryness (wind defense): Niacinamide, Ceramide NP, Ceramide AP, Ceramide EOP, Cholesterol and Phytosphingosine, and no Alcohol (drying)."
+            ]
+          }
           { "image": "images/glasses_blue_light_blocking.png", "url": "https://www.amazon.com.au/dp/B09KBR76LJ" },
           { "image": "images/bottle_holder_2.png", "url": "https://www.temu.com/au/for-bicycle-water-bottle-holder-universal-model-for-bicycles-motorcycles-adjustable-clamp--6-to-1-56-inches-sturdy-and-portable-convenient-drink-holder-g-605529065785522.html" },
           { "image": "images/bottle_holder.png", "url": "http://temu.com/au/motorcycle-cup-holder-electric-bike-mountain-bike-multi-functional-water-bottle-holder-bumper-handlebar-cup-holder-g-606034194212147.html" },
