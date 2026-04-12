@@ -37,6 +37,15 @@ function formatLabel(key) {
         .replace(/\b\w/g, char => char.toUpperCase());
 }
 
+function getImageTooltipName(imagePath) {
+    if (!imagePath || typeof imagePath !== 'string') return '';
+    const filename = imagePath.split('/').pop();
+    let name = filename.replace(/\.png$/i, '');
+    name = name.replace(/_/g, ' ').trim();
+    name = name.replace(/\b\w/g, char => char.toUpperCase());
+    return name || 'Item';
+}
+
 function isEmptyValue(value) {
     if (value === null || value === undefined) return true;
     if (typeof value === 'string' && value.trim() === '') return true;
@@ -241,7 +250,11 @@ function renderAllData() {
         
                             <div class="shop-gallery-grid">
                                 ${(sec.items || []).map(item => `
-                                    <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="shop-gallery-link">
+                                    <a href="${item.url}" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer" 
+                                       class="shop-gallery-link"
+                                       title="${getImageTooltipName(item.image)}">
                                         <img src="${item.image}" class="shop-gallery-image">
                                     </a>
                                 `).join('')}
