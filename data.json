@@ -188,6 +188,12 @@
         ]
       },
       {
+        "title": "Cleaning Gear",
+        "items": [
+          { "image": "images/helmet_lining_cleaner.png", "url": "helmet_lining_cleaner.png" }
+        ]
+      },
+      {
         "title": "Style",
         "items": [
           { "image": "images/key_cover.png", "url": "https://www.temu.com/au/key-cover-shell-keychain-and-holder-for-modified-motorcycles-including--models-250sr---450mt-700clx--700mt--nk250--400nk-300nk-400gt-and--g-601102494727339.html" },
