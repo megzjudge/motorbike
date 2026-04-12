@@ -10,43 +10,48 @@
 </head>
 <body>
     
-<div class="main-container">
-    <div class="header">
-        <div class="header-left">
-            <h1 class="title">MOTORBIKE</h1>
+    <div class="main-container">
+        <div class="header">
+            <div class="header-left">
+                <h1 class="title">MOTORBIKE</h1>
+            </div>
+    
+            <div class="header-right">
+                <img src="images/icon.png" alt="Motorbike Icon">
+            </div>
         </div>
-
-        <div class="header-right">
-            <img src="images/icon.png" alt="Motorbike Icon">
+    
+        <div class="content">
+            <div id="content-container">
+                <!-- Items will be appended here by JS -->
+            </div>
+    
+            <div class="footer-logos">
+                <a href="https://www.nrma.com.au/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/nrma.png" alt="NRMA">
+                </a>
+    
+                <a href="https://www.cfmoto.com.au/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/cfmoto.png" alt="CFMoto">
+                </a>
+                
+                <a href="https://instagram.com/vixenbike target="_blank" rel="noopener noreferrer">
+                    <img src="images/instagram.png" alt="Instagram Icon">
+                </a>
+            </div>
         </div>
     </div>
 
-    <div class="content">
-        <div id="content-container">
-            <!-- Items will be appended here by JS -->
-        </div>
-
-        <div class="footer-logos">
-            <a href="https://www.nrma.com.au/" target="_blank" rel="noopener noreferrer">
-                <img src="images/nrma.png" alt="NRMA">
-            </a>
-
-            <a href="https://www.cfmoto.com.au/" target="_blank" rel="noopener noreferrer">
-                <img src="images/cfmoto.png" alt="CFMoto">
-            </a>
-            
-            <a href="https://instagram.com/vixenbike target="_blank" rel="noopener noreferrer">
-                <img src="images/instagram.png" alt="Instagram Icon">
-            </a>
-        </div>
+    <div id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-image" src="" alt="">
     </div>
-</div>
 
-<div id="lightbox">
-    <span class="lightbox-close">&times;</span>
-    <img id="lightbox-image" src="" alt="">
-</div>
+    <div id="custom-tooltip" class="custom-tooltip">
+        <span id="tooltip-text"></span>
+    </div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
+    
 </body>
 </html>
