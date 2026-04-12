@@ -243,6 +243,7 @@
         "items": [
           { "image": "images/first_aid_kit.png", "url": "http://amazon.com.au/Mini-First-Aid-Kit-Waterproof/dp/B0DFQK98D7/" },
           { "image": "images/rain_repellent_wipes.png", "url": "https://www.amazon.com.au/Invisible-Glass-Cleaner-Rain-Repellent/dp/B0FF9GLG3B/" },
+          { "image": "images/eye_wash.png", "url": "https://www.amazon.com.au/Reclens-Eyewash-Eye-Cup-100/dp/B09MTFBHSL/" },
           { "image": "images/wind_damage_protection.png", "url": "https://www.amazon.com.au/s?k=alcohol+free+occlusive+lip+balm+%28petroleum+jelly+beeswax%2C+shea+butter%2C+or+lanolin+based" },
           { "image": "images/abrasion_cream.png", "url": "https://www.coles.com.au/product/savlon-antiseptic-cream-75g-197277" },
           { "image": "images/sprain_and_bones_bandage.png", "url": "https://www.amazon.com.au/s?k=compression+cohesive+bandage+brown&s=price-asc-rank" },
