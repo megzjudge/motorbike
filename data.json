@@ -191,6 +191,7 @@
         "title": "Cleaning Gear",
         "items": [
           { "image": "images/cleaner_helmet_lining.png", "url": "helmet_lining_cleaner.png" }
+          { "image": "images/cleaner_rain_repellent.png", "url": "https://www.amazon.com.au/Invisible-Glass-Cleaner-Rain-Repellent/dp/B0FF9GLG3B/" },
         ]
       },
       {
