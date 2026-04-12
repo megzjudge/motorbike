@@ -443,6 +443,35 @@ body {
     opacity: 1;
 }
 
+/* ============================================= */
+/* Tooltip                                       */
+/* ============================================= */
+
+.custom-tooltip {
+    position: fixed;
+    background: var(--primary);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    box-shadow: 0 10px 20px -4px rgb(1 184 198 / 0.3);
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    white-space: nowrap;
+    transform: translate(15px, 20px);
+}
+
+.custom-tooltip.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
     .header {
@@ -465,6 +494,11 @@ body {
     .image-container {
         height: 220px;
         margin-bottom: 24px;
+    }
+
+    .custom-tooltip {
+        font-size: 14px;
+        padding: 9px 18px;
     }
 
     .data-card {
