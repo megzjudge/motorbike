@@ -31,12 +31,6 @@ function getVideoSiteName(videoUrl) {
     return siteName;
 }
 
-function formatLabel(key) {
-    return key
-        .replace(/_/g, ' ')
-        .replace(/\b\w/g, char => char.toUpperCase());
-}
-
 function getImageTooltipName(imagePath) {
     if (!imagePath || typeof imagePath !== 'string') return '';
     const filename = imagePath.split('/').pop();
@@ -44,6 +38,12 @@ function getImageTooltipName(imagePath) {
     name = name.replace(/_/g, ' ').trim();
     name = name.replace(/\b\w/g, char => char.toUpperCase());
     return name || 'Item';
+}
+
+function formatLabel(key) {
+    return key
+        .replace(/_/g, ' ')
+        .replace(/\b\w/g, char => char.toUpperCase());
 }
 
 function isEmptyValue(value) {
@@ -227,6 +227,60 @@ function renderCardRows(data) {
     return rows.join('');
 }
 
+function setupTooltips() {
+    const tooltip = document.getElementById('custom-tooltip');
+    if (!tooltip) return;
+
+    const links = document.querySelectorAll('.shop-gallery-link');
+
+    links.forEach(link => {
+        const text = link.getAttribute('data-tooltip');
+
+        // Desktop mouse
+        link.addEventListener('mouseenter', (e) => {
+            document.getElementById('tooltip-text').textContent = text;
+            tooltip.classList.add('show');
+            updateTooltipPosition(e);
+        });
+
+        link.addEventListener('mousemove', updateTooltipPosition);
+
+        link.addEventListener('mouseleave', () => {
+            tooltip.classList.remove('show');
+        });
+
+        // Mobile touch
+        link.addEventListener('touchstart', (e) => {
+            if (e.touches.length > 0) {
+                document.getElementById('tooltip-text').textContent = text;
+                tooltip.classList.add('show');
+                updateTooltipPosition(e.touches[0]);
+            }
+        });
+
+        link.addEventListener('touchmove', (e) => {
+            if (e.touches.length > 0) {
+                updateTooltipPosition(e.touches[0]);
+            }
+        });
+
+        link.addEventListener('touchend', () => {
+            tooltip.classList.remove('show');
+        });
+    });
+}
+
+function updateTooltipPosition(e) {
+    const tooltip = document.getElementById('custom-tooltip');
+    if (!tooltip) return;
+
+    const x = e.clientX + 18;
+    const y = e.clientY + 24;
+
+    tooltip.style.left = `${x}px`;
+    tooltip.style.top = `${y}px`;
+}
+
 function renderAllData() {
     const container = document.getElementById('content-container');
     container.innerHTML = '';
@@ -254,7 +308,7 @@ function renderAllData() {
                                        target="_blank" 
                                        rel="noopener noreferrer" 
                                        class="shop-gallery-link"
-                                       title="${getImageTooltipName(item.image)}">
+                                       data-tooltip="${getImageTooltipName(item.image)}">
                                         <img src="${item.image}" class="shop-gallery-image">
                                     </a>
                                 `).join('')}
@@ -315,6 +369,7 @@ function renderAllData() {
     });
 
     setupLightbox();
+    setupTooltips();          // ← D. This is now included
 }
 
 function setupLightbox() {
