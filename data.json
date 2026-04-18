@@ -111,12 +111,12 @@
     "brand_flag": "🇮🇹",
     "versions": [
       {
-        "name": "D-Core Thermo Women's Tee",
-        "url": "https://www.amxsuperstores.com.au/products/dainese-d-core-thermo-lady-tee-ls-black-fuchsia"
-      },
-      {
         "name": "D-Core Thermo Women's Pants",
         "url": "https://www.amxsuperstores.com.au/products/dainese-d-core-thermo-lady-pant-ll-black-pink"
+      },
+      {
+        "name": "D-Core Thermo Women's Tee",
+        "url": "https://www.amxsuperstores.com.au/products/dainese-d-core-thermo-lady-tee-ls-black-fuchsia"
       }
     ],
     "from": "AMX Auburn",
