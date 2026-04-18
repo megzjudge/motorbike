@@ -187,10 +187,10 @@
       {
         "title": "Cleaning Bike",
         "items": [
+                    { "image": "images/cleaner_foam.png", "url": "https://www.amazon.com.au/dp/B0749VM3MB" },
           { "image": "images/hose_gun.png", "url": "https://www.ebay.com.au/itm/334916310665" },
           { "image": "images/hose.png", "url": "https://www.ebay.com.au/itm/404941503250" },
-          { "image": "images/cloths.png", "url": "https://www.amazon.com.au/MR-SIGA-Cleaning-Reusable-Absorbent-Microfiber/dp/B0CFXZ6GZS/" },
-          { "image": "images/cleaner_foam.png", "url": "https://www.amazon.com.au/dp/B0749VM3MB" }
+          { "image": "images/cloths.png", "url": "https://www.amazon.com.au/MR-SIGA-Cleaning-Reusable-Absorbent-Microfiber/dp/B0CFXZ6GZS/" }
         ]
       },
       {
