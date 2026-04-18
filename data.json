@@ -134,10 +134,10 @@
   },
   {
     "type": "shop_gallery",
-    "title": "Fun Things I've Bought for the Bike",
+    "title": "Accessories",
     "sections": [
       {
-        "title": "Accessories",
+        "title": "Parts",
         "items": [
           { "image": "images/auto_turn_signal.png", "url": "https://st2-systems.com/st2-turn-system/" },
           { "image": "images/windshield_windscreen.png", "url": "https://www.ebay.com.au/itm/227244281897" },
