@@ -83,14 +83,15 @@ body {
     height: 280px;
     cursor: zoom-in;
     display: flex;
+    gap: 10px;
     align-items: center;
     justify-content: center;
 }
 
 .image-container img {
-    width: auto;
+    width: 100%;
     height: 100%;
-    max-width: 100%;
+    max-width: 50%;
     object-fit: contain;
     display: block;
     transition: transform 0.3s ease;
