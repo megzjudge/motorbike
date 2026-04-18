@@ -137,17 +137,31 @@
     "title": "Fun Things I've Bought for the Bike",
     "sections": [
       {
-        "title": "Oops",
+        "title": "Accessories",
+        "items": [
+          { "image": "images/auto_turn_signal.png", "url": "https://st2-systems.com/st2-turn-system/" },
+          { "image": "images/windshield_windscreen.png", "url": "https://www.ebay.com.au/itm/227244281897" },
+          { "image": "images/mirrors.png", "url": "https://www.amazon.com.au/Motorcycle-Rotating-Universal-Adjustable-Replacement/dp/B0CM7YMW7F/" },
+          { "image": "images/lever_clutch_break.png", "url": "https://www.amazon.com.au/MTCRIGHTER-CFMOTO-Retractable-Foldable-Aluminum/dp/B0DRT7SKWX/" },
+          { "image": "images/turn_signal.png", "url": "https://www.temu.com/au/-motorcycle-turn--switch-button-cap-modification-accessory-modified-turn--toggle-button-cap-with-installation-tools-universal-button-cap-high-quality-metal-material-modified-decorative-motorcycle-motorcycle-parts-g-605959636282210.html" }
+        ]
+      },
+      {
+        "title": "Bike Care",
+        "items": [
+          { "image": "images/tyre_pump.png", "url": "https://www.ebay.com.au/itm/298081000584" },
+          { "image": "images/screen_cover.png", "url": "https://www.temu.com/au/for--cf25022--2022-2023-motorcycle-screen-instrument-protection-film-screen-scratch-resistant-tpu-screen-protection-film-transparent-motorcycle-instrument-protection-g-601101995504505.html" },
+          { "image": "images/stand_protector.png", "url": "https://www.temu.com/au/high-quality-motorcycle-footpeg-extension-plate--in--side-stand-support-plate-accessory-for-street-bikes-g-601105346977493.html" }
+        ]
+      },
+      {
+        "title": "Repair",
         "items": [
           { "image": "images/tyre_repair.png", "url": "https://www.temu.com/au/20-40-80pcs-vacuum-tire-repair-kit-with-spiral-nails--tool-for-cars-and-motorcycles-non-damaging-iron-mushroom-nails-for-tire-patching-g-601105056555125.html" },
           { "image": "images/battery_jumper.png", "url": "https://www.ebay.com.au/itm/156419810697" },
-          { "image": "images/tyre_pump.png", "url": "https://www.ebay.com.au/itm/298081000584" },
           { "image": "images/screws.png", "url": "https://www.ebay.com.au/itm/156399205324" },
-          { "image": "images/first_aid_kit.png", "url": "http://amazon.com.au/Mini-First-Aid-Kit-Waterproof/dp/B0DFQK98D7/" },
           { "image": "images/screw_loosener.png", "url": "https://www.ebay.com.au/itm/227141884746" },
-          { "image": "images/screen_cover.png", "url": "https://www.temu.com/au/for--cf25022--2022-2023-motorcycle-screen-instrument-protection-film-screen-scratch-resistant-tpu-screen-protection-film-transparent-motorcycle-instrument-protection-g-601101995504505.html" },
           { "image": "images/screw_looseners.png", "url": "https://www.amazon.com.au/WORKPRO-W001308A-3-piece-Locking-Straight/dp/B0109PTUYM/" },
-          { "image": "images/stand_protector.png", "url": "https://www.temu.com/au/high-quality-motorcycle-footpeg-extension-plate--in--side-stand-support-plate-accessory-for-street-bikes-g-601105346977493.html" }
         ]
       },
       {
@@ -158,16 +172,6 @@
           { "image": "images/hazard_protector.png", "url": "https://www.temu.com/au/for---400nk--motorcycle-switch-button-cover-with-extended-bracket-horn-button-protective-cover-installation-compatible-for--250-400-nk-motorcycles-g-601104497780114.html" },
           { "image": "images/stickers_gps.png", "url": "https://www.temu.com/au/gps--matte-vinyl-decals-self--automotive-stickers-with-vibrant-high-quality-design-single-use-front-windshield-decal-for-cars-trucks-suvs-easy-application--removal-car-vinyl-stickers-vehicle-g-601103486862347.html" },
           { "image": "images/storage.png", "url": "https://www.amazon.com.au/dp/B0B15D94HJ" }
-        ]
-      },
-      {
-        "title": "Accessories",
-        "items": [
-          { "image": "images/auto_turn_signal.png", "url": "https://st2-systems.com/st2-turn-system/" },
-          { "image": "images/windshield_windscreen.png", "url": "https://www.ebay.com.au/itm/227244281897" },
-          { "image": "images/mirrors.png", "url": "https://www.amazon.com.au/Motorcycle-Rotating-Universal-Adjustable-Replacement/dp/B0CM7YMW7F/" },
-          { "image": "images/lever_clutch_break.png", "url": "https://www.amazon.com.au/MTCRIGHTER-CFMOTO-Retractable-Foldable-Aluminum/dp/B0DRT7SKWX/" },
-          { "image": "images/turn_signal.png", "url": "https://www.temu.com/au/-motorcycle-turn--switch-button-cap-modification-accessory-modified-turn--toggle-button-cap-with-installation-tools-universal-button-cap-high-quality-metal-material-modified-decorative-motorcycle-motorcycle-parts-g-605959636282210.html" }
         ]
       },
       {
