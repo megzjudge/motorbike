@@ -34,7 +34,7 @@ function getVideoSiteName(videoUrl) {
 function getImageTooltipName(imagePath) {
     if (!imagePath || typeof imagePath !== 'string') return '';
     const filename = imagePath.split('/').pop();
-    let name = filename.replace(/\.png$/i, '');
+    let name = filename.replace(/\.[^.]+$/i, '');
     name = name.replace(/_/g, ' ').trim();
     name = name.replace(/\b\w/g, char => char.toUpperCase());
     return name || 'Item';
@@ -68,7 +68,22 @@ function renderGenericRow(key, value) {
     if (Array.isArray(value)) {
         const items = value
             .filter(item => !isEmptyValue(item))
-            .map(item => `<span class="safety-item">${item}</span>`)
+            .map(item => {
+                if (typeof item === 'string' || typeof item === 'number') {
+                    return `<span class="safety-item">${item}</span>`;
+                }
+
+                if (item && typeof item === 'object') {
+                    const text = Object.entries(item)
+                        .filter(([, v]) => !isEmptyValue(v))
+                        .map(([k, v]) => `${formatLabel(k)}: ${v}`)
+                        .join(' • ');
+
+                    return text ? `<span class="safety-item">${text}</span>` : '';
+                }
+
+                return '';
+            })
             .join('');
 
         if (!items) return '';
@@ -100,12 +115,35 @@ function renderGenericRow(key, value) {
     return '';
 }
 
+function renderVersionsRow(versions) {
+    if (!Array.isArray(versions) || !versions.length) return '';
+
+    const items = versions
+        .filter(v => v && !isEmptyValue(v.name))
+        .map(v => {
+            if (v.url) {
+                return `<a href="${v.url}" target="_blank" rel="noopener noreferrer" class="version-tag">${v.name}</a>`;
+            }
+
+            return `<span class="version-tag version-tag-plain">${v.name}</span>`;
+        })
+        .join('');
+
+    if (!items) return '';
+
+    return `
+        <div class="data-row">
+            <span class="label">VERSION</span>
+            <div class="safety-ratings">${items}</div>
+        </div>
+    `;
+}
+
 function renderCardRows(data) {
     const rows = [];
 
     Object.entries(data).forEach(([key, value]) => {
-
-        if (['image', 'type', 'title', 'thumbnail'].includes(key)) return;
+        if (['image', 'type', 'title', 'thumbnail', 'versions'].includes(key)) return;
         if (isEmptyValue(value)) return;
 
         // PART
@@ -156,7 +194,14 @@ function renderCardRows(data) {
 
         if (key === 'from_url') return;
 
-        // VERSION
+        // MULTI VERSION
+        if (key === 'versions') {
+            const versionsHTML = renderVersionsRow(value);
+            if (versionsHTML) rows.push(versionsHTML);
+            return;
+        }
+
+        // SINGLE VERSION FALLBACK
         if (key === 'version') {
             rows.push(`
                 <div class="data-row">
@@ -175,7 +220,9 @@ function renderCardRows(data) {
 
         // SAFETY
         if (key === 'safety_rating') {
-            const items = value
+            const ratings = Array.isArray(value) ? value : [value];
+
+            const items = ratings
                 .filter(r => r && r.text)
                 .map(r =>
                     r.url
@@ -223,6 +270,14 @@ function renderCardRows(data) {
         const generic = renderGenericRow(key, value);
         if (generic) rows.push(generic);
     });
+
+    if (Array.isArray(data.versions) && data.versions.length) {
+        const versionsHTML = renderVersionsRow(data.versions);
+        if (versionsHTML) {
+            const hasVersionRowAlready = rows.some(row => row.includes('<span class="label">VERSION</span>'));
+            if (!hasVersionRowAlready) rows.push(versionsHTML);
+        }
+    }
 
     return rows.join('');
 }
@@ -274,7 +329,6 @@ function updateTooltipPosition(e) {
     const tooltip = document.getElementById('custom-tooltip');
     if (!tooltip) return;
 
-    // Offset so it doesn't sit directly under finger/cursor
     const x = e.clientX + 18;
     const y = e.clientY + 24;
 
@@ -282,32 +336,52 @@ function updateTooltipPosition(e) {
     tooltip.style.top = `${y}px`;
 }
 
+function renderImages(data, container) {
+    if (!data.image) return;
+
+    const images = Array.isArray(data.image) ? data.image : [data.image];
+    const validImages = images.filter(src => typeof src === 'string' && src.trim() !== '');
+
+    if (!validImages.length) return;
+
+    const imgContainer = document.createElement('div');
+    imgContainer.className = 'image-container';
+
+    validImages.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = data.part || 'Motorbike part';
+        imgContainer.appendChild(img);
+    });
+
+    container.appendChild(imgContainer);
+}
+
 function renderAllData() {
     const container = document.getElementById('content-container');
     container.innerHTML = '';
 
     dataArray.forEach(data => {
-
         // SHOP GALLERY
         if (data.type === 'shop_gallery') {
             const section = document.createElement('div');
             section.className = 'shop-gallery-section';
-        
+
             const sections = Array.isArray(data.sections) ? data.sections : [];
-        
+
             section.innerHTML = `
                 <div class="shop-gallery-inner">
                     ${data.title ? `<div class="shop-gallery-title">${data.title}</div>` : ''}
-        
+
                     ${sections.map(sec => `
                         <div class="shop-subsection">
                             ${sec.title ? `<div class="shop-subheader">${sec.title}</div>` : ''}
-        
+
                             <div class="shop-gallery-grid">
                                 ${(sec.items || []).map(item => `
-                                    <a href="${item.url}" 
-                                       target="_blank" 
-                                       rel="noopener noreferrer" 
+                                    <a href="${item.url}"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
                                        class="shop-gallery-link"
                                        data-tooltip="${getImageTooltipName(item.image)}"
                                        ${item.note ? `title="${Array.isArray(item.note) ? item.note.join('\n\n') : item.note}"` : ''}>
@@ -319,7 +393,7 @@ function renderAllData() {
                     `).join('')}
                 </div>
             `;
-        
+
             container.appendChild(section);
             return;
         }
@@ -341,26 +415,7 @@ function renderAllData() {
         }
 
         // IMAGE
-        if (data.image) {
-            const images = Array.isArray(data.image) ? data.image : [data.image];
-
-            const imgContainer = document.createElement('div');
-            imgContainer.className = 'image-container';
-
-            images.forEach(src => {
-                if (!src) return;
-
-                const img = document.createElement('img');
-                img.src = src;
-                img.alt = data.part || 'Motorbike part';
-
-                imgContainer.appendChild(img);
-            });
-
-            if (imgContainer.children.length) {
-                container.appendChild(imgContainer);
-            }
-        }
+        renderImages(data, container);
 
         // CARD
         const rowsHTML = renderCardRows(data);
@@ -388,6 +443,8 @@ function setupLightbox() {
     const lightboxImg = document.getElementById('lightbox-image');
     const closeBtn = document.querySelector('.lightbox-close');
 
+    if (!lightbox || !lightboxImg) return;
+
     document.querySelectorAll('.image-container img').forEach(img => {
         img.addEventListener('click', () => {
             lightboxImg.src = img.src;
@@ -399,13 +456,11 @@ function setupLightbox() {
         closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
     }
 
-    if (lightbox) {
-        lightbox.addEventListener('click', e => {
-            if (e.target === lightbox) {
-                lightbox.classList.remove('active');
-            }
-        });
-    }
+    lightbox.addEventListener('click', e => {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('active');
+        }
+    });
 }
 
 window.onload = loadData;
