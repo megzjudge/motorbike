@@ -109,11 +109,16 @@
     "part": "Undergear",
     "brand": "Dainese",
     "brand_flag": "🇮🇹",
-    "version": "Dainese D-Core Thermo Women's Tee & Pants",
-    "version_url": [
-      "https://www.amxsuperstores.com.au/products/dainese-d-core-thermo-lady-tee-ls-black-fuchsia",
-      "https://www.amxsuperstores.com.au/products/dainese-d-core-thermo-lady-pant-ll-black-pink"
-    ]
+    "versions": [
+      {
+        "name": "D-Core Thermo Women's Tee",
+        "url": "https://www.amxsuperstores.com.au/products/dainese-d-core-thermo-lady-tee-ls-black-fuchsia"
+      },
+      {
+        "name": "D-Core Thermo Women's Pants",
+        "url": "https://www.amxsuperstores.com.au/products/dainese-d-core-thermo-lady-pant-ll-black-pink"
+      }
+    ],
     "from": "AMX Auburn",
     "from_url": "https://www.amxsuperstores.com.au/products/dainese-freeland-2-womens-gore-tex-boots-black",
     "video_url": "https://www.youtube.com/watch?v=OuXnmkpWLCk"
