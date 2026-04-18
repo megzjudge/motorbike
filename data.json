@@ -102,8 +102,12 @@
     "video_url": "https://www.youtube.com/watch?v=OuXnmkpWLCk"
   },
   {
-    "image": "images/thermo_shirt.png",
-    "image": "images/thermo_pants.png",
+    "image": [
+      {
+        "image": "images/thermo_shirt.png",
+        "image": "images/thermo_pants.png"
+      }
+    ],
     "part": "Undergear",
     "brand": "Dainese",
     "brand_flag": "🇮🇹",
