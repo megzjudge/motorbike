@@ -159,9 +159,10 @@
         "items": [
           { "image": "images/tyre_repair.png", "url": "https://www.temu.com/au/20-40-80pcs-vacuum-tire-repair-kit-with-spiral-nails--tool-for-cars-and-motorcycles-non-damaging-iron-mushroom-nails-for-tire-patching-g-601105056555125.html" },
           { "image": "images/battery_jumper.png", "url": "https://www.ebay.com.au/itm/156419810697" },
+          { "image": "images/gloves.png", "url": "https://www.amazon.com.au/dp/B08G6M1XFR" },
           { "image": "images/screws.png", "url": "https://www.ebay.com.au/itm/156399205324" },
           { "image": "images/screw_loosener.png", "url": "https://www.ebay.com.au/itm/227141884746" },
-          { "image": "images/screw_looseners.png", "url": "https://www.amazon.com.au/WORKPRO-W001308A-3-piece-Locking-Straight/dp/B0109PTUYM/" },
+          { "image": "images/screw_looseners.png", "url": "https://www.amazon.com.au/WORKPRO-W001308A-3-piece-Locking-Straight/dp/B0109PTUYM/" }
         ]
       },
       {
@@ -178,7 +179,6 @@
         "items": [
           { "image": "images/stand.png", "url": "https://www.amazon.com.au/Motorcycle-Wheel-cleaning-stand-Replacement/dp/B075N73R26/" },
           { "image": "images/chain_brush.png", "url": "https://www.ebay.com.au/itm/256960870775" },
-          { "image": "images/gloves.png", "url": "https://www.amazon.com.au/dp/B08G6M1XFR" },
           { "image": "images/cleaner_rust.png", "url": "https://www.amazon.com.au/dp/B07QBXVJVV" },
           { "image": "images/cleaner_chain.png", "url": "https://www.ebay.com.au/itm/186259169072" },
           { "image": "images/cleaner_lube.png", "url": "http://amazon.com.au/Tru-Tension-Weather-Cassette-Drivetrain-Lubricant/dp/B07TT7SCNM/" }
