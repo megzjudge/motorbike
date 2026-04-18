@@ -342,15 +342,24 @@ function renderAllData() {
 
         // IMAGE
         if (data.image) {
+            const images = Array.isArray(data.image) ? data.image : [data.image];
+
             const imgContainer = document.createElement('div');
             imgContainer.className = 'image-container';
 
-            const img = document.createElement('img');
-            img.src = data.image;
-            img.alt = data.part || 'Motorbike part';
+            images.forEach(src => {
+                if (!src) return;
 
-            imgContainer.appendChild(img);
-            container.appendChild(imgContainer);
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = data.part || 'Motorbike part';
+
+                imgContainer.appendChild(img);
+            });
+
+            if (imgContainer.children.length) {
+                container.appendChild(imgContainer);
+            }
         }
 
         // CARD
