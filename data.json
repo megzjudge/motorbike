@@ -103,8 +103,8 @@
   },
   {
     "image": [
-      "images/thermo_shirt.png",
-      "images/thermo_pants.png"
+      "images/thermo_pants.png",
+      "images/thermo_shirt.png"
     ],
     "part": "Undergear",
     "brand": "Dainese",
