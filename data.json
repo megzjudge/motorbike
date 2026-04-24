@@ -302,7 +302,9 @@
           { "image": "images/period_cup.png", "url": "https://www.coles.com.au/product/tom-organic-the-period-cup-size-2-1-each-3757957" },
           { "image": "images/cream_seal_wounds.png", "url": "https://www.chemistwarehouse.com.au/buy/100951/stratamed-advanced-film-forming-wound-dressing-5g" }
         ],
-        "note": "Designed for roadside stabilisation only. Focus: bleeding control, wound care, and shock prevention. Not a replacement for emergency services."
+        "note": [
+          { "Designed for roadside stabilisation only. Focus: bleeding control, wound care, and shock prevention. Not a replacement for emergency services." },
+          { "Designed for roadside stabilisation only. Focus: bleeding control, wound care, and shock prevention. Not a replacement for emergency services." }
       }
     ]
   }
