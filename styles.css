@@ -233,6 +233,14 @@ body {
     gap: 8px;
 }
 
+.shop-note-text {
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 1.45;
+    color: #334155;
+    text-align: center;
+}
+
 .shop-note-link {
     display: flex;
     justify-content: center;
