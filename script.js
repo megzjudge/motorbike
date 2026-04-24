@@ -366,33 +366,23 @@ function renderAllData() {
         if (data.type === 'shop_gallery') {
             const section = document.createElement('div');
             section.className = 'shop-gallery-section';
-
+    
             const sections = Array.isArray(data.sections) ? data.sections : [];
-
+    
             section.innerHTML = `
                 <div class="shop-gallery-inner">
                     ${data.title ? `<div class="shop-gallery-title">${data.title}</div>` : ''}
-            
+    
                     ${data.note ? `
                         <div class="shop-gallery-note">
                             ${data.note}
                         </div>
                     ` : ''}
-            
+    
                     ${sections.map(sec => `
                         <div class="shop-subsection">
                             ${sec.title ? `<div class="shop-subheader">${sec.title}</div>` : ''}
-            
-                            ${sec.note ? `
-                                <div class="shop-gallery-note">
-                                    ${
-                                        Array.isArray(sec.note)
-                                            ? sec.note.join('<br><br>')
-                                            : sec.note
-                                    }
-                                </div>
-                            ` : ''}
-            
+    
                             <div class="shop-gallery-grid">
                                 ${(sec.items || []).map(item => `
                                     <a href="${item.url}"
@@ -405,11 +395,32 @@ function renderAllData() {
                                     </a>
                                 `).join('')}
                             </div>
+    
+                            ${sec.note ? `
+                                <div class="shop-note-groups">
+                                    ${Object.entries(sec.note).map(([group, items]) => `
+                                        <div class="shop-note-group">
+                                            <div class="shop-note-group-title">${group}</div>
+    
+                                            <div class="shop-note-grid">
+                                                ${(items || []).map(item => `
+                                                    <a href="${item.url}"
+                                                       target="_blank"
+                                                       rel="noopener noreferrer"
+                                                       class="shop-note-link">
+                                                        <img src="${item.image}" class="shop-note-image">
+                                                    </a>
+                                                `).join('')}
+                                            </div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
                         </div>
                     `).join('')}
                 </div>
             `;
-
+    
             container.appendChild(section);
             return;
         }
