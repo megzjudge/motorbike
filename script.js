@@ -372,23 +372,23 @@ function renderAllData() {
             section.innerHTML = `
                 <div class="shop-gallery-inner">
                     ${data.title ? `<div class="shop-gallery-title">${data.title}</div>` : ''}
-
+            
                     ${data.note ? `
                         <div class="shop-gallery-note">
                             ${data.note}
                         </div>
                     ` : ''}
-
+            
                     ${sections.map(sec => `
                         <div class="shop-subsection">
                             ${sec.title ? `<div class="shop-subheader">${sec.title}</div>` : ''}
-                    
+            
                             ${sec.note ? `
                                 <div class="shop-gallery-note">
                                     ${sec.note}
                                 </div>
                             ` : ''}
-                    
+            
                             <div class="shop-gallery-grid">
                                 ${(sec.items || []).map(item => `
                                     <a href="${item.url}"
@@ -403,6 +403,8 @@ function renderAllData() {
                             </div>
                         </div>
                     `).join('')}
+                </div>
+            `;
 
             container.appendChild(section);
             return;
