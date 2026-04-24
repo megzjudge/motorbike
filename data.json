@@ -302,7 +302,7 @@
           { "image": "images/period_cup.png", "url": "https://www.coles.com.au/product/tom-organic-the-period-cup-size-2-1-each-3757957" },
           { "image": "images/cream_seal_wounds.png", "url": "https://www.chemistwarehouse.com.au/buy/100951/stratamed-advanced-film-forming-wound-dressing-5g" }
         ],
-        "note": [
+        "note": {
           "For breaks": [
             { "image": "images/bandage_sprain_and_bones.png", "url": "https://www.amazon.com.au/s?k=compression+cohesive+bandage+brown&s=price-asc-rank" },
             { "image": "images/blanket_emergency_shock_&_cold_protection.png", "url": "https://www.amazon.com.au/s?k=Foil+emergency+blanket+150x210" }
@@ -326,7 +326,7 @@
             { "image": "images/shopping_bag.png", "url": "https://www.amazon.com.au/s?k=reusable+shopping+bags+foldable" },
             { "image": "images/period_cup.png", "url": "https://www.coles.com.au/product/tom-organic-the-period-cup-size-2-1-each-3757957" }
           ]
-        ]
+        }
       }
     ]
   }
