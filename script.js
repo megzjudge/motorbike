@@ -373,6 +373,12 @@ function renderAllData() {
                 <div class="shop-gallery-inner">
                     ${data.title ? `<div class="shop-gallery-title">${data.title}</div>` : ''}
 
+                    ${data.note ? `
+                        <div class="shop-gallery-note">
+                            ${data.note}
+                        </div>
+                    ` : ''}
+
                     ${sections.map(sec => `
                         <div class="shop-subsection">
                             ${sec.title ? `<div class="shop-subheader">${sec.title}</div>` : ''}
