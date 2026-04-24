@@ -262,7 +262,7 @@ body {
 }
 
 .shop-subheader {
-    padding: 12px 24px 6px;
+    padding: 18px 24px 12px;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -538,6 +538,10 @@ body {
 
     .shop-gallery-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shop-note-grid {
+        grid-template-columns: repeat(5, 1fr);
     }
 
     .content {
