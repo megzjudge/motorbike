@@ -292,6 +292,9 @@
           { "image": "images/cream_abrasions.png", "url": "https://www.coles.com.au/product/savlon-antiseptic-cream-75g-197277" },
           { "image": "images/bandage_sprain_and_bones.png", "url": "https://www.amazon.com.au/s?k=compression+cohesive+bandage+brown&s=price-asc-rank" },
           { "image": "images/bandage_normal_wound.png", "url": "https://www.amazon.com.au/Matrons-Crepe-Elastic-Bandage-Length/dp/B0B1Q4NZ3M/" },
+          { "image": "images/medical_tape.png", "url": "" },
+          { "image": "images/dressings.png", "url": "" },
+          { "image": "images/gauze.png", "url": "" },
           { "image": "images/scissors.png", "url": "https://www.amazon.com.au/dp/B0D3LTGR9Q" },
           { "image": "images/pain_relief_low_drowziness.png", "url": "https://www.coles.com.au/product/nyal-paracetamol-liquid-capsules-16-pack-8799080" },
           { "image": "images/wipes_antibacterial_dirty.png", "url": "https://www.priceline.com.au/product/282383/wet-ones-be-gentle-sensitive-antibacterial-hand-face-wipes-15-wipes" },
@@ -321,13 +324,16 @@
           },
           "For bleeds": {
             "items": [
+                { "image": "images/gauze.png", "url": "" },
+                { "image": "images/dressings.png", "url": "" },
                 { "image": "images/tourniquet_stop_bleeding_pressure.png", "url": "https://www.amazon.com.au/Emergency-Release-Tactical-Tourniquet-Medical/dp/B0B499KHGT/" },
                 { "image": "images/wipes_wound_no_stinging.png", "url": "https://www.ebay.com.au/itm/285925105888" },
                 { "image": "images/cream_seal_wounds.png", "url": "https://www.chemistwarehouse.com.au/buy/100951/stratamed-advanced-film-forming-wound-dressing-5g" },
                 { "image": "images/bandage_normal_wound.png", "url": "https://www.amazon.com.au/Matrons-Crepe-Elastic-Bandage-Length/dp/B0B1Q4NZ3M/" },
+                { "image": "images/medical_tape.png", "url": "" },
                 { "image": "images/scissors.png", "url": "https://www.amazon.com.au/dp/B0D3LTGR9Q" }
               ],
-            "text": "Crepe Bandage, Scissors, Alcohol Free Wipes, Tourniquet, Wound Seal Cream"
+            "text": "Crepe Bandage, Scissors, Gauze, Dressings, Medical Tape, Alcohol Free Wipes, Tourniquet, Wound Seal Cream"
           },
           "For breaks": {
             "items": [ 
