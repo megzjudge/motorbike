@@ -372,17 +372,17 @@ function renderAllData() {
             section.innerHTML = `
                 <div class="shop-gallery-inner">
                     ${data.title ? `<div class="shop-gallery-title">${data.title}</div>` : ''}
-    
+            
                     ${data.note ? `
                         <div class="shop-gallery-note">
                             ${data.note}
                         </div>
                     ` : ''}
-    
+            
                     ${sections.map(sec => `
                         <div class="shop-subsection">
                             ${sec.title ? `<div class="shop-subheader">${sec.title}</div>` : ''}
-    
+            
                             <div class="shop-gallery-grid">
                                 ${(sec.items || []).map(item => `
                                     <a href="${item.url}"
@@ -390,28 +390,35 @@ function renderAllData() {
                                        rel="noopener noreferrer"
                                        class="shop-gallery-link"
                                        data-tooltip="${getImageTooltipName(item.image)}"
-                                       ${item.note ? `title="${Array.isArray(item.note) ? item.note.join('\n\n') : item.note}"` : ''}>
+                                       ${item.note ? `title="${Array.isArray(item.note) ? item.note.join('\\n\\n') : item.note}"` : ''}>
                                         <img src="${item.image}" class="shop-gallery-image">
                                     </a>
                                 `).join('')}
                             </div>
-    
+            
                             ${sec.note ? `
                                 <div class="shop-note-groups">
-                                    ${Object.entries(sec.note).map(([group, items]) => `
+                                    ${Object.entries(sec.note).map(([group, noteData]) => `
                                         <div class="shop-note-group">
                                             <div class="shop-note-group-title">${group}</div>
-    
+            
                                             <div class="shop-note-grid">
-                                                ${(items || []).map(item => `
+                                                ${(noteData.items || []).map(item => `
                                                     <a href="${item.url}"
                                                        target="_blank"
                                                        rel="noopener noreferrer"
-                                                       class="shop-note-link">
+                                                       class="shop-note-link"
+                                                       data-tooltip="${getImageTooltipName(item.image)}">
                                                         <img src="${item.image}" class="shop-note-image">
                                                     </a>
                                                 `).join('')}
                                             </div>
+            
+                                            ${noteData.text ? `
+                                                <div class="shop-note-text">
+                                                    ${noteData.text}
+                                                </div>
+                                            ` : ''}
                                         </div>
                                     `).join('')}
                                 </div>
@@ -420,10 +427,9 @@ function renderAllData() {
                     `).join('')}
                 </div>
             `;
-    
+            
             container.appendChild(section);
             return;
-        }
 
         // STANDALONE VIDEO
         if (data.type === 'standalone_video') {
