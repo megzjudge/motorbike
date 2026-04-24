@@ -210,6 +210,48 @@ body {
     margin: 0 auto;
 }
 
+.shop-note-groups {
+    padding: 6px 24px 16px;
+}
+
+.shop-note-group {
+    margin-top: 10px;
+}
+
+.shop-note-group-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #64748b;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.shop-note-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.shop-note-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-note-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+    opacity: 0.85;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.shop-note-link:hover .shop-note-image {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
 .shop-subsection {
     margin-bottom: 18px;
 }
