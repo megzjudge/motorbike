@@ -429,11 +429,10 @@ function renderAllData() {
                     `).join('')}
                 </div>
             `;
-            
+
             container.appendChild(section);
             return;
-            }
-
+            
         // STANDALONE VIDEO
         if (data.type === 'standalone_video') {
             const videoBlock = document.createElement('div');
