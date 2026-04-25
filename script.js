@@ -432,6 +432,7 @@ function renderAllData() {
             
             container.appendChild(section);
             return;
+            }
 
         // STANDALONE VIDEO
         if (data.type === 'standalone_video') {
