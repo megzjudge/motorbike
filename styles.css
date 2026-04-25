@@ -215,8 +215,8 @@ body {
 }
 
 .shop-note-group {
-    margin-top: 10px;
-    padding: 12px;
+    margin-top: 16px;
+    padding: 12px 12px 8px;
     border-radius: 14px;
 }
 
@@ -234,15 +234,25 @@ body {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     gap: 8px;
+    margin-bottom: 6px;
 }
 
 .shop-note-text {
-    margin-top: 6px;
+    margin-top: 14px;
+    margin-bottom: 0;
     font-size: 13px;
     line-height: 1.45;
     color: #334155;
     text-align: center;
     text-align: left;
+}
+
+.shop-note-text div {
+    margin-bottom: 8px;
+}
+
+.shop-note-text div:last-child {
+    margin-bottom: 0;
 }
 
 .shop-note-link {
