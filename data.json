@@ -262,7 +262,7 @@
           },
           { "image": "images/glasses_blue_light_blocking.png", "url": "https://www.amazon.com.au/dp/B09KBR76LJ" },
           { "image": "images/insoles.png", "url": "https://www.amazon.com.au/dp/B07XXXV7FC" },
-          { "image": "images/bottle_holder.png", "url": "https://www.temu.com/au/motorcycle-water-bottle-holder-heavy-duty-adjustable-clamp-1-52-3-96cm-with-free-installation-sturdy-motorcycle-drink-system-for-1-liter-bottles-hands-free-motorcycling-accessory-black-fits-mtb-e-road-motorcycle-cup-holder-g-601105483062205.html" },
+          { "image": "images/wipes_rain_repellent.png", "url": "https://www.amazon.com.au/Invisible-Glass-Cleaner-Rain-Repellent/dp/B0FF9GLG3B/" },
           { "image": "images/helmet_speakers.png", "url": "https://www.amazon.com.au/dp/B0GN34QLF9/" },
           { "image": "images/sweat_pads.png", "url": "https://www.temu.com/au/60-disposable-underarm-sweat-pads-suitable-for-a-months--ideal-for-an-lifestyle-absorbent-pads--liners-that--dry-and-hygienic-during-sports-and-outdoor-activities-g-601100098912425.html" },
           { "image": "images/heat_packs_body_warmers.png", "url": "https://www.amazon.com.au/dp/B095BBYHNQ" },
@@ -273,17 +273,16 @@
           { "image": "images/neck_fox.png", "url": "https://www.temu.com/au/-forest-fox-neck-gaiter-with-glasses-stylish-polyester-face-mask-neck-scarf-and-magnet-for-outdoor-activities-outdoor-gear-vibrant-animal-print-durable-neck-gaiter-g-601101195957759.html" },
           { "image": "images/neck_wolf.png", "url": "https://www.temu.com/au/-mystical-wolf--neck-gaiter-face-mask-lightweight-polyester-knit-bandana-stretchable-95-polyester-5-elastane-fabric-breathable-and-moisture-wicking-motorcycle-scarf-g-601099724112613.html" },
           { "image": "images/neck_elephant.png", "url": "https://www.temu.com/au/vibrant-neon-elephant-print-scarf-colorful-digital-printed-neck-face-mask-polyester-lightweight-stylish-for-casual-attire-elephant-deco-g-601100819297123.html" },
+          { "image": "images/bottle_holder.png", "url": "https://www.temu.com/au/motorcycle-water-bottle-holder-heavy-duty-adjustable-clamp-1-52-3-96cm-with-free-installation-sturdy-motorcycle-drink-system-for-1-liter-bottles-hands-free-motorcycling-accessory-black-fits-mtb-e-road-motorcycle-cup-holder-g-601105483062205.html" },
           { "image": "images/hotday_damp_cloth.png", "url": "https://www.temu.com/au/1pc-camping-towels-cooling-towel-ice-towels-for-neck-and--breathable--towel-for-yoga-workout-gym-golf-camping-stay-cool-and-refreshed-all-day-outdoor-sports-towel-for-instant-cooling-relief-g-601099559042618.html" },
           { "image": "images/shoe_covers.png", "url": "https://www.temu.com/au/1-2pairs-waterproof-shoe-covers-rain-shoes-protector-reusable-non-slip-rain-boots-sneakers-protector-silicone-shoe-covers-footwear-g-601099547676354.html" },
-          { "image": "images/socks_water_repelling_odour_prevention.png", "url": "https://www.amazon.com.au/s?k=fox+river+military+boot+socks" },
-          { "image": "images/brush.png", "url": "https://www.amazon.com.au/dp/B0FNW46F26" }
+          { "image": "images/socks_water_repelling_odour_prevention.png", "url": "https://www.amazon.com.au/s?k=fox+river+military+boot+socks" }
         ]
       },
       {
         "title": "First Aid Kit",
         "items": [
           { "image": "images/first_aid_pouch.png", "url": "https://www.ebay.com.au/itm/137206956803" },
-          { "image": "images/wipes_rain_repellent.png", "url": "https://www.amazon.com.au/Invisible-Glass-Cleaner-Rain-Repellent/dp/B0FF9GLG3B/" },
           { "image": "images/bandaids_xl.png", "url": "https://www.woolworths.com.au/shop/productdetails/225613/band-aid-tough-strips-extra-large-fabric-bandages" },
           { "image": "images/eye_wash_road_debris.png", "url": "https://www.woolworths.com.au/shop/productdetails/1122503151/reclens-saline-eye-wash-10-x-15ml-with-eye-cups" },
           { "image": "images/tourniquet_stop_bleeding_pressure.png", "url": "https://www.amazon.com.au/Emergency-Release-Tactical-Tourniquet-Medical/dp/B0B499KHGT/" },
@@ -303,7 +302,6 @@
           { "image": "images/travel_comb.png", "url": "https://www.amazon.com.au/Chicago-Comb-Anti-static-Fine-tooth-Mustache/dp/B088NPVCG1/" },
           { "image": "images/shopping_bag.png", "url": "https://www.amazon.com.au/s?k=reusable+shopping+bags+foldable" },
           { "image": "images/period_cup.png", "url": "https://www.coles.com.au/product/tom-organic-the-period-cup-size-2-1-each-3757957" },
-          { "image": "images/cream_seal_wounds.png", "url": "https://www.chemistwarehouse.com.au/buy/100951/stratamed-advanced-film-forming-wound-dressing-5g" }
         ],
         "note": {
           "For breaks": {
@@ -325,8 +323,7 @@
                 { "image": "images/bandage_normal_wound.png", "url": "https://www.amazon.com.au/Matrons-Crepe-Elastic-Bandage-Length/dp/B0B1Q4NZ3M/" },
                 { "image": "images/medical_tape_hold_bandage.png", "url": "http://amazon.com.au/Nexcare-Micropore-Gentle-Paper-Tape/dp/B0002H484U/" },
                 { "image": "images/scissors.png", "url": "https://www.amazon.com.au/dp/B0D3LTGR9Q" },
-                { "image": "images/tourniquet_stop_bleeding_pressure.png", "url": "https://www.amazon.com.au/Emergency-Release-Tactical-Tourniquet-Medical/dp/B0B499KHGT/" },
-                { "image": "images/cream_seal_wounds.png", "url": "https://www.chemistwarehouse.com.au/buy/100951/stratamed-advanced-film-forming-wound-dressing-5g" }
+                { "image": "images/tourniquet_stop_bleeding_pressure.png", "url": "https://www.amazon.com.au/Emergency-Release-Tactical-Tourniquet-Medical/dp/B0B499KHGT/" }
               ],
             "text": [
               "Crepe Bandage, Scissors, Gauze, Dressings, Medical Tape, Alcohol Free Wipes, Tourniquet, Wound Seal Cream",
