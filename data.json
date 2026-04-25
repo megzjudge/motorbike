@@ -341,8 +341,10 @@
                 { "image": "images/tweezers_remove_gravel.png", "url": "https://www.coles.com.au/product/coles-tweezer-slant-tip-1-pack-3593521" },
                 { "image": "images/bandaids_xl.png", "url": "https://www.woolworths.com.au/shop/productdetails/225613/band-aid-tough-strips-extra-large-fabric-bandages" }
               ],
-            "text": "Antiseptic Cream, Paracetamol, Bandaids, Tweezers",
-            "text": "Steps: Remove anything from the wounds with tweezers, put on cream, apply bandaid, give paracetamol if required."
+            "text": [
+              "Antiseptic Cream, Paracetamol, Bandaids, Tweezers",
+              "Steps: Remove anything from the wounds with tweezers, put on cream, apply bandaid, give paracetamol if required."
+            ]
           },
           "For irritation": {
             "items": [
