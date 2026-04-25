@@ -292,10 +292,11 @@
           { "image": "images/cream_abrasions.png", "url": "https://www.coles.com.au/product/savlon-antiseptic-cream-75g-197277" },
           { "image": "images/bandage_sprain_and_bones.png", "url": "https://www.amazon.com.au/s?k=compression+cohesive+bandage+brown&s=price-asc-rank" },
           { "image": "images/bandage_normal_wound.png", "url": "https://www.amazon.com.au/Matrons-Crepe-Elastic-Bandage-Length/dp/B0B1Q4NZ3M/" },
-          { "image": "images/medical_tape.png", "url": "" },
-          { "image": "images/dressings.png", "url": "" },
-          { "image": "images/gauze.png", "url": "" },
+          { "image": "images/medical_tape_hold_bandage.png", "url": "http://amazon.com.au/Nexcare-Micropore-Gentle-Paper-Tape/dp/B0002H484U/" },
+          { "image": "images/absorbent_dressing.png", "url": "" },
+          { "image": "images/gauze_inside_bleeding_wound.png", "url": "http://ebay.com.au/itm/397589180394" },
           { "image": "images/scissors.png", "url": "https://www.amazon.com.au/dp/B0D3LTGR9Q" },
+          { "image": "images/tweezers_remove_gravel.png", "url": "https://www.coles.com.au/product/coles-tweezer-slant-tip-1-pack-3593521" },
           { "image": "images/pain_relief_low_drowziness.png", "url": "https://www.coles.com.au/product/nyal-paracetamol-liquid-capsules-16-pack-8799080" },
           { "image": "images/wipes_antibacterial_dirty.png", "url": "https://www.priceline.com.au/product/282383/wet-ones-be-gentle-sensitive-antibacterial-hand-face-wipes-15-wipes" },
           { "image": "images/wipes_wound_no_stinging.png", "url": "https://www.ebay.com.au/itm/285925105888" },
@@ -310,9 +311,11 @@
             "items": [ 
                 { "image": "images/pain_relief_low_drowziness.png", "url": "https://www.coles.com.au/product/nyal-paracetamol-liquid-capsules-16-pack-8799080" },
                 { "image": "images/cream_abrasions.png", "url": "https://www.coles.com.au/product/savlon-antiseptic-cream-75g-197277" },
+                { "image": "images/tweezers_remove_gravel.png", "url": "https://www.coles.com.au/product/coles-tweezer-slant-tip-1-pack-3593521" },
                 { "image": "images/bandaids_xl.png", "url": "https://www.woolworths.com.au/shop/productdetails/225613/band-aid-tough-strips-extra-large-fabric-bandages" }
               ],
-            "text": "Antiseptic Cream, Paracetamol, Bandaids"
+            "text": "Antiseptic Cream, Paracetamol, Bandaids, Tweezers",
+            "text": "Steps: Remove anything from the wounds with tweezers, put on cream, apply bandaid, give paracetamol if required."
           },
           "For irritation": {
             "items": [
@@ -324,16 +327,18 @@
           },
           "For bleeds": {
             "items": [
-                { "image": "images/gauze.png", "url": "" },
-                { "image": "images/dressings.png", "url": "" },
-                { "image": "images/tourniquet_stop_bleeding_pressure.png", "url": "https://www.amazon.com.au/Emergency-Release-Tactical-Tourniquet-Medical/dp/B0B499KHGT/" },
+                { "image": "images/gauze_inside_bleeding_wound.png", "url": "http://ebay.com.au/itm/397589180394" },
+                { "image": "images/absorbent_dressing.png", "url": "https://www.coles.com.au/product/elastoplast-sensitive-dressing-6cm-x-1m-1-metre-8685810" },
+                { "image": "images/gloves_fluid_protection.png", "url": "https://www.ebay.com.au/itm/177370946771" },
                 { "image": "images/wipes_wound_no_stinging.png", "url": "https://www.ebay.com.au/itm/285925105888" },
-                { "image": "images/cream_seal_wounds.png", "url": "https://www.chemistwarehouse.com.au/buy/100951/stratamed-advanced-film-forming-wound-dressing-5g" },
                 { "image": "images/bandage_normal_wound.png", "url": "https://www.amazon.com.au/Matrons-Crepe-Elastic-Bandage-Length/dp/B0B1Q4NZ3M/" },
-                { "image": "images/medical_tape.png", "url": "" },
-                { "image": "images/scissors.png", "url": "https://www.amazon.com.au/dp/B0D3LTGR9Q" }
+                { "image": "images/medical_tape_hold_bandage.png", "url": "http://amazon.com.au/Nexcare-Micropore-Gentle-Paper-Tape/dp/B0002H484U/" },
+                { "image": "images/scissors.png", "url": "https://www.amazon.com.au/dp/B0D3LTGR9Q" },
+                { "image": "images/tourniquet_stop_bleeding_pressure.png", "url": "https://www.amazon.com.au/Emergency-Release-Tactical-Tourniquet-Medical/dp/B0B499KHGT/" },
+                { "image": "images/cream_seal_wounds.png", "url": "https://www.chemistwarehouse.com.au/buy/100951/stratamed-advanced-film-forming-wound-dressing-5g" },
               ],
-            "text": "Crepe Bandage, Scissors, Gauze, Dressings, Medical Tape, Alcohol Free Wipes, Tourniquet, Wound Seal Cream"
+            "text": "Crepe Bandage, Scissors, Gauze, Dressings, Medical Tape, Alcohol Free Wipes, Tourniquet, Wound Seal Cream.",
+            "text": "Steps: Gloves, Wipes, Gauze and Dressing (if deep then gauze inside the wound first before dressing, if shallow just dressing), Bandage and Tape and Scissors, [if severe bleeding, twist Tourniquet above area to slow bleeding before dressing]."
           },
           "For breaks": {
             "items": [ 
@@ -341,6 +346,7 @@
                 { "image": "images/blanket_emergency_shock_&_cold_protection.png", "url": "https://www.amazon.com.au/s?k=Foil+emergency+blanket+150x210" }
               ],
             "text": "Compression bandage, Foil Emergency Blanket"
+            "text": "Follow steps for bleeds, replace white bandage with brown bandage, put on blanket if in shock."
           },
           "For riding": {
             "items": [
