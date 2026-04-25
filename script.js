@@ -416,11 +416,9 @@ function renderAllData() {
             
                                             ${noteData.text ? `
                                                 <div class="shop-note-text">
-                                                    ${
-                                                      Array.isArray(noteData.text)
-                                                        ? noteData.text.map(t => `<div>${t}</div>`).join('')
-                                                        : noteData.text
-                                                    }
+                                                    ${Array.isArray(noteData.text)
+                                                        ? noteData.text.map(t => '<div>' + t + '</div>').join('')
+                                                        : noteData.text}
                                                 </div>
                                             ` : ''}
                                         </div>
