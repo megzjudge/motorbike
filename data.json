@@ -191,18 +191,18 @@
         "items": [
           { "image": "images/alarm.png", "url": "https://www.amazon.com.au/Lancoon-Bicycle-Anti-Theft-Motorcycle-Vehicles/dp/B07QXRXW15/" },
           { "image": "images/helmet_chain.png", "url": "https://www.amazon.com.au/dp/B0G23M6CN5" },
+          { "image": "images/storage.png", "url": "https://www.amazon.com.au/dp/B0B15D94HJ" },
           { "image": "images/break_lock.png", "url": "https://www.temu.com/au/-lock-for-motorcycles-and-scooters-a-strong-anti-theft-device-featuring-an-ergonomic-handle-designed-for-motorcycles-and-electric-vehicles-a-safety-for-bikes-ideal-for-garage-or-outdoor-settings-easy-to-set-up-and--g-606340881681350.html" },
-          { "image": "images/stickers_gps.png", "url": "https://www.temu.com/au/gps--matte-vinyl-decals-self--automotive-stickers-with-vibrant-high-quality-design-single-use-front-windshield-decal-for-cars-trucks-suvs-easy-application--removal-car-vinyl-stickers-vehicle-g-601103486862347.html" },
-          { "image": "images/storage.png", "url": "https://www.amazon.com.au/dp/B0B15D94HJ" }
+          { "image": "images/stickers_gps.png", "url": "https://www.temu.com/au/gps--matte-vinyl-decals-self--automotive-stickers-with-vibrant-high-quality-design-single-use-front-windshield-decal-for-cars-trucks-suvs-easy-application--removal-car-vinyl-stickers-vehicle-g-601103486862347.html" }
         ]
       },
       {
         "title": "Cleaning Chain",
         "items": [
           { "image": "images/stand.png", "url": "https://www.amazon.com.au/Motorcycle-Wheel-cleaning-stand-Replacement/dp/B075N73R26/" },
-          { "image": "images/cleaner_rust.png", "url": "https://www.amazon.com.au/dp/B0F8B7VLTV" },
           { "image": "images/cleaner_chain.png", "url": "https://www.ebay.com.au/itm/186259169072" },
           { "image": "images/cleaner_lube.png", "url": "http://amazon.com.au/Tru-Tension-Weather-Cassette-Drivetrain-Lubricant/dp/B07TT7SCNM/" },
+          { "image": "images/cleaner_rust.png", "url": "https://www.amazon.com.au/dp/B0F8B7VLTV" },
           { "image": "images/chain_brush.png", "url": "https://www.ebay.com.au/itm/256960870775" }
         ]
       },
