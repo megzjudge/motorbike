@@ -277,13 +277,13 @@
         "title": "Weather",
         "items": [
           { "image": "images/glasses_blue_light_blocking.png", "url": "https://www.amazon.com.au/dp/B09KBR76LJ" },
+          { "image": "images/water.png", "url": "https://www.amazon.com.au/Hydration-Reservoir-Military-Replacement-Insulated/dp/B071DQSZB8/" },
           { "image": "images/wipes_rain_repellent.png", "url": "https://www.amazon.com.au/Invisible-Glass-Cleaner-Rain-Repellent/dp/B0FF9GLG3B/" },
           { "image": "images/sweat_pads.png", "url": "https://www.temu.com/au/60-disposable-underarm-sweat-pads-suitable-for-a-months--ideal-for-an-lifestyle-absorbent-pads--liners-that--dry-and-hygienic-during-sports-and-outdoor-activities-g-601100098912425.html" },
           { "image": "images/rain_protector_bag.png", "url": "https://www.temu.com/au/universal-new-35-cover-for-backpack-backpack-rain-cover-high-quality-dustproof-cover-for-hiking-camping-travel-backpacks-outdoor-hiking-pack--with-reflective-strips-for-hiking-cycling-and-travel-g-601104466006221.html" },
           { "image": "images/rain_gear.png", "url": "https://www.temu.com/au/adult-split-type-rain-pants-suit-outer-wear-full-body-rainproof-cycling-long-raincoat-set-non-disposable-g-605524032609825.html" },
-          { "image": "images/water.png", "url": "https://www.amazon.com.au/Hydration-Reservoir-Military-Replacement-Insulated/dp/B071DQSZB8/" },
-          { "image": "images/hotday_damp_cloth.png", "url": "https://www.temu.com/au/1pc-camping-towels-cooling-towel-ice-towels-for-neck-and--breathable--towel-for-yoga-workout-gym-golf-camping-stay-cool-and-refreshed-all-day-outdoor-sports-towel-for-instant-cooling-relief-g-601099559042618.html" },
-          { "image": "images/shoe_covers.png", "url": "https://www.temu.com/au/1-2pairs-waterproof-shoe-covers-rain-shoes-protector-reusable-non-slip-rain-boots-sneakers-protector-silicone-shoe-covers-footwear-g-601099547676354.html" }
+          { "image": "images/shoe_covers.png", "url": "https://www.temu.com/au/1-2pairs-waterproof-shoe-covers-rain-shoes-protector-reusable-non-slip-rain-boots-sneakers-protector-silicone-shoe-covers-footwear-g-601099547676354.html" },
+          { "image": "images/hotday_damp_cloth.png", "url": "https://www.temu.com/au/1pc-camping-towels-cooling-towel-ice-towels-for-neck-and--breathable--towel-for-yoga-workout-gym-golf-camping-stay-cool-and-refreshed-all-day-outdoor-sports-towel-for-instant-cooling-relief-g-601099559042618.html" }
         ]
       },
       {
