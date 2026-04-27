@@ -395,6 +395,20 @@ function renderAllData() {
                                     </a>
                                 `).join('')}
                             </div>
+                            
+                            ${Array.isArray(sec.gallery) && sec.gallery.length ? `
+                                <div class="shop-gallery-grid shop-gallery-feature-grid">
+                                    ${sec.gallery.map(item => `
+                                        <a href="${item.url}"
+                                           target="_blank"
+                                           rel="noopener noreferrer"
+                                           class="shop-gallery-link"
+                                           data-tooltip="${getImageTooltipName(item.image)}">
+                                            <img src="${item.image}" class="shop-gallery-image">
+                                        </a>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
             
                             ${sec.note ? `
                                 <div class="shop-note-groups">
