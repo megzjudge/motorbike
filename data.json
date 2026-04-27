@@ -303,7 +303,9 @@
           { "image": "images/travel_comb.png", "url": "https://www.amazon.com.au/Chicago-Comb-Anti-static-Fine-tooth-Mustache/dp/B088NPVCG1/" },
           { "image": "images/shopping_bag.png", "url": "https://www.amazon.com.au/s?k=reusable+shopping+bags+foldable" },
           { "image": "images/period_cup.png", "url": "https://www.coles.com.au/product/tom-organic-the-period-cup-size-2-1-each-3757957" },
-          { "image": "images/First_Aid_Kit_3.png", "url": "First_Aid_Kit_4.png" },
+        ],
+        "gallery": [
+          { "image": "images/First_Aid_Kit_3.png", "url": "images/First_Aid_Kit_4.png" },
           { "image": "images/First_Aid_Kit_2.png", "url": "images/First_Aid_Kit_4.png" },
           { "image": "images/First_Aid_Kit.png", "url": "images/First_Aid_Kit_4.png" }
         ],
