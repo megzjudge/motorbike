@@ -432,6 +432,11 @@ body {
     transform: translateY(-1px);
 }
 
+.gallery {
+  margin-top: 32px;
+  padding-top: 24px;
+}
+
 /* STANDALONE VIDEO */
 .standalone-video {
     width: 100%;
