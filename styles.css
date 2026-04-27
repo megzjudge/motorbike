@@ -292,6 +292,11 @@ body {
     text-transform: uppercase;
 }
 
+.shop-gallery-feature-grid {
+  margin-top: 32px;
+  padding-top: 24px;
+}
+
 /* DATA CARD */
 .data-card {
     border: 3px solid #01b8c6;
@@ -430,11 +435,6 @@ body {
     background: #01b8c6;
     color: white;
     transform: translateY(-1px);
-}
-
-.shop-gallery-feature-grid {
-  margin-top: 32px;
-  padding-top: 24px;
 }
 
 /* STANDALONE VIDEO */
