@@ -28,11 +28,28 @@
     "video_url": "https://www.youtube.com/watch?v=KqqAZaFgXhY"
   },
   {
-    "image": "images/gloves_flow.png",
+    "image": [
+      "images/gloves_flow.png",
+      "images/gloves_flow.png",
+      "images/gloves_flow.png"
+    ],
     "part": "Gloves",
     "brand": "Rjays",
     "brand_flag": "🇦🇺",
-    "version": "Flow Ladies Gloves Blk/Wht XS",
+    "versions": [
+      {
+        "name": "Flow Ladies Gloves Blk/Wht XS",
+        "url": "https://www.amxsuperstores.com.au/products/dainese-d-core-thermo-lady-pant-ll-black-pink"
+      },
+      {
+        "name": "Flow Ladies Gloves Blk/Wht XS",
+        "url": "https://www.amxsuperstores.com.au/products/dainese-d-core-thermo-lady-pant-ll-black-pink"
+      },
+      {
+        "name": "Flow Ladies Gloves Blk/Wht XS",
+        "url": "https://www.amxsuperstores.com.au/products/dainese-d-core-thermo-lady-pant-ll-black-pink"
+      }
+    ],
     "safety_rating": [
       {
         "text": "CE Level 1"
@@ -166,7 +183,7 @@
         "items": [
           { "image": "images/tyre_pump.png", "url": "https://www.ebay.com.au/itm/298081000584" },
           { "image": "images/screen_cover.png", "url": "https://www.temu.com/au/for--cf25022--2022-2023-motorcycle-screen-instrument-protection-film-screen-scratch-resistant-tpu-screen-protection-film-transparent-motorcycle-instrument-protection-g-601101995504505.html" },
-          { "image": "images/stand_protector.png", "url": "https://www.temu.com/au/high-quality-motorcycle-footpeg-extension-plate--in--side-stand-support-plate-accessory-for-street-bikes-g-601105346977493.html" }
+          { "image": "images/stand_protector.png", "url": "https://www.temu.com/au/high-quality-motorcycle-footpeg-extension-plate--in--side-stand-support-plate-accessory-for-street-bikes-g-601105346977493.html" },
           { "image": "images/screw_looseners.png", "url": "https://www.amazon.com.au/WORKPRO-W001308A-3-piece-Locking-Straight/dp/B0109PTUYM/" },
           { "image": "images/seat_repair.png", "url": "https://www.amazon.com.au/dp/B0D2XQRBMM" },
           { "image": "images/tyre_repair.png", "url": "https://www.temu.com/au/20-40-80pcs-vacuum-tire-repair-kit-with-spiral-nails--tool-for-cars-and-motorcycles-non-damaging-iron-mushroom-nails-for-tire-patching-g-601105056555125.html" },
