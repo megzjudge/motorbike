@@ -53,6 +53,40 @@ function isEmptyValue(value) {
     return false;
 }
 
+function toArray(value) {
+    if (isEmptyValue(value)) return [];
+    return Array.isArray(value) ? value : [value];
+}
+
+function collectImageSources(value) {
+    const sources = [];
+
+    toArray(value).forEach(item => {
+        if (typeof item === 'string' && item.trim() !== '') {
+            sources.push(item);
+            return;
+        }
+
+        if (Array.isArray(item)) {
+            sources.push(...collectImageSources(item));
+            return;
+        }
+
+        if (item && typeof item === 'object') {
+            if (typeof item.image === 'string' && item.image.trim() !== '') {
+                sources.push(item.image);
+                return;
+            }
+
+            if (Array.isArray(item.image)) {
+                sources.push(...collectImageSources(item.image));
+            }
+        }
+    });
+
+    return sources;
+}
+
 function renderGenericRow(key, value) {
     if (isEmptyValue(value)) return '';
 
@@ -116,16 +150,49 @@ function renderGenericRow(key, value) {
 }
 
 function renderVersionsRow(versions) {
-    if (!Array.isArray(versions) || !versions.length) return '';
-
-    const items = versions
-        .filter(v => v && !isEmptyValue(v.name))
+    const versionItems = toArray(versions)
+        .filter(v => v && !isEmptyValue(v.name || v.text || v.title || v.version))
         .map(v => {
-            if (v.url) {
-                return `<a href="${v.url}" target="_blank" rel="noopener noreferrer" class="version-tag">${v.name}</a>`;
+            const versionName = v.name || v.text || v.title || v.version;
+            const versionUrl = v.url || v.version_url;
+
+            if (versionUrl) {
+                return `<a href="${versionUrl}" target="_blank" rel="noopener noreferrer" class="version-tag">${versionName}</a>`;
             }
 
-            return `<span class="version-tag version-tag-plain">${v.name}</span>`;
+            return `<span class="version-tag version-tag-plain">${versionName}</span>`;
+        })
+        .join('');
+
+    if (!versionItems) return '';
+
+    return `
+        <div class="data-row">
+            <span class="label">VERSION</span>
+            <div class="safety-ratings">${versionItems}</div>
+        </div>
+    `;
+}
+
+function renderSafetyRow(safetyRatings) {
+    const ratings = toArray(safetyRatings);
+
+    const items = ratings
+        .filter(r => {
+            if (typeof r === 'string' || typeof r === 'number') return !isEmptyValue(r);
+            return r && !isEmptyValue(r.text || r.name || r.rating);
+        })
+        .map(r => {
+            if (typeof r === 'string' || typeof r === 'number') {
+                return `<span class="safety-item">${r}</span>`;
+            }
+
+            const ratingText = r.text || r.name || r.rating;
+            const ratingUrl = r.url;
+
+            return ratingUrl
+                ? `<a href="${ratingUrl}" target="_blank" rel="noopener noreferrer" class="safety-tag">${ratingText}</a>`
+                : `<span class="safety-item">${ratingText}</span>`;
         })
         .join('');
 
@@ -133,10 +200,166 @@ function renderVersionsRow(versions) {
 
     return `
         <div class="data-row">
-            <span class="label">VERSION</span>
+            <span class="label">SAFETY RATING</span>
             <div class="safety-ratings">${items}</div>
         </div>
     `;
+}
+
+function renderVideoRow(videoValue) {
+    const videos = toArray(videoValue).filter(Boolean);
+
+    if (!videos.length) return '';
+
+    const links = videos.map((video, i) => {
+        const url = typeof video === 'string' ? video : video.url || video.video_url;
+        if (!url) return '';
+
+        const name = video.title || video.name || getVideoSiteName(url);
+
+        return `
+            <a href="${url}" target="_blank" rel="noopener noreferrer" class="safety-tag">
+                ${videos.length > 1 ? `${name} ${i + 1}` : name}
+            </a>
+        `;
+    }).join('');
+
+    if (!links.trim()) return '';
+
+    return `
+        <div class="data-row">
+            <span class="label">VIDEO</span>
+            <div class="safety-ratings">${links}</div>
+        </div>
+    `;
+}
+
+function renderBrandArrayRows(brands) {
+    const brandItems = brands
+        .filter(brand => brand && typeof brand === 'object' && !isEmptyValue(brand.name || brand.brand));
+
+    if (!brandItems.length) return '';
+
+    const rows = [];
+
+    const brandContent = brandItems
+        .map(brand => {
+            const brandName = brand.name || brand.brand;
+            const brandUrl = brand.brand_url || brand.url;
+            const brandNameHTML = brandUrl
+                ? `<a href="${brandUrl}" target="_blank" rel="noopener noreferrer" class="version-tag">${brandName}</a>`
+                : `<span class="value">${brandName}</span>`;
+
+            return `
+                <span class="brand-inline-item">
+                    ${brandNameHTML}
+                    ${brand.brand_flag ? `<span class="flag">${brand.brand_flag}</span>` : ''}
+                </span>
+            `;
+        })
+        .join('');
+
+    rows.push(`
+        <div class="data-row">
+            <span class="label">BRAND</span>
+            <div class="brand-row brand-row-multi">
+                ${brandContent}
+            </div>
+        </div>
+    `);
+
+    const allVersions = [];
+    brandItems.forEach(brand => {
+        if (Array.isArray(brand.versions)) {
+            allVersions.push(...brand.versions);
+        } else if (!isEmptyValue(brand.version || brand.version_url)) {
+            allVersions.push({
+                name: brand.version,
+                url: brand.version_url
+            });
+        }
+    });
+
+    const versionsHTML = renderVersionsRow(allVersions);
+    if (versionsHTML) rows.push(versionsHTML);
+
+    const allSafetyRatings = [];
+    brandItems.forEach(brand => {
+        if (!isEmptyValue(brand.safety_rating)) {
+            allSafetyRatings.push(...toArray(brand.safety_rating));
+        }
+    });
+
+    const safetyHTML = renderSafetyRow(allSafetyRatings);
+    if (safetyHTML) rows.push(safetyHTML);
+
+    const fromItems = brandItems
+        .filter(brand => !isEmptyValue(brand.from))
+        .map(brand => {
+            if (brand.from_url) {
+                return `<a href="${brand.from_url}" target="_blank" rel="noopener noreferrer" class="version-tag">${brand.from}</a>`;
+            }
+
+            return `<span class="version-tag version-tag-plain">${brand.from}</span>`;
+        })
+        .join('');
+
+    if (fromItems) {
+        rows.push(`
+            <div class="data-row">
+                <span class="label">FROM</span>
+                <div class="safety-ratings">${fromItems}</div>
+            </div>
+        `);
+    }
+
+    const allVideos = [];
+    brandItems.forEach(brand => {
+        if (!isEmptyValue(brand.video_url)) {
+            allVideos.push(...toArray(brand.video_url));
+        }
+    });
+
+    const videoHTML = renderVideoRow(allVideos);
+    if (videoHTML) rows.push(videoHTML);
+
+    const handledBrandKeys = new Set([
+        'name',
+        'brand',
+        'brand_flag',
+        'brand_url',
+        'url',
+        'image',
+        'versions',
+        'version',
+        'version_url',
+        'safety_rating',
+        'from',
+        'from_url',
+        'video_url'
+    ]);
+
+    const extraKeys = [];
+    brandItems.forEach(brand => {
+        Object.keys(brand).forEach(key => {
+            if (!handledBrandKeys.has(key) && !extraKeys.includes(key)) {
+                extraKeys.push(key);
+            }
+        });
+    });
+
+    extraKeys.forEach(key => {
+        const combinedValues = brandItems
+            .map(brand => brand[key])
+            .filter(value => !isEmptyValue(value));
+
+        if (!combinedValues.length) return;
+
+        const generic = renderGenericRow(key, combinedValues.length === 1 ? combinedValues[0] : combinedValues);
+        if (generic) rows.push(generic);
+    });
+
+    return rows.join('');
 }
 
 function renderCardRows(data) {
@@ -159,6 +382,12 @@ function renderCardRows(data) {
 
         // BRAND
         if (key === 'brand') {
+            if (Array.isArray(value)) {
+                const brandRows = renderBrandArrayRows(value);
+                if (brandRows) rows.push(brandRows);
+                return;
+            }
+
             const brandContent = data.brand_url
                 ? `<a href="${data.brand_url}" target="_blank" rel="noopener noreferrer" class="version-tag">${value}</a>`
                 : `<span class="value">${value}</span>`;
@@ -220,49 +449,15 @@ function renderCardRows(data) {
 
         // SAFETY
         if (key === 'safety_rating') {
-            const ratings = Array.isArray(value) ? value : [value];
-
-            const items = ratings
-                .filter(r => r && r.text)
-                .map(r =>
-                    r.url
-                        ? `<a href="${r.url}" target="_blank" rel="noopener noreferrer" class="safety-tag">${r.text}</a>`
-                        : `<span class="safety-item">${r.text}</span>`
-                )
-                .join('');
-
-            if (items) {
-                rows.push(`
-                    <div class="data-row">
-                        <span class="label">SAFETY RATING</span>
-                        <div class="safety-ratings">${items}</div>
-                    </div>
-                `);
-            }
+            const safetyHTML = renderSafetyRow(value);
+            if (safetyHTML) rows.push(safetyHTML);
             return;
         }
 
         // VIDEO
         if (key === 'video_url') {
-            const videos = Array.isArray(value) ? value.filter(Boolean) : [value];
-
-            if (videos.length) {
-                const links = videos.map((url, i) => {
-                    const name = getVideoSiteName(url);
-                    return `
-                        <a href="${url}" target="_blank" rel="noopener noreferrer" class="safety-tag">
-                            ${videos.length > 1 ? `${name} ${i + 1}` : name}
-                        </a>
-                    `;
-                }).join('');
-
-                rows.push(`
-                    <div class="data-row">
-                        <span class="label">VIDEO</span>
-                        <div class="safety-ratings">${links}</div>
-                    </div>
-                `);
-            }
+            const videoHTML = renderVideoRow(value);
+            if (videoHTML) rows.push(videoHTML);
             return;
         }
 
@@ -337,9 +532,18 @@ function updateTooltipPosition(e) {
 }
 
 function renderImages(data, container) {
-    if (!data.image) return;
+    const images = [];
 
-    const images = Array.isArray(data.image) ? data.image : [data.image];
+    images.push(...collectImageSources(data.image));
+
+    if (Array.isArray(data.brand)) {
+        data.brand.forEach(brand => {
+            if (brand && typeof brand === 'object') {
+                images.push(...collectImageSources(brand.image));
+            }
+        });
+    }
+
     const validImages = images.filter(src => typeof src === 'string' && src.trim() !== '');
 
     if (!validImages.length) return;
