@@ -34,7 +34,9 @@
       "images/gloves_flow.png"
     ],
     "part": "Gloves",
-    "brand": "Rjays",
+    "brand": [
+      {
+      "Rjays",
     "brand_flag": "🇦🇺",
     "versions": [
       {
@@ -42,12 +44,8 @@
         "url": "https://www.amxsuperstores.com.au/products/dainese-d-core-thermo-lady-pant-ll-black-pink"
       },
       {
-        "name": "Flow Ladies Gloves Blk/Wht XS",
-        "url": "https://www.amxsuperstores.com.au/products/dainese-d-core-thermo-lady-pant-ll-black-pink"
-      },
-      {
-        "name": "Flow Ladies Gloves Blk/Wht XS",
-        "url": "https://www.amxsuperstores.com.au/products/dainese-d-core-thermo-lady-pant-ll-black-pink"
+        "name": "Fly MX24 Title Heated Gloves Black XS",
+        "url": "https://www.amxsuperstores.com.au/products/fly-mx24-title-heated-glove-black"
       }
     ],
     "safety_rating": [
@@ -57,6 +55,47 @@
     ],
     "from": "MCAS Alexandria",
     "from_url": "https://www.mcas.com.au/shop/rjays-flow-womens-gloves-black-white-GL125BKWTDXS-P"
+  },
+  {
+    "part": "Gloves",
+    "brand": [
+      {
+        "name": "Rjays",
+        "brand_flag": "🇦🇺",
+        "image": "images/rjays-flow-gloves.png",
+        "versions": [
+          {
+            "name": "Flow Ladies Gloves Blk/Wht XS",
+            "url": "https://www.mcas.com.au/shop/rjays-flow-womens-gloves-black-white-GL125BKWTDXS-P"
+          }
+        ],
+        "safety_rating": [
+          {
+            "text": "CE Level 1"
+          }
+        ],
+        "from": "MCAS Alexandria",
+        "from_url": "https://www.mcas.com.au/shop/rjays-flow-womens-gloves-black-white-GL125BKWTDXS-P"
+      },
+      {
+        "name": "Fly Racing",
+        "brand_flag": "🇺🇸",
+        "image": "images/gloves_fly.png",
+        "versions": [
+          {
+            "name": "Fly MX24 Title Heated Gloves Black XS",
+            "url": "https://www.amxsuperstores.com.au/products/fly-mx24-title-heated-glove-black"
+          }
+        ],
+        "safety_rating": [
+          {
+            "text": "CE Level 1"
+          }
+        ],
+        "from": "AMX Superstores",
+        "from_url": "https://www.amxsuperstores.com.au/products/fly-mx24-title-heated-glove-black"
+      }
+    ]
   },
   {
     "image": "images/exhaust_jacket.png",
