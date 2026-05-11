@@ -28,35 +28,6 @@
     "video_url": "https://www.youtube.com/watch?v=KqqAZaFgXhY"
   },
   {
-    "image": [
-      "images/gloves_flow.png",
-      "images/gloves_flow.png",
-      "images/gloves_flow.png"
-    ],
-    "part": "Gloves",
-    "brand": [
-      {
-      "Rjays",
-    "brand_flag": "🇦🇺",
-    "versions": [
-      {
-        "name": "Flow Ladies Gloves Blk/Wht XS",
-        "url": "https://www.amxsuperstores.com.au/products/dainese-d-core-thermo-lady-pant-ll-black-pink"
-      },
-      {
-        "name": "Fly MX24 Title Heated Gloves Black XS",
-        "url": "https://www.amxsuperstores.com.au/products/fly-mx24-title-heated-glove-black"
-      }
-    ],
-    "safety_rating": [
-      {
-        "text": "CE Level 1"
-      }
-    ],
-    "from": "MCAS Alexandria",
-    "from_url": "https://www.mcas.com.au/shop/rjays-flow-womens-gloves-black-white-GL125BKWTDXS-P"
-  },
-  {
     "part": "Gloves",
     "brand": [
       {
@@ -80,11 +51,11 @@
       {
         "name": "Fly Racing",
         "brand_flag": "🇺🇸",
-        "image": "images/gloves_fly.png",
+        "image": "images/fly-heated-gloves.png",
         "versions": [
           {
             "name": "Fly MX24 Title Heated Gloves Black XS",
-            "url": "https://www.amxsuperstores.com.au/products/fly-mx24-title-heated-glove-black"
+            "url": "https://www.flyracing.com/title-heated-gauntlet-gloves/"
           }
         ],
         "safety_rating": [
@@ -92,7 +63,7 @@
             "text": "CE Level 1"
           }
         ],
-        "from": "AMX Superstores",
+        "from": "AMX Online",
         "from_url": "https://www.amxsuperstores.com.au/products/fly-mx24-title-heated-glove-black"
       }
     ]
