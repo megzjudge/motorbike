@@ -166,8 +166,9 @@
         "items": [
           { "image": "images/auto_turn_signal.png", "url": "https://st2-systems.com/st2-turn-system/" },
           { "image": "images/windshield_windscreen.png", "url": "https://www.ebay.com.au/itm/227244281897" },
-          { "image": "images/mirrors.png", "url": "https://www.amazon.com.au/Motorcycle-Rotating-Universal-Adjustable-Replacement/dp/B0CM7YMW7F/" },
-          { "image": "images/lever_clutch_break.png", "url": "https://www.amazon.com.au/MTCRIGHTER-CFMOTO-Retractable-Foldable-Aluminum/dp/B0DRT7SKWX/" }
+          { "image": "images/lever_clutch_break.png", "url": "https://www.amazon.com.au/MTCRIGHTER-CFMOTO-Retractable-Foldable-Aluminum/dp/B0DRT7SKWX/" },
+          { "image": "images/bike_oil_cap.png", "url": "https://www.aliexpress.com/item/1005009940557874.html" },
+          { "image": "images/bike_bar.png", "url": "https://www.aliexpress.com/item/1005006202883987.html" }
         ]
       },
       {
@@ -226,6 +227,9 @@
         "title": "Style",
         "items": [
           { "image": "images/key_cover.png", "url": "https://www.temu.com/au/key-cover-shell-keychain-and-holder-for-modified-motorcycles-including--models-250sr---450mt-700clx--700mt--nk250--400nk-300nk-400gt-and--g-601102494727339.html" },
+          { "image": "images/bike_bolt_covers.png", "url": "https://www.aliexpress.com/item/1005005950798749.html" },
+          { "image": "images/stickers_tank.png", "url": "https://www.aliexpress.com/item/1005008505922286.html" },
+          { "image": "images/stickers_fuel.png", "url": "https://www.aliexpress.com/item/1005007103881555.html" },
           { "image": "images/stickers_helmet.png", "url": "https://www.temu.com/au/motorcycle-reflective-strips-stickers-for-car-motorcycle-helmet-bicycle-exterior-decoration-decals-night-driving-safety-warning-sign-reflector-vinyl-self--fashionable-line-strip-pattern-sticker-gift-g-601100877038050.html" },
           { "image": "images/stickers_bike.png", "url": "https://www.temu.com/au/aggressive-bull-vector-image-for-car-decals-bumper-stickers-and-vinyl---scratch-resistant-and-durable-designs-are--helmets-stylish-motorcycles-toolboxes-guitars-scooters-and-car-stickers-g-601103661802471.html" },
           { "image": "images/stickers_rabbit.png", "url": "https://www.temu.com/au/2d-flat-2d-flat-sticker-car-decal-suitable-for-cars-windows-laptops-bumpers-trunk-motorcycles-and-camping-bikes-easter-theme-creative-rabbit-stickers-2d-g-601101423356550.html" },
