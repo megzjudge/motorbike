@@ -461,6 +461,23 @@ function renderCardRows(data) {
             return;
         }
 
+        // COLOURS WITH INLINE SOURCE
+        if (key === 'colours') {
+            const sourceLink = data.colours_source_url
+                ? ` <a href="${data.colours_source_url}" target="_blank" rel="noopener noreferrer" class="inline-source-link">Source</a>`
+                : '';
+
+            rows.push(`
+                <div class="data-row">
+                    <span class="label">COLOURS</span>
+                    <span class="value">${value}${sourceLink}</span>
+                </div>
+            `);
+            return;
+        }
+
+        if (key === 'colours_source_url') return;
+
         // DEFAULT AUTO FIELD
         const generic = renderGenericRow(key, value);
         if (generic) rows.push(generic);
