@@ -336,6 +336,12 @@ body {
     flex-shrink: 0;
 }
 
+.inline-source-link {
+  display: inline;
+  margin-left: 4px;
+  white-space: nowrap;
+}
+
 .value {
     font-size: 15.5px;
     font-weight: 600;
