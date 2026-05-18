@@ -168,6 +168,7 @@
           { "image": "images/windshield_windscreen.png", "url": "https://www.ebay.com.au/itm/227244281897" },
           { "image": "images/lever_clutch_break.png", "url": "https://www.amazon.com.au/MTCRIGHTER-CFMOTO-Retractable-Foldable-Aluminum/dp/B0DRT7SKWX/" },
           { "image": "images/bike_oil_cap.png", "url": "https://www.aliexpress.com/item/1005009940557874.html" },
+          { "image": "images/seat.png", "url": "http://ebay.com.au/itm/287092771392" },
           { "image": "images/bike_bar.png", "url": "https://www.aliexpress.com/item/1005006202883987.html" }
         ]
       },
@@ -267,13 +268,12 @@
           { "image": "images/insoles.png", "url": "https://www.amazon.com.au/dp/B0CYSJ7DLM" },
           { "image": "images/helmet_speakers.png", "url": "https://www.amazon.com.au/dp/B0GN34QLF9/" },
           { "image": "images/bottle.png", "url": "https://www.amazon.com.au/dp/B07KD449LM" },
-          { "image": "images/seat.png", "url": "http://ebay.com.au/itm/287092771392" },
           { "image": "images/bottle_holder.png", "url": "https://www.temu.com/au/motorcycle-water-bottle-holder-heavy-duty-adjustable-clamp-1-52-3-96cm-with-free-installation-sturdy-motorcycle-drink-system-for-1-liter-bottles-hands-free-motorcycling-accessory-black-fits-mtb-e-road-motorcycle-cup-holder-g-601105483062205.html" },
+          { "image": "images/socks_water_repelling_odour_prevention.png", "url": "https://www.amazon.com.au/s?k=fox+river+military+boot+socks" },
           { "image": "images/neck_whale.png", "url": "https://www.temu.com/au/fashionable-knitted-neck-gaiter-with-whale-pattern-polyester-95-and-elastane-5-multifunctional-neck-scarf-and-face-mask-for-outdoor-sports-and-sun-protection-g-601099768087769.html" },
           { "image": "images/neck_fox.png", "url": "https://www.temu.com/au/-forest-fox-neck-gaiter-with-glasses-stylish-polyester-face-mask-neck-scarf-and-magnet-for-outdoor-activities-outdoor-gear-vibrant-animal-print-durable-neck-gaiter-g-601101195957759.html" },
           { "image": "images/neck_wolf.png", "url": "https://www.temu.com/au/-mystical-wolf--neck-gaiter-face-mask-lightweight-polyester-knit-bandana-stretchable-95-polyester-5-elastane-fabric-breathable-and-moisture-wicking-motorcycle-scarf-g-601099724112613.html" },
-          { "image": "images/neck_elephant.png", "url": "https://www.temu.com/au/vibrant-neon-elephant-print-scarf-colorful-digital-printed-neck-face-mask-polyester-lightweight-stylish-for-casual-attire-elephant-deco-g-601100819297123.html" },
-          { "image": "images/socks_water_repelling_odour_prevention.png", "url": "https://www.amazon.com.au/s?k=fox+river+military+boot+socks" }
+          { "image": "images/neck_elephant.png", "url": "https://www.temu.com/au/vibrant-neon-elephant-print-scarf-colorful-digital-printed-neck-face-mask-polyester-lightweight-stylish-for-casual-attire-elephant-deco-g-601100819297123.html" }
         ]
       },
       {
