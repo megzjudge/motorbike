@@ -234,6 +234,33 @@ function renderVideoRow(videoValue) {
     `;
 }
 
+
+function extractTailSourceLink(value, fallbackUrl) {
+    let text = typeof value === 'string' ? value : String(value);
+    let url = fallbackUrl || '';
+    let label = 'Source';
+
+    const anchorMatch = text.match(/\s*<a\s+[^>]*href=(["'])(.*?)\1[^>]*>(.*?)<\/a>\s*$/i);
+
+    if (anchorMatch) {
+        if (!url) url = anchorMatch[2];
+        label = anchorMatch[3].replace(/<[^>]*>/g, '').trim() || 'Source';
+        text = text.replace(anchorMatch[0], '').trim();
+    }
+
+    return {
+        text,
+        url,
+        label
+    };
+}
+
+function renderInlineSourceLink(url, label = 'Source') {
+    if (!url) return '';
+
+    return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="inline-source-link" style="display:inline !important; margin-left:4px; white-space:nowrap;">${label}</a>`;
+}
+
 function renderBrandArrayRows(brands) {
     const brandItems = brands
         .filter(brand => brand && typeof brand === 'object' && !isEmptyValue(brand.name || brand.brand));
@@ -463,14 +490,13 @@ function renderCardRows(data) {
 
         // COLOURS WITH INLINE SOURCE
         if (key === 'colours') {
-            const sourceLink = data.colours_source_url
-                ? ` <a href="${data.colours_source_url}" target="_blank" rel="noopener noreferrer" class="inline-source-link">Source</a>`
-                : '';
+            const source = extractTailSourceLink(value, data.colours_source_url);
+            const sourceLink = source.url ? ` ${renderInlineSourceLink(source.url, source.label)}` : '';
 
             rows.push(`
                 <div class="data-row">
                     <span class="label">COLOURS</span>
-                    <span class="value">${value}${sourceLink}</span>
+                    <span class="value">${source.text}${sourceLink}</span>
                 </div>
             `);
             return;
