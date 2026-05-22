@@ -352,6 +352,38 @@ body {
     min-height: 34px;
 }
 
+.colours-row {
+    align-items: flex-start;
+}
+
+.colours-row .label {
+    padding-top: 8px;
+}
+
+.colours-value-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    max-width: 75%;
+}
+
+.colours-value {
+    display: block;
+    line-height: 1.45;
+    min-height: 0;
+}
+
+.colours-source-wrap {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.colours-source-button {
+    width: fit-content;
+}
+
 .brand-row {
     display: flex;
     align-items: center;
@@ -618,6 +650,24 @@ body {
         width: 100%;
         justify-content: flex-start;
         text-align: left;
+    }
+
+    .colours-row .label {
+        padding-top: 0;
+    }
+
+    .colours-value-wrap {
+        width: 100%;
+        max-width: 100%;
+        align-items: flex-start;
+    }
+
+    .colours-value {
+        text-align: left;
+    }
+
+    .colours-source-wrap {
+        justify-content: flex-start;
     }
 
     .flag {
