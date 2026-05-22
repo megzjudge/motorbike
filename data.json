@@ -169,7 +169,10 @@
           { "image": "images/windshield_windscreen.png", "url": "https://www.ebay.com.au/itm/227244281897" },
           { "image": "images/lever_clutch_break.png", "url": "https://www.amazon.com.au/MTCRIGHTER-CFMOTO-Retractable-Foldable-Aluminum/dp/B0DRT7SKWX/" },
           { "image": "images/bike_oil_cap.png", "url": "https://www.aliexpress.com/item/1005009940557874.html" },
+          { "image": "images/mirrors.png", "url": "https://www.amazon.com.au/dp/B0C65JRLSK" },
           { "image": "images/seat.png", "url": "http://ebay.com.au/itm/287092771392" },
+          { "image": "images/fuse_box.png", "url": "https://www.amazon.com.au/dp/B0D7HKSDGQ" },
+          { "image": "images/charger.png", "url": "http://amazon.com.au/CCJZBCAU-Motorcycle-Waterproof-Handlebar-Voltmeter/dp/B0D9SX3VRJ/" },
           { "image": "images/bike_bar.png", "url": "https://www.aliexpress.com/item/1005006202883987.html" }
         ]
       },
@@ -180,10 +183,13 @@
           { "image": "images/screen_cover.png", "url": "https://www.temu.com/au/for--cf25022--2022-2023-motorcycle-screen-instrument-protection-film-screen-scratch-resistant-tpu-screen-protection-film-transparent-motorcycle-instrument-protection-g-601101995504505.html" },
           { "image": "images/stand_protector.png", "url": "https://www.temu.com/au/high-quality-motorcycle-footpeg-extension-plate--in--side-stand-support-plate-accessory-for-street-bikes-g-601105346977493.html" },
           { "image": "images/screw_looseners.png", "url": "https://www.amazon.com.au/WORKPRO-W001308A-3-piece-Locking-Straight/dp/B0109PTUYM/" },
+          { "image": "images/fluid_oil.png", "url": "https://www.amazon.com.au/dp/B0BHW2Y1HK" },
+          { "image": "images/fluid_breaks.png", "url": "https://www.amazon.com.au/Nulon-Xtreme-Performance-Brake-Fluid/dp/B08WHHWTKK/" },
           { "image": "images/battery_jumper.png", "url": "https://www.ebay.com.au/itm/156419810697" },
           { "image": "images/seat_repair.png", "url": "https://www.amazon.com.au/dp/B0D2XQRBMM" },
           { "image": "images/tyre_repair.png", "url": "https://www.temu.com/au/20-40-80pcs-vacuum-tire-repair-kit-with-spiral-nails--tool-for-cars-and-motorcycles-non-damaging-iron-mushroom-nails-for-tire-patching-g-601105056555125.html" },
           { "image": "images/screws_spare.png", "url": "http://ebay.com.au/itm/397237824238" },
+          { "image": "images/spring_puller.png", "url": "https://www.amazon.com.au/dp/B0GRN5V859" },
           { "image": "images/gloves.png", "url": "https://www.amazon.com.au/dp/B08G6M1XFR" },
           { "image": "images/screw_loosener.png", "url": "https://www.ebay.com.au/itm/227141884746" }
         ]
@@ -230,6 +236,7 @@
         "items": [
           { "image": "images/key_cover.png", "url": "https://www.temu.com/au/key-cover-shell-keychain-and-holder-for-modified-motorcycles-including--models-250sr---450mt-700clx--700mt--nk250--400nk-300nk-400gt-and--g-601102494727339.html" },
           { "image": "images/bike_bolt_covers.png", "url": "https://www.aliexpress.com/item/1005005950798749.html" },
+          { "image": "images/tyre_valve_caps.png", "url": "https://www.amazon.com.au/dp/B0GTTL97LY" },
           { "image": "images/stickers_tank.png", "url": "https://www.aliexpress.com/item/1005008505922286.html" },
           { "image": "images/stickers_fuel.png", "url": "https://www.aliexpress.com/item/1005007103881555.html" },
           { "image": "images/stickers_helmet.png", "url": "https://www.temu.com/au/motorcycle-reflective-strips-stickers-for-car-motorcycle-helmet-bicycle-exterior-decoration-decals-night-driving-safety-warning-sign-reflector-vinyl-self--fashionable-line-strip-pattern-sticker-gift-g-601100877038050.html" },
@@ -274,7 +281,8 @@
           { "image": "images/neck_whale.png", "url": "https://www.temu.com/au/fashionable-knitted-neck-gaiter-with-whale-pattern-polyester-95-and-elastane-5-multifunctional-neck-scarf-and-face-mask-for-outdoor-sports-and-sun-protection-g-601099768087769.html" },
           { "image": "images/neck_fox.png", "url": "https://www.temu.com/au/-forest-fox-neck-gaiter-with-glasses-stylish-polyester-face-mask-neck-scarf-and-magnet-for-outdoor-activities-outdoor-gear-vibrant-animal-print-durable-neck-gaiter-g-601101195957759.html" },
           { "image": "images/neck_wolf.png", "url": "https://www.temu.com/au/-mystical-wolf--neck-gaiter-face-mask-lightweight-polyester-knit-bandana-stretchable-95-polyester-5-elastane-fabric-breathable-and-moisture-wicking-motorcycle-scarf-g-601099724112613.html" },
-          { "image": "images/neck_elephant.png", "url": "https://www.temu.com/au/vibrant-neon-elephant-print-scarf-colorful-digital-printed-neck-face-mask-polyester-lightweight-stylish-for-casual-attire-elephant-deco-g-601100819297123.html" }
+          { "image": "images/neck_elephant.png", "url": "https://www.temu.com/au/vibrant-neon-elephant-print-scarf-colorful-digital-printed-neck-face-mask-polyester-lightweight-stylish-for-casual-attire-elephant-deco-g-601100819297123.html" },
+          { "image": "images/rain_gear_vaccum_seal_bag.png", "url": "https://www.amazon.com.au/dp/B0857MZWDM" }
         ]
       },
       {
