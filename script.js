@@ -488,15 +488,20 @@ function renderCardRows(data) {
             return;
         }
 
-        // COLOURS WITH INLINE SOURCE
+        // COLOURS WITH SOURCE BUTTON
         if (key === 'colours') {
             const source = extractTailSourceLink(value, data.colours_source_url);
-            const sourceLink = source.url ? ` ${renderInlineSourceLink(source.url, source.label)}` : '';
+            const sourceButton = source.url
+                ? `<a href="${source.url}" target="_blank" rel="noopener noreferrer" class="safety-tag colours-source-button">${source.label}</a>`
+                : '';
 
             rows.push(`
-                <div class="data-row">
+                <div class="data-row colours-row">
                     <span class="label">COLOURS</span>
-                    <span class="value">${source.text}${sourceLink}</span>
+                    <div class="colours-value-wrap">
+                        <span class="value colours-value">${source.text}</span>
+                        ${sourceButton ? `<div class="colours-source-wrap">${sourceButton}</div>` : ''}
+                    </div>
                 </div>
             `);
             return;
