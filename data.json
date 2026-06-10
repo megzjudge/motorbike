@@ -1,15 +1,28 @@
 [
   {
-    "image": "images/exo_helmet.png",
+    "images": ["images/exo_helmet.png", "images/skwal_helmet.png"],
     "part": "Helmet",
-    "brand": "Scorpion Exo",
-    "brand_flag": "🇦🇺",
-    "version": "EXO-491",
-    "version_url": "https://www.scorpionexohelmets.com.au/scorpion-exo-491-helmet-matte-black-3xl~112",
-    "safety_rating": [
+    "brands": [
       {
-        "text": "ECE 22.06"
+        "name": "Scorpion-Exo",
+        "flag": "🇺🇸"
       },
+      {
+        "name": "Shark",
+        "flag": "🇫🇷"
+      }
+    ],
+    "versions": [
+      {
+        "name": "EXO-491",
+        "url": "https://www.scorpionexohelmets.com.au/scorpion-exo-491-helmet-matte-black-3xl~112"
+      },
+      {
+        "name": "D-Skwal 2 Penxa",
+        "url": "https://motorcyclestuff.com.au/collections/all-helmets/products/shark-d-skwal-2-penxa-black-green-yellow-helmet-xs"
+      }
+    ],
+    "safety_rating": [
       {
         "text": "UK Law",
         "url": "https://www.gov.uk/motorcycle-helmet-law"
@@ -19,13 +32,28 @@
         "url": "https://sharp.dft.gov.uk/"
       },
       {
-        "text": "SHARP 3★",
+        "text": "ECE 22.06 · SHARP 3★",
         "url": "https://sharp.dft.gov.uk/helmets/scorpion-exo-491/"
+      },
+      {
+        "text": "ECE 22.05 · SHARP 4★",
+        "url": "https://sharp.dft.gov.uk/helmets/shark-skwal-2/"
       }
     ],
-    "from": "MCAS Alexandria",
-    "from_url": "https://www.mcas.com.au/scorpion-exo-491-helmet-matte-black-se48100100-p",
-    "video_url": "https://www.youtube.com/watch?v=KqqAZaFgXhY"
+    "from": [
+      {
+        "name": "MCAS Alexandria",
+        "url": "https://www.mcas.com.au/scorpion-exo-491-helmet-matte-black-se48100100-p"
+      },
+      {
+        "name": "Motorcycle Stuff St Peters",
+        "url": "https://motorcyclestuff.com.au/collections/all-helmets/products/shark-d-skwal-2-penxa-black-green-yellow-helmet-xs"
+      }
+    ],
+    "video_urls": [
+      "https://www.youtube.com/watch?v=KqqAZaFgXhY",
+      "https://www.youtube.com/watch?v=_FwGO4oPjSg"
+    ]
   },
   {
     "part": "Gloves",
@@ -66,7 +94,7 @@
         "url": "https://www.motocap.com.au/product/exhaust-ladies"
       }
     ],
-    "from": "Motorcycle Stuff Alexandria",
+    "from": "Motorcycle Stuff St Peters",
     "from_url": "https://motorcyclestuff.com.au/products/ixon-exhaust-womens-textile-jacket-black",
     "video_url": "https://motorcyclestuff.com.au/collections/ixon-womens-jackets/products/ixon-exhaust-womens-textile-jacket-black?tolstoyAutoOpen=eoh4xluzwyodu&utm_source=tolstoy&utm_medium=feed_share&tolstoyStartVideo=aa1e94ca-d51d-4aca-8c1e-fe6f6d125f98"
   },
