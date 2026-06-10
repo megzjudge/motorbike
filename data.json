@@ -1,28 +1,21 @@
 [
   {
-    "images": ["images/exo_helmet.png", "images/skwal_helmet.png"],
+    "image": ["images/exo_helmet.png", "images/skwal_helmet.png"],
     "part": "Helmet",
-    "brands": [
-      {
-        "name": "Scorpion-Exo",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Shark",
-        "flag": "🇫🇷"
-      }
-    ],
-    "versions": [
-      {
-        "name": "EXO-491",
-        "url": "https://www.scorpionexohelmets.com.au/scorpion-exo-491-helmet-matte-black-3xl~112"
-      },
-      {
-        "name": "D-Skwal 2 Penxa",
-        "url": "https://motorcyclestuff.com.au/collections/all-helmets/products/shark-d-skwal-2-penxa-black-green-yellow-helmet-xs"
-      }
+    "brand": ["Scorpion Exo", "Shark"],
+    "brand_flag": ["🇺🇸", "🇫🇷"],
+    "version": ["EXO-491", "D-Skwal 2 Penxa"],
+    "version_url": [
+      "https://www.scorpionexohelmets.com.au/scorpion-exo-491-helmet-matte-black-3xl~112",
+      "https://motorcyclestuff.com.au/collections/all-helmets/products/shark-d-skwal-2-penxa-black-green-yellow-helmet-xs"
     ],
     "safety_rating": [
+      {
+        "text": "ECE 22.06"
+      },
+      {
+        "text": "ECE 22.05"
+      },
       {
         "text": "UK Law",
         "url": "https://www.gov.uk/motorcycle-helmet-law"
@@ -32,25 +25,20 @@
         "url": "https://sharp.dft.gov.uk/"
       },
       {
-        "text": "ECE 22.06 · SHARP 3★",
+        "text": "SHARP 3★",
         "url": "https://sharp.dft.gov.uk/helmets/scorpion-exo-491/"
       },
       {
-        "text": "ECE 22.05 · SHARP 4★",
+        "text": "SHARP 4★",
         "url": "https://sharp.dft.gov.uk/helmets/shark-skwal-2/"
       }
     ],
-    "from": [
-      {
-        "name": "MCAS Alexandria",
-        "url": "https://www.mcas.com.au/scorpion-exo-491-helmet-matte-black-se48100100-p"
-      },
-      {
-        "name": "Motorcycle Stuff St Peters",
-        "url": "https://motorcyclestuff.com.au/collections/all-helmets/products/shark-d-skwal-2-penxa-black-green-yellow-helmet-xs"
-      }
+    "from": ["MCAS Alexandria", "Motorcycle Stuff St Peters"],
+    "from_url": [
+      "https://www.mcas.com.au/scorpion-exo-491-helmet-matte-black-se48100100-p",
+      "https://motorcyclestuff.com.au/collections/all-helmets/products/shark-d-skwal-2-penxa-black-green-yellow-helmet-xs"
     ],
-    "video_urls": [
+    "video_url": [
       "https://www.youtube.com/watch?v=KqqAZaFgXhY",
       "https://www.youtube.com/watch?v=_FwGO4oPjSg"
     ]
