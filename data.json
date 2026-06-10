@@ -3,26 +3,6 @@
     "part": "Helmet",
     "brand": [
       {
-        "name": "Scorpion Exo",
-        "brand_flag": "🇺🇸",
-        "image": "images/exo_helmet.png",
-        "versions": [
-          {
-            "name": "EXO-491",
-            "url": "https://www.scorpionexohelmets.com.au/scorpion-exo-491-helmet-matte-black-3xl~112"
-          }
-        ],
-        "safety_rating": [
-          { "text": "ECE 22.06" },
-          { "text": "UK Law", "url": "https://www.gov.uk/motorcycle-helmet-law" },
-          { "text": "SHARP", "url": "https://sharp.dft.gov.uk/" },
-          { "text": "SHARP 3★", "url": "https://sharp.dft.gov.uk/helmets/scorpion-exo-491/" }
-        ],
-        "from": "MCAS Alexandria",
-        "from_url": "https://www.mcas.com.au/scorpion-exo-491-helmet-matte-black-se48100100-p",
-        "video_url": "https://www.youtube.com/watch?v=KqqAZaFgXhY"
-      },
-      {
         "name": "Shark",
         "brand_flag": "🇫🇷",
         "image": "images/skwal_helmet.png",
@@ -39,6 +19,24 @@
         "from": "Motorcycle Stuff St Peters",
         "from_url": "https://motorcyclestuff.com.au/collections/all-helmets/products/shark-d-skwal-2-penxa-black-green-yellow-helmet-xs",
         "video_url": "https://www.youtube.com/watch?v=_FwGO4oPjSg"
+      },
+      {
+        "name": "Scorpion Exo",
+        "brand_flag": "🇺🇸",
+        "image": "images/exo_helmet.png",
+        "versions": [
+          {
+            "name": "EXO-491",
+            "url": "https://www.scorpionexohelmets.com.au/scorpion-exo-491-helmet-matte-black-3xl~112"
+          }
+        ],
+        "safety_rating": [
+          { "text": "ECE 22.06" },
+          { "text": "SHARP 3★", "url": "https://sharp.dft.gov.uk/helmets/scorpion-exo-491/" }
+        ],
+        "from": "MCAS Alexandria",
+        "from_url": "https://www.mcas.com.au/scorpion-exo-491-helmet-matte-black-se48100100-p",
+        "video_url": "https://www.youtube.com/watch?v=KqqAZaFgXhY"
       }
     ]
   },
