@@ -44,22 +44,6 @@
     "part": "Gloves",
     "brand": [
       {
-        "name": "Rjays",
-        "brand_flag": "🇦🇺",
-        "image": "images/gloves_flow.png",
-        "versions": [
-          {
-            "name": "Flow Ladies Gloves Blk/Wht XS",
-            "url": "https://www.mcas.com.au/shop/rjays-flow-womens-gloves-black-white-GL125BKWTDXS-P"
-          }
-        ],
-        "safety_rating": [
-          { "text": "CE Level 1" }
-        ],
-        "from": "MCAS Alexandria",
-        "from_url": "https://www.mcas.com.au/shop/rjays-flow-womens-gloves-black-white-GL125BKWTDXS-P"
-      },
-      {
         "name": "Ixon",
         "brand_flag": "🇫🇷",
         "image": "images/gloves_arrow.png",
@@ -74,6 +58,22 @@
         ],
         "from": "Motorcycle Stuff St Peters",
         "from_url": "https://motorcyclestuff.com.au/collections/ixon/products/ixon-womens-pro-arrow-black-gloves"
+      },
+      {
+        "name": "Rjays",
+        "brand_flag": "🇦🇺",
+        "image": "images/gloves_flow.png",
+        "versions": [
+          {
+            "name": "Flow Ladies Gloves Blk/Wht XS",
+            "url": "https://www.mcas.com.au/shop/rjays-flow-womens-gloves-black-white-GL125BKWTDXS-P"
+          }
+        ],
+        "safety_rating": [
+          { "text": "CE Level 1" }
+        ],
+        "from": "MCAS Alexandria",
+        "from_url": "https://www.mcas.com.au/shop/rjays-flow-womens-gloves-black-white-GL125BKWTDXS-P"
       }
     ]
   },
