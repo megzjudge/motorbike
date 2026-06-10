@@ -31,6 +31,15 @@ function getVideoSiteName(videoUrl) {
     return siteName;
 }
 
+function isPdf(url) {
+    return typeof url === 'string' && /\.pdf(\?|#|$)/i.test(url.trim());
+}
+
+function pdfLinkAttrs(url) {
+    // shared attributes that mark a link as a PDF-lightbox trigger
+    return `href="${url}" data-pdf="${url}"`;
+}
+
 function getImageTooltipName(imagePath) {
     if (!imagePath || typeof imagePath !== 'string') return '';
     const filename = imagePath.split('/').pop();
@@ -157,6 +166,9 @@ function renderVersionsRow(versions) {
             const versionUrl = v.url || v.version_url;
 
             if (versionUrl) {
+                if (isPdf(versionUrl)) {
+                    return `<a ${pdfLinkAttrs(versionUrl)} class="version-tag pdf-trigger">${versionName}</a>`;
+                }
                 return `<a href="${versionUrl}" target="_blank" rel="noopener noreferrer" class="version-tag">${versionName}</a>`;
             }
 
@@ -190,9 +202,14 @@ function renderSafetyRow(safetyRatings) {
             const ratingText = r.text || r.name || r.rating;
             const ratingUrl = r.url;
 
-            return ratingUrl
-                ? `<a href="${ratingUrl}" target="_blank" rel="noopener noreferrer" class="safety-tag">${ratingText}</a>`
-                : `<span class="safety-item">${ratingText}</span>`;
+            if (ratingUrl) {
+                if (isPdf(ratingUrl)) {
+                    return `<a ${pdfLinkAttrs(ratingUrl)} class="safety-tag pdf-trigger">${ratingText}</a>`;
+                }
+                return `<a href="${ratingUrl}" target="_blank" rel="noopener noreferrer" class="safety-tag">${ratingText}</a>`;
+            }
+
+            return `<span class="safety-item">${ratingText}</span>`;
         })
         .join('');
 
@@ -324,6 +341,9 @@ function renderBrandArrayRows(brands) {
         .filter(brand => !isEmptyValue(brand.from))
         .map(brand => {
             if (brand.from_url) {
+                if (isPdf(brand.from_url)) {
+                    return `<a ${pdfLinkAttrs(brand.from_url)} class="version-tag pdf-trigger">${brand.from}</a>`;
+                }
                 return `<a href="${brand.from_url}" target="_blank" rel="noopener noreferrer" class="version-tag">${brand.from}</a>`;
             }
 
@@ -435,9 +455,16 @@ function renderCardRows(data) {
 
         // FROM
         if (key === 'from') {
-            const fromContent = data.from_url
-                ? `<a href="${data.from_url}" target="_blank" rel="noopener noreferrer" class="version-tag">${value}</a>`
-                : `<span class="value">${value}</span>`;
+            let fromContent;
+            if (data.from_url) {
+                if (isPdf(data.from_url)) {
+                    fromContent = `<a ${pdfLinkAttrs(data.from_url)} class="version-tag pdf-trigger">${value}</a>`;
+                } else {
+                    fromContent = `<a href="${data.from_url}" target="_blank" rel="noopener noreferrer" class="version-tag">${value}</a>`;
+                }
+            } else {
+                fromContent = `<span class="value">${value}</span>`;
+            }
 
             rows.push(`
                 <div class="data-row">
@@ -459,14 +486,21 @@ function renderCardRows(data) {
 
         // SINGLE VERSION FALLBACK
         if (key === 'version') {
+            let versionContent;
+            if (data.version_url) {
+                if (isPdf(data.version_url)) {
+                    versionContent = `<a ${pdfLinkAttrs(data.version_url)} class="version-tag pdf-trigger">${value}</a>`;
+                } else {
+                    versionContent = `<a href="${data.version_url}" target="_blank" rel="noopener noreferrer" class="version-tag">${value}</a>`;
+                }
+            } else {
+                versionContent = `<span class="version-tag version-tag-plain">${value}</span>`;
+            }
+
             rows.push(`
                 <div class="data-row">
                     <span class="label">VERSION</span>
-                    ${
-                        data.version_url
-                            ? `<a href="${data.version_url}" target="_blank" rel="noopener noreferrer" class="version-tag">${value}</a>`
-                            : `<span class="version-tag version-tag-plain">${value}</span>`
-                    }
+                    ${versionContent}
                 </div>
             `);
             return;
@@ -745,23 +779,57 @@ function setupLightbox() {
     const lightboxImg = document.getElementById('lightbox-image');
     const closeBtn = document.querySelector('.lightbox-close');
 
-    if (!lightbox || !lightboxImg) return;
+    if (!lightbox) return;
 
+    const pdfWrap = document.getElementById('lightbox-pdf');
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        lightbox.classList.remove('pdf-mode');
+        if (pdfWrap) pdfWrap.innerHTML = '';
+        if (lightboxImg) lightboxImg.style.display = '';
+    }
+
+    // IMAGES (existing behaviour)
     document.querySelectorAll('.image-container img').forEach(img => {
         img.addEventListener('click', () => {
-            lightboxImg.src = img.src;
+            if (lightboxImg) {
+                lightboxImg.src = img.src;
+                lightboxImg.style.display = '';
+            }
+            lightbox.classList.remove('pdf-mode');
             lightbox.classList.add('active');
         });
     });
 
-    if (closeBtn) {
-        closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
-    }
+    // PDFs
+    document.querySelectorAll('.pdf-trigger').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const url = link.getAttribute('data-pdf');
+            if (!url || !pdfWrap) return;
+
+            if (lightboxImg) lightboxImg.style.display = 'none';
+            lightbox.classList.add('pdf-mode', 'active');
+
+            // object tag = native viewer on desktop; iframe fallback for others
+            pdfWrap.innerHTML = `
+                <object data="${url}#toolbar=1&navpanes=0&view=FitH" type="application/pdf">
+                    <iframe src="${url}#view=FitH" title="PDF"></iframe>
+                </object>
+                <a class="pdf-open-tab" href="${url}" target="_blank" rel="noopener noreferrer">Open PDF in new tab ↗</a>
+            `;
+        });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
 
     lightbox.addEventListener('click', e => {
-        if (e.target === lightbox) {
-            lightbox.classList.remove('active');
-        }
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeLightbox();
     });
 }
 
