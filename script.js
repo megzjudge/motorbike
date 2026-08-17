@@ -617,7 +617,7 @@ function updateTooltipPosition(e) {
     tooltip.style.top = `${y}px`;
 }
 
-function renderImages(data, container) {
+function renderImages(data, container, id) {
     const images = [];
 
     images.push(...collectImageSources(data.image));
@@ -636,6 +636,7 @@ function renderImages(data, container) {
 
     const imgContainer = document.createElement('div');
     imgContainer.className = 'image-container';
+    if (id) imgContainer.id = id;
 
     validImages.forEach(src => {
         const img = document.createElement('img');
@@ -651,12 +652,13 @@ function renderAllData() {
     const container = document.getElementById('content-container');
     container.innerHTML = '';
 
-    dataArray.forEach(data => {
+    dataArray.forEach((data, index) => {
         // SHOP GALLERY
         if (data.type === 'shop_gallery') {
             const section = document.createElement('div');
             section.className = 'shop-gallery-section';
-    
+            section.id = 'accessories';
+
             const sections = Array.isArray(data.sections) ? data.sections : [];
     
             section.innerHTML = `
@@ -670,7 +672,7 @@ function renderAllData() {
                     ` : ''}
             
                     ${sections.map(sec => `
-                        <div class="shop-subsection">
+                        <div class="shop-subsection"${sec.title === 'First Aid Kit' ? ' id="first-aid"' : ''}>
                             ${sec.title ? `<div class="shop-subheader">${sec.title}</div>` : ''}
             
                             <div class="shop-gallery-grid">
@@ -742,6 +744,7 @@ function renderAllData() {
         if (data.type === 'bike_log') {
             const logBlock = document.createElement('div');
             logBlock.className = 'bike-log';
+            logBlock.id = 'alterations';
 
             const entries = Array.isArray(data.entries) ? data.entries : [];
 
@@ -793,7 +796,8 @@ function renderAllData() {
         }
 
         // IMAGE
-        renderImages(data, container);
+        const anchorId = index === 0 ? 'gear' : (data.part === 'Motorbike' ? 'bike' : undefined);
+        renderImages(data, container, anchorId);
 
         // CARD
         const rowsHTML = renderCardRows(data);
@@ -814,6 +818,20 @@ function renderAllData() {
 
     setupLightbox();
     setupTooltips();
+    setupNavPills();
+}
+
+function setupNavPills() {
+    document.querySelectorAll('.nav-pill').forEach(pill => {
+        pill.addEventListener('click', e => {
+            const id = pill.getAttribute('href').slice(1);
+            const target = document.getElementById(id);
+            if (!target) return;
+
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
 }
 
 function setupLightbox() {
