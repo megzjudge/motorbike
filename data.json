@@ -205,9 +205,12 @@
         "title": "Bike Care",
         "items": [
           { "image": "images/tyre_pump.png", "url": "https://www.ebay.com.au/itm/298081000584" },
+          { "image": "images/wrench_hex_set.png", "url": "https://www.temu.com/goods.html?_bg_fs=1&goods_id=601105215571395" },
+          { "image": "images/torque_wrench.png", "url": "https://www.amazon.com.au/dp/B0GGWN9GD7" },
           { "image": "images/screen_protector.png", "url": "https://www.ebay.com.au/itm/377189219734" },
           { "image": "images/stand_protector.png", "url": "https://www.temu.com/au/high-quality-motorcycle-footpeg-extension-plate--in--side-stand-support-plate-accessory-for-street-bikes-g-601105346977493.html" },
           { "image": "images/screw_looseners.png", "url": "https://www.amazon.com.au/WORKPRO-W001308A-3-piece-Locking-Straight/dp/B0109PTUYM/" },
+          { "image": "images/pocket_hex_key.png", "url": "https://www.amazon.com.au/dp/B0H2DDBQL3" },
           { "image": "images/fluid_oil.png", "url": "https://www.amazon.com.au/dp/B0BHW2Y1HK" },
           { "image": "images/fluid_breaks.png", "url": "https://www.amazon.com.au/Nulon-Xtreme-Performance-Brake-Fluid/dp/B08WHHWTKK/" },
           { "image": "images/battery_jumper.png", "url": "https://www.ebay.com.au/itm/156419810697" },
@@ -216,7 +219,8 @@
           { "image": "images/screws_spare.png", "url": "http://ebay.com.au/itm/397237824238" },
           { "image": "images/spring_puller.png", "url": "https://www.amazon.com.au/dp/B0GRN5V859" },
           { "image": "images/gloves.png", "url": "https://www.amazon.com.au/dp/B08G6M1XFR" },
-          { "image": "images/screw_loosener.png", "url": "https://www.ebay.com.au/itm/227141884746" }
+          { "image": "images/screw_loosener.png", "url": "https://www.ebay.com.au/itm/227141884746" },
+          { "image": "images/liquid_extractor.png", "url": "https://www.amazon.com.au/dp/B0H825CG7X" }
         ]
       },
       {
@@ -235,8 +239,9 @@
         "items": [
           { "image": "images/stand.png", "url": "https://www.amazon.com.au/Motorcycle-Wheel-cleaning-stand-Replacement/dp/B075N73R26/" },
           { "image": "images/cleaner_chain.png", "url": "https://www.ebay.com.au/itm/186259169072" },
-          { "image": "images/cleaner_lube.png", "url": "http://amazon.com.au/Tru-Tension-Weather-Cassette-Drivetrain-Lubricant/dp/B07TT7SCNM/" },
           { "image": "images/cleaner_rust.png", "url": "https://www.amazon.com.au/dp/B0F8B7VLTV" },
+          { "image": "images/chain_lube.png", "url": "https://www.amazon.com.au/dp/B001OV61KW" },
+          { "image": "images/chain_lube_pump.png", "url": "https://www.amazon.com.au/dp/B0GW8Q55S1" },
           { "image": "images/chain_brush.png", "url": "https://www.ebay.com.au/itm/256960870775" }
         ]
       },
@@ -279,7 +284,8 @@
           { "image": "images/bag_cables.png", "url": "https://www.temu.com/au/retractable--rope-for-motorcycle-elastic-cord-with--35-43-inches-g-601103789217384.html" },
           { "image": "images/waterproof_cover.png", "url": "https://www.temu.com/au/motorcycle-luggage-cover-outdoor-waterproof-riding--cover-lightweight-electric-bike-rack-increased-helmet--mesh-bag-g-606512076419424.html" },
           { "image": "images/tank_attachment.png", "url": "https://www.temu.com/au/motorcycle-tank-bag-with-molle-system--bag-attachment-heavy-duty-design-tool-free-installation-compatible-with-for--mm-for--motorcycles-rider--bag--bag-in-one-for-long-rides-off--black-g-601103427529373.html" },
-          { "image": "images/saddle_bags.png", "url": "https://www.temu.com/au/large-capacity-side-bag-for-motorcycles-designed-to-hold-a-full-helmet-and-other-riding-essentials-g-601099527575848.html" }
+          { "image": "images/saddle_bags.png", "url": "https://www.temu.com/au/large-capacity-side-bag-for-motorcycles-designed-to-hold-a-full-helmet-and-other-riding-essentials-g-601099527575848.html" },
+          { "image": "images/cup_holder.png", "url": "https://www.amazon.com.au/dp/B0CLV8KT5M" }
         ]
       },
       {
