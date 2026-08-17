@@ -734,6 +734,44 @@ function renderAllData() {
             return;
         }
             
+        // BIKE LOG
+        if (data.type === 'bike_log') {
+            const logBlock = document.createElement('div');
+            logBlock.className = 'bike-log';
+
+            const entries = Array.isArray(data.entries) ? data.entries : [];
+
+            logBlock.innerHTML = `
+                ${data.title ? `<div class="bike-log-title">${data.title}</div>` : ''}
+                <div class="bike-log-timeline">
+                    ${entries.map(entry => {
+                        const link = typeof entry.link === 'string'
+                            ? { text: 'Source', url: entry.link }
+                            : entry.link;
+
+                        return `
+                            <div class="bike-log-entry">
+                                <div class="bike-log-marker"></div>
+                                <div class="bike-log-content">
+                                    ${entry.date ? `<div class="bike-log-date">${entry.date}</div>` : ''}
+                                    ${entry.text ? `<div class="bike-log-text">${entry.text}</div>` : ''}
+                                    ${entry.image ? `<img src="${entry.image}" class="bike-log-image" alt="${getImageTooltipName(entry.image)}">` : ''}
+                                    ${link && link.url ? (
+                                        isPdf(link.url)
+                                            ? `<a ${pdfLinkAttrs(link.url)} class="version-tag pdf-trigger bike-log-link">${link.text || 'Source'}</a>`
+                                            : `<a href="${link.url}" target="_blank" rel="noopener noreferrer" class="version-tag bike-log-link">${link.text || 'Source'}</a>`
+                                    ) : ''}
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+
+            container.appendChild(logBlock);
+            return;
+        }
+
         // STANDALONE VIDEO
         if (data.type === 'standalone_video') {
             const videoBlock = document.createElement('div');
@@ -791,7 +829,7 @@ function setupLightbox() {
     }
 
     // IMAGES (existing behaviour)
-    document.querySelectorAll('.image-container img').forEach(img => {
+    document.querySelectorAll('.image-container img, .bike-log-image').forEach(img => {
         img.addEventListener('click', () => {
             if (lightboxImg) {
                 lightboxImg.src = img.src;

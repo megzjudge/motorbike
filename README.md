@@ -133,6 +133,34 @@ Recognised fields (all optional except `part`, and the renderer skips anything e
 
 `"type": "standalone_video"` — a big 🎥 emoji link with a caption, used to break up the page (e.g. a full gear-review video) without being tied to a specific item.
 
+### 4. A bike log block
+
+`"type": "bike_log"` — a timeline of short dated tidbits (mods, repairs, upgrades), rendered as a connected line of entries down the left edge, used for a running "stuff I've done to the bike" diary. Entries are shown in file order, so add new ones wherever they belong chronologically.
+
+```json
+{
+  "type": "bike_log",
+  "title": "Stuff I've Done to the Bike",
+  "entries": [
+    {
+      "date": "12 July 2026",
+      "text": "Replaced Clutch Lever Assembly (part connecting the lever to the handlebars)",
+      "image": "images/...",
+      "link": { "text": "Part #13", "url": "https://..." }
+    }
+  ]
+}
+```
+
+| Field | Purpose |
+|---|---|
+| `title` | Heading above the timeline |
+| `entries` | Array of tidbits, each optionally with `date`, `text`, `image`, and `link` |
+| `date` | Small teal label above the entry text, e.g. "12 July 2026" |
+| `text` | The tidbit itself |
+| `image` | Optional thumbnail; opens in the same lightbox as product photos |
+| `link` | Optional — either a plain URL string (rendered as a "Source" pill) or `{ text, url }` for a custom label |
+
 **Why this structure:** every rendering function (`renderGenericRow`, `renderSafetyRow`, `renderVersionsRow`, `renderVideoRow`, `renderBrandArrayRows`, …) treats its input defensively — strings, single objects, and arrays are all normalised via `toArray()`/`isEmptyValue()` before rendering. In practice this means you rarely need to worry about exact shape when adding an entry: a single `safety_rating: "CE Level 2"` string and a `safety_rating: [{ "text": "CE Level 2" }]` array both render identically.
 
 ## `script.js`

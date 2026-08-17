@@ -416,5 +416,40 @@
         }
       }
     ]
+  },
+  {
+    "type": "bike_log",
+    "title": "Stuff I've Done to the Bike",
+    "entries": [
+      {
+        "date": "Approx. August 2025",
+        "text": "Personally took apart my seat and cut it into pieces and put in a bike gel pad to get an extra cm of height (cause I'm 5'1)",
+        "link": "https://www.youtube.com/results?search_query=replace+bike+seat+with+gel+pad"
+      },
+      {
+        "date": "Approx. July – November 2025",
+        "text": "Replaced a side fairing due to dropping and scratching it, and finding a cheap one on eBay."
+      },
+      {
+        "date": "6 May 2026",
+        "text": "Upgraded bike windshield to a darker smoke to match the black accent colour of the bike",
+        "link": "https://www.instagram.com/p/DX_Q8Z7kW8e/"
+      },
+      {
+        "date": "5 June 2026",
+        "text": "Replaced chipped back bike fairing",
+        "link": "https://www.instagram.com/p/DZL9x2tNlMA/"
+      },
+      {
+        "date": "12 July 2026",
+        "text": "Replaced Clutch Lever Assembly (part connecting the lever to the handlebars)",
+        "link": { "text": "Part #13", "url": "https://shop.cfmoto.com.au/cf300-3f-eu5-2023-f10-b-steering-system-double-throttle-cable" }
+      },
+      {
+        "date": "Approx. November 2026",
+        "text": "Replaced gear levers with aftermarket ones (these bend when the bike starts to tip so you get a heavier weighted grip on the bike - it moves with your hand rather than with the bike - so it literally stops you from dropping it because it gives you more momentum to push the bike in the opposite direction as its falling - like grabbing something thats perfectly aligned with your hand rather than moving in an opposite direction against you).",
+        "link": "https://www.amazon.com.au/MTCRIGHTER-CFMOTO-Retractable-Foldable-Aluminum/dp/B0DRT7SKWX/"
+      }
+    ]
   }
 ]

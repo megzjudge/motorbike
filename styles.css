@@ -520,6 +520,97 @@ body {
     text-align: center;
 }
 
+/* BIKE LOG (TIMELINE) */
+.bike-log {
+    border: 3px solid #01b8c6;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+    background: white;
+    padding: 24px 24px 8px;
+    margin-bottom: 40px;
+}
+
+.bike-log-title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #64748b;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bike-log-timeline {
+    position: relative;
+    padding-left: 28px;
+}
+
+.bike-log-timeline::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: rgba(1, 184, 198, 0.2);
+}
+
+.bike-log-entry {
+    position: relative;
+    padding-bottom: 24px;
+}
+
+.bike-log-entry:last-child {
+    padding-bottom: 16px;
+}
+
+.bike-log-marker {
+    position: absolute;
+    left: -28px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #01b8c6;
+    box-shadow: 0 0 0 4px rgba(1, 184, 198, 0.15);
+}
+
+.bike-log-date {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #01b8c6;
+    margin-bottom: 6px;
+}
+
+.bike-log-text {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1f2937;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.bike-log-image {
+    display: block;
+    max-width: 96px;
+    max-height: 96px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.bike-log-image:hover {
+    transform: scale(1.05);
+}
+
+.bike-log-link {
+    display: inline-flex;
+}
+
 /* LEGACY VIDEO LINK STYLE */
 .video-link {
     display: flex;
