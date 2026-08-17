@@ -79,6 +79,50 @@ Recognised fields (all optional except `part`, and the renderer skips anything e
 
 `"type": "shop_gallery"` — a grid of small clickable product thumbnails grouped into titled sections (Parts, Bike Care, Security, Style, Carrying, etc.), used for the miscellaneous accessories list at the end of the page. Supports an optional `note` per section and nested `note` groups with their own sub-grid and text (used for the first-aid kit contents breakdown).
 
+```json
+{
+  "type": "shop_gallery",
+  "title": "Accessories",
+  "sections": [
+    {
+      "title": "Bike Care",
+      "items": [
+        { "image": "images/tyre_pump.png", "url": "https://..." },
+        { "image": "images/torque_wrench.png", "url": "https://..." }
+      ]
+    },
+    {
+      "title": "First Aid Kit",
+      "items": [
+        { "image": "images/bandaids_xl.png", "url": "https://..." }
+      ],
+      "gallery": [
+        { "image": "images/First_Aid_Kit.png", "url": "images/First_Aid_Kit_5.png" }
+      ],
+      "note": {
+        "For bleeds": {
+          "items": [
+            { "image": "images/gauze_inside_bleeding_wound.png", "url": "https://..." }
+          ],
+          "text": [
+            "Crepe Bandage, Scissors, Gauze, Dressings, Medical Tape, Alcohol Free Wipes, Tourniquet",
+            "Steps: Gloves, Wipes, Gauze and Dressing, Bandage and Tape and Scissors."
+          ]
+        }
+      }
+    }
+  ]
+}
+```
+
+| Field | Purpose |
+|---|---|
+| `title` | Heading for the whole gallery block, e.g. "Accessories" |
+| `sections` | Array of titled sub-grids, each with its own `title` and `items` |
+| `items` | Array of `{ image, url }` thumbnails, clicked to open the linked product page |
+| `gallery` | Optional — extra images for a section that open in the lightbox instead of navigating away (used for kit-contents photos) |
+| `note` | Optional — a map of sub-group titles (e.g. "For bleeds") to `{ items, text }`, rendered as a nested breakdown under the section (used for the first-aid kit contents) |
+
 ## Adding or editing gear
 
 1. Drop a product image into `images/` (PNG; a `.pdf` is also supported for spec sheets/size charts).
@@ -126,3 +170,4 @@ Fully static — the repo can be served as-is from any static host or CDN (e.g. 
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
