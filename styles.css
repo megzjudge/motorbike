@@ -549,7 +549,7 @@ body {
 
 .footer-logos {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 18px;
     margin-top: 20px;
@@ -703,14 +703,14 @@ body {
     }
 
     .footer-logos {
-        gap: 14px;
+        justify-content: space-between;
         margin-top: 16px;
         padding: 8px 0 12px;
     }
 
     .footer-logos img {
-        height: 10px;
-        max-width: 96px;
+        height: 22px;
+        max-width: 80px;
     }
 
     .value,

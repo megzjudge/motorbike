@@ -123,7 +123,7 @@ Recognised fields (all optional except `part`, and the renderer skips anything e
 | `gallery` | Optional — extra images for a section that open in the lightbox instead of navigating away (used for kit-contents photos) |
 | `note` | Optional — a map of sub-group titles (e.g. "For bleeds") to `{ items, text }`, rendered as a nested breakdown under the section (used for the first-aid kit contents) |
 
-## Adding or editing gear
+### Adding or editing gear
 
 1. Drop a product image into `images/` (PNG; a `.pdf` is also supported for spec sheets/size charts).
 2. Add an entry to `data.json` following the shapes above — copy the closest existing entry as a template.
