@@ -419,7 +419,7 @@
   },
   {
     "type": "bike_log",
-    "title": "Stuff I've Done to the Bike",
+    "title": "Stuff I've Done to the Bike Myself",
     "entries": [
       {
         "date": "Approx. August 2025",
@@ -428,7 +428,13 @@
       },
       {
         "date": "Approx. July – November 2025",
-        "text": "Replaced a side fairing due to dropping and scratching it, and finding a cheap one on eBay."
+        "text": "Replaced the main and small navy side fairing due to dropping and scratching it, and finding one on eBay. I went to put my foot down at the bottom of a hill and wasn't prepared for the 5cm lack of footing to the ground - when the bike dropped, the sliders didn't help because it landed on the gutter, an odd landing due to the slope. Poor bike, nobody's fault, just wasn't prepared - this was when I'd only been riding outside of the few back streets I'd been practicing on up until that point, and I didn't realise how much a slope would shrink my footing. After that, I got massive platform shoes for a while whilst I was practicing, since I had to learn how to control 160kg on my tippy toes. I found some fairings on eBay so was okay.",
+        "link": "https://www.ebay.com.au/str/bikesparesaustralia"
+      },
+      {
+        "date": "Approx. November 2025",
+        "text": "Replaced gear levers with aftermarket ones - these bend when the bike starts to tip so you get a heavier weighted grip on the bike. They move with your hand rather than with the bike - so it literally stops you from dropping it because it gives you more momentum to push the bike in the opposite direction as its falling - like grabbing something thats perfectly aligned with your hand rather than moving in an opposite direction against you.",
+        "link": "https://www.amazon.com.au/MTCRIGHTER-CFMOTO-Retractable-Foldable-Aluminum/dp/B0DRT7SKWX/"
       },
       {
         "date": "6 May 2026",
@@ -437,18 +443,13 @@
       },
       {
         "date": "5 June 2026",
-        "text": "Replaced chipped back bike fairing",
+        "text": "Replaced the chipped back bike fairing that was like that when I purchased it. I bought it approx the day it was put into the mechanics - a guy had come in with it at 3000kms and wanted to trade up, and I think it was within a few days that I rocked up and put down a deposit on it, so they didn't have time to get in the replacement fairing. They had ordered it, but it hadn't arrived yet, which made sense. I didn't care, it was a tiny little thing. Good to buy a bike from a mechanics that's also a sales store because he said when I wanted to upgrade I could just bring it back in and they'd help with the upgrade, nice guys.",
         "link": "https://www.instagram.com/p/DZL9x2tNlMA/"
       },
       {
         "date": "12 July 2026",
-        "text": "Replaced Clutch Lever Assembly (part connecting the lever to the handlebars)",
+        "text": "Replaced the clutch lever assembly - there's a part that connects the clutch lever to the handlebars, luckily for me the electronics are disassociated from that, and so is the lever itself, just a tiny little chunk of metal that snapped. My levers are of course impenetrable now cause they bend, but at the time I was backing the bike off a driveway - stupid, I should've just turned the bike around, but someone was watching and I got nervous and dropped it on the slope cause my feet weren't touching the ground, obviously lol.",
         "link": { "text": "Part #13", "url": "https://shop.cfmoto.com.au/cf300-3f-eu5-2023-f10-b-steering-system-double-throttle-cable" }
-      },
-      {
-        "date": "Approx. November 2026",
-        "text": "Replaced gear levers with aftermarket ones (these bend when the bike starts to tip so you get a heavier weighted grip on the bike - it moves with your hand rather than with the bike - so it literally stops you from dropping it because it gives you more momentum to push the bike in the opposite direction as its falling - like grabbing something thats perfectly aligned with your hand rather than moving in an opposite direction against you).",
-        "link": "https://www.amazon.com.au/MTCRIGHTER-CFMOTO-Retractable-Foldable-Aluminum/dp/B0DRT7SKWX/"
       }
     ]
   }

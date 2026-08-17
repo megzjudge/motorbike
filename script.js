@@ -13,22 +13,26 @@ async function loadData() {
     }
 }
 
-function getVideoSiteName(videoUrl) {
-    let siteName = '';
+function getSiteName(url, fallback = 'Source') {
+    let siteName = fallback;
 
     try {
-        const urlObj = new URL(videoUrl);
+        const urlObj = new URL(url);
         siteName = urlObj.hostname.replace('www.', '').split('.')[0];
         siteName = siteName.charAt(0).toUpperCase() + siteName.slice(1);
 
-        if (siteName.toLowerCase() === 'youtube') {
-            siteName = 'YouTube';
-        }
+        const overrides = { youtube: 'YouTube', ebay: 'eBay' };
+        const override = overrides[siteName.toLowerCase()];
+        if (override) siteName = override;
     } catch (e) {
-        siteName = 'Video';
+        siteName = fallback;
     }
 
     return siteName;
+}
+
+function getVideoSiteName(videoUrl) {
+    return getSiteName(videoUrl, 'Video');
 }
 
 function isPdf(url) {
@@ -746,7 +750,7 @@ function renderAllData() {
                 <div class="bike-log-timeline">
                     ${entries.map(entry => {
                         const link = typeof entry.link === 'string'
-                            ? { text: 'Source', url: entry.link }
+                            ? { text: getSiteName(entry.link), url: entry.link }
                             : entry.link;
 
                         return `
