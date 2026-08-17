@@ -39,6 +39,15 @@ body {
     flex-shrink: 0;
 }
 
+.header-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
 .header-left {
     display: flex;
     align-items: center;
