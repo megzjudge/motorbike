@@ -79,6 +79,12 @@ Recognised fields (all optional except `part`, and the renderer skips anything e
 
 `"type": "shop_gallery"` — a grid of small clickable product thumbnails grouped into titled sections (Parts, Bike Care, Security, Style, Carrying, etc.), used for the miscellaneous accessories list at the end of the page. Supports an optional `note` per section and nested `note` groups with their own sub-grid and text (used for the first-aid kit contents breakdown).
 
+## Adding or editing gear
+
+1. Drop a product image into `images/` (PNG; a `.pdf` is also supported for spec sheets/size charts).
+2. Add an entry to `data.json` following the shapes above — copy the closest existing entry as a template.
+3. Refresh the page. No build step, no restart needed (it's a static fetch).
+
 ### 3. A standalone video block
 
 `"type": "standalone_video"` — a big 🎥 emoji link with a caption, used to break up the page (e.g. a full gear-review video) without being tied to a specific item.
@@ -113,15 +119,9 @@ A single stylesheet, mobile-first breakpoint at `768px`, built around one core v
 - **Purpose-built PDF lightbox mode** (`#lightbox.pdf-mode`): reuses the existing image lightbox overlay but swaps in an A4-proportioned (`aspect-ratio: 1/1.414`) `<object>`/`<iframe>` panel sized for readable documents, going full-viewport with a floating close button and "open in new tab" pill on mobile.
 - **Emoji-driven iconography** — flags (`.flag`, sized up to 42px) and the 🎥 video-link glyph are used instead of an icon font/SVG sprite, keeping the whole site dependency-free.
 
-## Adding or editing gear
-
-1. Drop a product image into `images/` (PNG; a `.pdf` is also supported for spec sheets/size charts).
-2. Add an entry to `data.json` following the shapes above — copy the closest existing entry as a template.
-3. Refresh the page. No build step, no restart needed (it's a static fetch).
-
 ## Deployment
 
-Fully static — the repo can be served as-is from any static host or CDN (e.g. Cloudflare Pages, per the comment at the top of `script.js` referencing `motorbike-5x6.pages.dev` / `motorbike.jdge.cc`). `robots.txt` explicitly allows all major crawlers.
+Fully static — the repo can be served as-is from any static host or CDN (e.g. Cloudflare Pages).
 
 ## License
 
