@@ -1,6 +1,6 @@
 # Motorbike
 
-A single-page, data-driven gear catalogue for a motorcycle rider — helmet, jacket, gloves, pants, and general accessories — rendered entirely client-side from a JSON file. No build step, no framework, no backend. Live at [motorbike.jdge.cc](https://motorbike.jdge.cc).
+A single-page, data-driven gear catalogue for a motorcycle rider — helmet, jacket, gloves, pants, and general accessories — rendered entirely client-side from a JSON file. No build step, no framework, no backend.
 
 <p align="center">
   <img src="images/icon.png" width="72" alt="Motorbike icon">
