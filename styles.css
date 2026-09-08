@@ -631,6 +631,10 @@ body {
     margin-bottom: 10px;
 }
 
+.bike-log-text a {
+    color: var(--primary);
+}
+
 .bike-log-image {
     display: block;
     max-width: 96px;
