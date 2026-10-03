@@ -221,7 +221,8 @@
           { "image": "images/spring_puller.png", "url": "https://www.amazon.com.au/dp/B0GRN5V859" },
           { "image": "images/gloves.png", "url": "https://www.amazon.com.au/dp/B08G6M1XFR" },
           { "image": "images/screw_loosener.png", "url": "https://www.ebay.com.au/itm/227141884746" },
-          { "image": "images/liquid_extractor.png", "url": "https://www.amazon.com.au/dp/B0H825CG7X" }
+          { "image": "images/liquid_extractor.png", "url": "https://www.amazon.com.au/dp/B0H825CG7X" },
+          { "image": "images/meter_reader.png", "url": "https://www.amazon.com.au/dp/B01ISAMUA6" }
         ]
       },
       {
@@ -231,6 +232,7 @@
           { "image": "images/helmet_chain.png", "url": "https://www.amazon.com.au/dp/B0G23M6CN5" },
           { "image": "images/alarm.png", "url": "https://www.amazon.com.au/Lancoon-Bicycle-Anti-Theft-Motorcycle-Vehicles/dp/B07QXRXW15/" },
           { "image": "images/storage.png", "url": "https://www.amazon.com.au/dp/B0B15D94HJ" },
+          { "image": "images/storage_cupboard.png", "url": "https://www.amazon.com.au/dp/B0BNBDH5Z1" },
           { "image": "images/stickers_gps.png", "url": "https://www.temu.com/au/gps--matte-vinyl-decals-self--automotive-stickers-with-vibrant-high-quality-design-single-use-front-windshield-decal-for-cars-trucks-suvs-easy-application--removal-car-vinyl-stickers-vehicle-g-601103486862347.html" },
           { "image": "images/break_lock.png", "url": "https://www.temu.com/au/-lock-for-motorcycles-and-scooters-a-strong-anti-theft-device-featuring-an-ergonomic-handle-designed-for-motorcycles-and-electric-vehicles-a-safety-for-bikes-ideal-for-garage-or-outdoor-settings-easy-to-set-up-and--g-606340881681350.html" }
         ]
@@ -243,6 +245,7 @@
           { "image": "images/cleaner_rust.png", "url": "https://www.amazon.com.au/dp/B0F8B7VLTV" },
           { "image": "images/chain_lube.png", "url": "https://www.amazon.com.au/dp/B001OV61KW" },
           { "image": "images/chain_lube_pump.png", "url": "https://www.amazon.com.au/dp/B0GW8Q55S1" },
+          { "image": "images/chain_aligner.png", "url": "https://www.amazon.com.au/dp/B094D3M28L" },
           { "image": "images/chain_brush.png", "url": "https://www.ebay.com.au/itm/256960870775" }
         ]
       },
@@ -279,14 +282,15 @@
       {
         "title": "Carrying",
         "items": [
+          { "image": "images/foldup_backpack.jpg", "url": "https://www.amazon.com.au/dp/B0FWKC8BGP" },
           { "image": "images/padlock.png", "url": "https://www.amazon.com.au/dp/B09HT75K5Z" },
-          { "image": "images/hook.png", "url": "https://www.temu.com/au/1pc-scooter-hanging-storage--mounting-hook-for-xiaomi-m365---bicycle-motorcycle-e-bikes--for-scooter-bike-motorcycle-accessories-scooter-storage-solution-g-601102029949785.html" },
+          { "image": "images/bike_duffle_bag_motodry.png", "url": "https://www.mxstore.com.au/p/MotoDry-ZXR-1-Black-Roll-Bag/LER300" },
           { "image": "images/bag_tail.png", "url": "https://www.amazon.com.au/CHANGCHENG-Motorcycle-Bag-Multipurpose-Waterproof/dp/B09CDBBM46/" },
           { "image": "images/bag_cables.png", "url": "https://www.temu.com/au/retractable--rope-for-motorcycle-elastic-cord-with--35-43-inches-g-601103789217384.html" },
           { "image": "images/waterproof_cover.png", "url": "https://www.temu.com/au/motorcycle-luggage-cover-outdoor-waterproof-riding--cover-lightweight-electric-bike-rack-increased-helmet--mesh-bag-g-606512076419424.html" },
           { "image": "images/tank_attachment.png", "url": "https://www.temu.com/au/motorcycle-tank-bag-with-molle-system--bag-attachment-heavy-duty-design-tool-free-installation-compatible-with-for--mm-for--motorcycles-rider--bag--bag-in-one-for-long-rides-off--black-g-601103427529373.html" },
-          { "image": "images/saddle_bags.png", "url": "https://www.temu.com/au/large-capacity-side-bag-for-motorcycles-designed-to-hold-a-full-helmet-and-other-riding-essentials-g-601099527575848.html" },
           { "image": "images/cup_holder.png", "url": "https://www.amazon.com.au/dp/B0CLV8KT5M" }
+          { "image": "images/thigh_bag.png", "url": "https://www.amazon.com.au/dp/B0BWF9B3SN" },
         ]
       },
       {
