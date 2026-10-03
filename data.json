@@ -255,7 +255,8 @@
           { "image": "images/cleaner_foam.png", "url": "https://www.amazon.com.au/dp/B0749VM3MB" },
           { "image": "images/cloths.png", "url": "https://www.amazon.com.au/MR-SIGA-Cleaning-Reusable-Absorbent-Microfiber/dp/B0CFXZ6GZS/" },
           { "image": "images/hose.png", "url": "https://www.ebay.com.au/itm/404941503250" },
-          { "image": "images/hose_gun.png", "url": "https://www.ebay.com.au/itm/334916310665" }
+          { "image": "images/hose_gun.png", "url": "https://www.ebay.com.au/itm/334916310665" },
+          { "image": "images/screen_wiper.png", "url": "https://share.temu.com/wHwV0kNPgIA" },
         ]
       },
       {
@@ -271,6 +272,7 @@
           { "image": "images/key_cover.png", "url": "https://www.temu.com/au/key-cover-shell-keychain-and-holder-for-modified-motorcycles-including--models-250sr---450mt-700clx--700mt--nk250--400nk-300nk-400gt-and--g-601102494727339.html" },
           { "image": "images/tyre_valve_caps.png", "url": "https://www.amazon.com.au/dp/B0GTTL97LY" },
           { "image": "images/stickers_fuel_tank.png", "url": "https://www.ebay.com.au/itm/127159144110" },
+          { "image": "images/sticker_girl_biker.png", "url": "sticker_girl_biker.png" },
           { "image": "images/stickers_sun.png", "url": "https://www.ebay.com.au/itm/264007928472" },
           { "image": "images/stickers_bike.png", "url": "https://www.temu.com/au/aggressive-bull-vector-image-for-car-decals-bumper-stickers-and-vinyl---scratch-resistant-and-durable-designs-are--helmets-stylish-motorcycles-toolboxes-guitars-scooters-and-car-stickers-g-601103661802471.html" },
           { "image": "images/stickers_rabbit.png", "url": "https://www.temu.com/au/2d-flat-2d-flat-sticker-car-decal-suitable-for-cars-windows-laptops-bumpers-trunk-motorcycles-and-camping-bikes-easter-theme-creative-rabbit-stickers-2d-g-601101423356550.html" },
@@ -326,13 +328,15 @@
           { "image": "images/hotday_damp_cloth.png", "url": "https://www.temu.com/au/1pc-camping-towels-cooling-towel-ice-towels-for-neck-and--breathable--towel-for-yoga-workout-gym-golf-camping-stay-cool-and-refreshed-all-day-outdoor-sports-towel-for-instant-cooling-relief-g-601099559042618.html" },
           { "image": "images/rain_protector_bag.png", "url": "https://www.temu.com/au/universal-new-35-cover-for-backpack-backpack-rain-cover-high-quality-dustproof-cover-for-hiking-camping-travel-backpacks-outdoor-hiking-pack--with-reflective-strips-for-hiking-cycling-and-travel-g-601104466006221.html" },
           { "image": "images/rain_gear.png", "url": "https://www.temu.com/au/adult-split-type-rain-pants-suit-outer-wear-full-body-rainproof-cycling-long-raincoat-set-non-disposable-g-605524032609825.html" },
-          { "image": "images/shoe_covers.png", "url": "https://www.temu.com/au/1-2pairs-waterproof-shoe-covers-rain-shoes-protector-reusable-non-slip-rain-boots-sneakers-protector-silicone-shoe-covers-footwear-g-601099547676354.html" }
+          { "image": "images/shoe_covers.png", "url": "https://www.temu.com/au/1-2pairs-waterproof-shoe-covers-rain-shoes-protector-reusable-non-slip-rain-boots-sneakers-protector-silicone-shoe-covers-footwear-g-601099547676354.html" },
+          { "image": "images/helmet_cooler.png", "url": "https://share.temu.com/mNMmL8Sr7jA" }
         ]
       },
       {
         "title": "First Aid Kit",
         "items": [
           { "image": "images/first_aid_pouch.png", "url": "https://www.ebay.com.au/itm/137206956803" },
+          { "image": "images/mini_torch.png", "url": "https://www.temu.com/au/1pc-2pcs-4pcs-8pcs-mini-usb-rechargeable-colorful-led-flashlight--size-with-rotary-switch-rechargeable-pendant-keychain-light-led-keychain-flashlight-night-light-portable-mini-torch-with-usb-charging-suitable-for-daily-indoor-g-601102959133214.html" },
           { "image": "images/bandaids_xl.png", "url": "https://www.woolworths.com.au/shop/productdetails/225613/band-aid-tough-strips-extra-large-fabric-bandages" },
           { "image": "images/eye_wash_road_debris.png", "url": "https://www.woolworths.com.au/shop/productdetails/1122503151/reclens-saline-eye-wash-10-x-15ml-with-eye-cups" },
           { "image": "images/tourniquet_stop_bleeding_pressure.png", "url": "https://www.amazon.com.au/Emergency-Release-Tactical-Tourniquet-Medical/dp/B0B499KHGT/" },
